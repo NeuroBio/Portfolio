@@ -81,15 +81,27 @@
     </header>
 
     <!-- Portfolio Grid Section -->
-    <section class="portfolio" id="portfolio">
+    <section class="portfolio bg-tertiary" id="portfolio">
         <div class="container">
             <h2 class="text-center text-uppercase text-secondary mb-0">
                 Portfolio
             </h2>
-            <hr class="star-dark mb-5" />
+            <hr class="star-dark mb-5 hr-recolor" />
 
             <!-- Arecace Website.-->
             <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <a class="portfolio-item d-block mx-auto" data-toggle="modal" data-target="#portfolio-modal-3">
+                        <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                            <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                <p>Card Database</p>
+                                <i class="fas fa-search-plus fa-2x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/project3.png" alt="" />
+                    </a>
+                </div>
+
                 <div class="col-md-6 col-lg-4">
                     <a class="portfolio-item d-block mx-auto" data-toggle="modal" data-target="#portfolio-modal-1">
                         <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
@@ -101,7 +113,18 @@
                         <img class="img-fluid" src="assets/img/portfolio/project1.png" alt="" />
                     </a>
                 </div>
-                
+
+                <div class="col-md-6 col-lg-4">
+                    <a class="portfolio-item d-block mx-auto" data-toggle="modal" data-target="#portfolio-modal-2">
+                        <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                            <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                <p>Creanza Lab Website</p>
+                                <i class="fas fa-search-plus fa-2x"></i>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/project2.png" alt="" />
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -113,28 +136,35 @@
             <hr class="star-light mb-5" />
 
             <p class="about-me text-center">
-                I am an enthusiastic software developer with a passion for
-                creating beautiful web applications built on JavaScript
-                technologies.
+                I am scientist redesigning myself into a software engineer.
+                I live for overcoming complex challenges and aim to make 
+                applications that are efficient, fast, and have aesthetically
+                pleasing UIs.
             </p>
         </div>
         <div class="container">
             <div class="col-md-10 offset-md-1">
                 <div class="row text-center skills-row">
-
-                    <!-- Replace these icons and text with skills you want to show case -->
-                    <!-- You should ideally not include any more than 5-6 tech skills -->
                     <div class="col">
-                        <i class="fab fa-html5 fa-3x"></i>
+                        <i class="fab fa-3x">
+                            <img src="assets/img/logos/r.svg" class="icon">
+                        </i>
                     </div>
                     <div class="col">
-                        <i class="fab fa-css3-alt fa-3x"></i>
+                        <i class="fab fa-3x">
+                            <img src="assets/img/logos/c-sharp.svg" class="icon">
+                        </i>
                     </div>
                     <div class="col">
-                        <i class="fab fa-js-square fa-3x"></i>
+                        <i class="fab fa-brands fa-python fa-3x"></i>
                     </div>
                     <div class="col">
-                        <i class="fab fa-node fa-3x"></i>
+                        <i class="fab fa-brands fa-angular fa-3x"></i>
+                    </div>
+                    <div class="col">
+                        <i class="fab fa-3x">
+                            <img src="assets/img/logos/postgres.svg" class="icon">
+                        </i>
                     </div>
                     <div class="col">
                         <i class="fab fa-git fa-3x"></i>
@@ -151,41 +181,67 @@
     </section>
 
     <!-- Education -->
-    <section class="education" id="education">
+    <section class="education bg-tertiary" id="education">
         <div class="container">
             <h2 class="text-center text-uppercase text-secondary mb-0">
-                Education
+                Education and Employment
             </h2>
-            <hr class="star-dark mb-5" />
+            <hr class="star-dark mb-5 hr-recolor" />
             <div class="credential">
                 <h2 class="location mb-0">
-                    Vanderbilt University |
-                    <span class="credential-date text-muted">Jan 2019 - July 2019</span>
+                    TrustiPhi LLC |
+                    <span class="credential-date text-muted">Aug 2020 - Present</span>
                 </h2>
-                <p class="lead">Full-stack Web Development Certificate</p>
+                <p class="lead">Programming Consultant</p>
                 <p class="credential-description">
-                    Web development is a high-growth career track, and
-                    Vanderbilt University Coding Boot Camp teaches you the
-                    specialized skills for full-stack web development.
-                    Through a fast-paced, immersive curriculum, you’ll learn
-                    in-demand front-end and back-end technologies.
+                    Using an iterative, mockup process, completed an extensive redesign of
+                    TrustiPhi’s flagship angular app to provide a consistent, intuitive
+                    user-experience.  Responsible for developing new features of the
+                    redesigned application including resolvers and unit tests.  Extended
+                    and improved base functionality as well as implementing changes to meet
+                    web accessibility standards.  As part of this project, wrote over 50
+                    JIRA tasks.
                 </p>
             </div>
             <hr class="credential-divider" />
             <div class="credential">
                 <h2 class="location mb-0">
-                    University of North Carolina |
-                    <span class="credential-date text-muted">Aug 2010 - May 2015</span>
+                    University of Miami |
+                    <span class="credential-date text-muted">May 2021 - October 2021</span>
                 </h2>
-                <p class="lead">B.A. Art History</p>
+                <p class="lead">Certificate in Data Analytics</p>
                 <p class="credential-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Cras non dictum justo. Donec sagittis ipsum a odio
-                    dignissim varius. Nam vitae lectus diam. Etiam efficitur
-                    venenatis quam, vitae semper justo ornare id. Sed sed
-                    posuere lorem, vitae porttitor augue. Sed sagittis
-                    sapien mauris, at varius arcu egestas ut. Praesent
-                    egestas metus id dui ultrices tincidunt.
+                    Learned Excel, VBA, Python, PostgreSQL, and techniques for big data
+                    analytics during a 24-week course. See
+                    <a href="https://bootcamp.miami.edu/data/">course description.</a>
+                </p>
+            </div>
+            <hr class="credential-divider" />
+            <div class="credential">
+                <h2 class="location mb-0">
+                    Vanderbilt University |
+                    <span class="credential-date text-muted">May 2013 - Oct 2019</span>
+                </h2>
+                <p class="lead">Ph.D. in Computational Biology</p>
+                <p class="credential-description">
+                    1) Examined how birdsong evolves using a simulation model I
+                    developed in R and C# (see Publication 1). <br>
+                    2) Compiled published data and performed meta data analysis
+                    to understand the relationship between birdsong complexity and
+                    reproductive success (see Publications 3-4).<br>
+                    <i>Thesis Advisors:</i> Dr. Donna Webb (2014-2017, deceased) & Dr. Nicole Creanza (2017-2019)
+                </p>
+            </div>
+            <hr class="credential-divider" />
+            <div class="credential">
+                <h2 class="location mb-0">
+                    Ohio Northern University |
+                    <span class="credential-date text-muted">Aug 2009 - May 2013</span>
+                </h2>
+                <p class="lead">B.S. in Molecular Biology and Behavioral Neuroscience</p>
+                <p class="credential-description">
+                    Research Assistant 2010-2013, (see Publications 7-8)<br>
+                    <i>Research Advisor:</i> Dr. Phillip Zoladz
                 </p>
             </div>
             <hr class="credential-divider" />
@@ -201,21 +257,16 @@
                         Connect with Me
                     </h2>
                     <p class="text-uppercase mb-4">
-                        myverycoolemail@gmail.com
+                        cristinamrobinson@gmail.com
                     </p>
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item">
-                            <a class="btn-social text-center rounded-circle" href="#">
-                                <i class="fab fa-fw fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn-social text-center rounded-circle" href="#">
+                            <a class="btn-social text-center rounded-circle" href="https://www.linkedin.com/in/cristina-robinson-88938052/">
                                 <i class="fab fa-fw fa-linkedin-in"></i>
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="btn-social text-center rounded-circle" href="https://github.com/USER">
+                            <a class="btn-social text-center rounded-circle" href="https://github.com/NeuroBio">
                                 <i class="fab fa-github"></i>
                             </a>
                         </li>
@@ -227,7 +278,7 @@
 
     <div class="copyright py-4 text-center text-white">
         <div class="container">
-            <small>Copyright &copy; Jane Doe 2019-2020</small>
+            <small>Copyright &copy; Cristina Robinson 2021</small>
         </div>
     </div>
 
