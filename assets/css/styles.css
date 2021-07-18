@@ -2,12 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: 100;
 }
 
@@ -24,7 +19,7 @@ hr {
 }
 
 section {
-    padding: 6rem 0;
+    padding: 3rem 0;
 }
 
 section h2 {
@@ -66,7 +61,7 @@ section h2 {
 
 header.masthead {
     padding-top: calc(3rem + 56px);
-    padding-bottom: 6rem;
+    padding-bottom: 5rem;
 }
 
 header.masthead h1 {
@@ -94,7 +89,6 @@ header.masthead h2 {
 
 .brand-statement,
 .about-me {
-    margin-top: 50px;
     font-size: 1.2em;
     font-weight: 100;
     line-height: 1.5;
@@ -104,15 +98,13 @@ header.masthead h2 {
     margin-top: 50px;
 }
 
-.portfolio {
-    margin-bottom: -15px;
-}
 
-.portfolio .portfolio-item {
+.portfolio-item {
     position: relative;
     display: block;
     max-width: 25rem;
     margin-bottom: 15px;
+    padding: 0px;
 }
 
 .portfolio .portfolio-item .portfolio-item-caption {
@@ -131,15 +123,6 @@ header.masthead h2 {
     .portfolio-item-caption
     .portfolio-item-caption-content {
     font-size: 1.5rem;
-}
-
-@media (min-width: 576px) {
-    .portfolio {
-        margin-bottom: -30px;
-    }
-    .portfolio .portfolio-item {
-        margin-bottom: 30px;
-    }
 }
 
 .portfolio-modal .portfolio-modal-dialog {
@@ -177,9 +160,6 @@ header.masthead h2 {
     }
 }
 
-.education {
-    margin-bottom: -15px;
-}
 
 .education .location {
     font-size: 1.6rem;
@@ -200,15 +180,11 @@ header.masthead h2 {
 }
 
 .footer {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    background-color: #1a252f;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
     color: #fff;
 }
 
-.copyright {
-    background-color: #1a252f;
-}
 
 a:focus,
 a:hover,
@@ -217,21 +193,29 @@ a:active {
 }
 
 .close-link {
-    color: #30336b;
+    color: #3A405A;
 }
 
 .close-link:focus,
 .close-link:hover,
 .close-link:active {
-    color: #30336b;
+    color: #3A405A;
 }
 
 .btn {
     border-width: 2px;
 }
 
+.bg-default {
+    background-color: #1a252f;
+}
+
+.bg-accent {
+    background-color: #C2D7DE;
+}
+
 .bg-primary {
-    background-color: #30336b !important;
+    background-color: #3A405A !important;
 }
 
 .bg-secondary {
@@ -239,11 +223,15 @@ a:active {
 }
 
 .bg-tertiary {
-    background-color: #d8e2ec !important;
+    background-color: #F9DEC9 !important;
+}
+
+.bg-quaternary {
+    background-color: #E9AFA3 !important;
 }
 
 .text-primary {
-    color: #30336b !important;
+    color: #3A405A !important;
 }
 
 .text-secondary {
@@ -251,15 +239,15 @@ a:active {
 }
 
 .btn-primary {
-    background-color: #30336b;
-    border-color: #30336b;
+    background-color: #3A405A;
+    border-color: #3A405A;
 }
 
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-    background-color: #30336b !important;
-    border-color: #30336b !important;
+    background-color: #3A405A !important;
+    border-color: #3A405A !important;
     color: #fff;
 }
 
@@ -300,4 +288,27 @@ a:active {
 
 .icon {
     height: 45px;
+}
+
+h2 {
+    padding: 1em 0em;
+}
+
+.container.bg-tertiary {
+    padding: 0px;
+    margin: auto;
+}
+
+.sub-container, .credential {
+    padding: 1em;
+}
+
+.max-width-container {
+    margin: auto;
+    max-width: 1200px;
+}
+
+.smooth-corners {
+    border-radius: 1em !important;
+    overflow: hidden;
 }
