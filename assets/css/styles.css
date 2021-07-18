@@ -46,6 +46,13 @@ section h2 {
     color: #fff;
 }
 
+.btn-pubs {
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
 #mainNav .navbar-nav {
     letter-spacing: 0.0625rem;
 }
