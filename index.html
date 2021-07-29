@@ -149,6 +149,24 @@
                         </a>
                     </div>
                 </div>
+
+                <hr class="credential-divider hr-recolor" />
+                <h3>C# Blazor Projects</h3>
+                <div class="row">
+
+                    <!-- Bacteria Biodiversity-->
+                    <div class="col-md-6 col-lg-4">
+                        <a class="portfolio-item d-block mx-auto" data-toggle="modal" data-target="#portfolio-modal-5">
+                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                                    <p>Song Evolution Model</p>
+                                    <i class="fas fa-search-plus fa-2x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/project5.png" alt="" />
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -411,14 +429,14 @@
     <!-- Portfolio Modals: These are what open up when you click on each project. Replace the information as needed. -->
     <!-- Portfolio Modal 1 -->
     <div class="modal portfolio-modal mfp-hide" id="portfolio-modal-1">
-        <div class="portfolio-modal-dialog bg-white">
-            <a class="close-button portfolio-modal-dismiss" href="#" data-dismiss="modal">
-                <i class="fa fa-2x fa-times close-link"></i>
-            </a>
-
-            <div class="bg-tertiary smooth-corners">
-                <h2 class="text-secondary text-uppercase text-center bg-quaternary">
+        <div class="portfolio-modal-dialog"
+        onclick="if (event.srcElement==this) {$('#portfolio-modal-1').modal('hide');}">
+            <div class="bg-tertiary smooth-corners pop-up">
+                <h2 class="text-secondary text-uppercase bg-quaternary align-apart">
                     Arecace Website
+                    <a class="close-button portfolio-modal-dismiss" href="#" data-dismiss="modal">
+                        <i class="fa fa-2x fa-times close-link"></i>
+                    </a>
                 </h2>
     
                 <div class="center-contents container">
@@ -453,14 +471,14 @@
     </div>
 
     <div class="modal portfolio-modal mfp-hide" id="portfolio-modal-2">
-        <div class="portfolio-modal-dialog bg-white">
-            <a class="close-button portfolio-modal-dismiss" href="#" data-dismiss="modal">
-                <i class="fa fa-2x fa-times close-link"></i>
-            </a>
-
-            <div class="bg-tertiary smooth-corners">
-                <h2 class="text-secondary text-uppercase text-center bg-quaternary">
+        <div class="portfolio-modal-dialog"
+        onclick="if (event.srcElement==this) {$('#portfolio-modal-2').modal('hide');}">
+            <div class="bg-tertiary smooth-corners pop-up">
+                <h2 class="text-secondary text-uppercase bg-quaternary align-apart">
                     Creanza Lab Website
+                    <a class="close-button portfolio-modal-dismiss" href="#" data-dismiss="modal">
+                        <i class="fa fa-2x fa-times close-link"></i>
+                    </a>
                 </h2>
     
                 <div class="center-contents container">
@@ -492,14 +510,14 @@
     </div>
 
     <div class="modal portfolio-modal mfp-hide" id="portfolio-modal-3">
-        <div class="portfolio-modal-dialog bg-white">
-            <a class="close-button portfolio-modal-dismiss" href="#" data-dismiss="modal">
-                <i class="fa fa-2x fa-times close-link"></i>
-            </a>
-
-            <div class="bg-tertiary smooth-corners">
-                <h2 class="text-secondary text-uppercase text-center bg-quaternary">
+        <div class="portfolio-modal-dialog"
+        onclick="if (event.srcElement==this) {$('#portfolio-modal-3').modal('hide');}">
+            <div class="bg-tertiary smooth-corners pop-up">
+                <h2 class="text-secondary text-uppercase bg-quaternary align-apart">
                     Pokemon Card Database
+                    <a class="close-button portfolio-modal-dismiss" href="#" data-dismiss="modal">
+                        <i class="fa fa-2x fa-times close-link"></i>
+                    </a>
                 </h2>
     
                 <div class="center-contents container">
@@ -542,14 +560,14 @@
     </div>
 
     <div class="modal portfolio-modal mfp-hide" id="portfolio-modal-4">
-        <div class="portfolio-modal-dialog bg-white">
-            <a class="close-button portfolio-modal-dismiss" href="#" data-dismiss="modal">
-                <i class="fa fa-2x fa-times close-link"></i>
-            </a>
-
-            <div class="bg-tertiary smooth-corners">
-                <h2 class="text-secondary text-uppercase text-center bg-quaternary">
+        <div class="portfolio-modal-dialog"
+        onclick="if (event.srcElement==this) {$('#portfolio-modal-4').modal('hide');}">
+            <div class="bg-tertiary smooth-corners pop-up">
+                <h2 class="text-secondary text-uppercase bg-quaternary align-apart">
                     Bacterial Biodiversity
+                    <a class="close-button portfolio-modal-dismiss" href="#" data-dismiss="modal">
+                        <i class="fa fa-2x fa-times close-link"></i>
+                    </a>
                 </h2>
     
                 <div class="center-contents container">
@@ -571,6 +589,48 @@
                             <a class="btn btn-primary portfolio-modal-dismiss" href="https://neurobio.github.io/Bacteria-Diversity/">
                                 Live Website</a>
                             <a class="btn btn-primary portfolio-modal-dismiss" href="https://github.com/NeuroBio/Bacteria-Diversity">
+                                View Code</a>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal portfolio-modal mfp-hide " id="portfolio-modal-5">
+        <div class="portfolio-modal-dialog"
+        onclick="if (event.srcElement==this) {$('#portfolio-modal-5').modal('hide');}">
+
+            <div class="bg-tertiary smooth-corners pop-up">
+                <h2 class="text-secondary text-uppercase bg-quaternary align-apart">
+                    Song Evolution Model
+                    <a class="close-button portfolio-modal-dismiss" href="#" data-dismiss="modal">
+                        <i class="fa fa-2x fa-times close-link"></i>
+                    </a>
+                </h2>
+    
+                <div class="center-contents container ">
+                    <img class="fit-image mb-5" src="assets/img/portfolio/project5.png" alt="">
+                    <div class="col-lg-8">
+                        <hr>
+                        <p>
+                            For my thesis work, I wanted to study how different evolutionary
+                            pressures affect song learning in birds.  I coded an agent-based
+                            simulation model in R, and refactored it into C#, so that it would
+                            run faster.  To allow other researchers who might want to use the
+                            model to see how it works without downloading the C# or R package,
+                            I used the web assembly tool Blazor to convert my model library into
+                            this web app.
+                        </p>
+                        <p>
+                            <b>Tools and Languages:</b> C#, Blazor, Web Assembly, R 
+                        </p>
+                        <hr>
+                        <div class="text-center">
+                            <a class="btn btn-primary portfolio-modal-dismiss" href="https://neurobio.github.io/SEMWebApp/release/SEMWebApp/dist/">
+                                Live Website</a>
+                            <a class="btn btn-primary portfolio-modal-dismiss" href="https://github.com/NeuroBio/SEMWebApp">
                                 View Code</a>
                         </div>
                         <br>
