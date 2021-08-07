@@ -12,6 +12,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
     <!-- more bootstrap icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -27,6 +28,7 @@
 </head>
 
 <body id="page-top">
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-dark fixed-top text-uppercase" id="mainNav">
         <div class="container">
@@ -36,19 +38,8 @@
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link " href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#education">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#connect">Connect</a>
-                    </li>
+                <ul id="main-nav" class="navbar-nav ml-auto">
+                    <!-- Links populated by D3 -->
                 </ul>
             </div>
         </div>
@@ -88,98 +79,8 @@
             <h2 class="text-center text-uppercase text-secondary bg-quaternary">
                 Portfolio
             </h2>
-            <div class="sub-container">
-                <h3>Javascript Projects</h3>
-                <div class="row">
-
-                    <!-- Bacteria Biodiversity-->
-                    <div class="col-md-6 col-lg-4">
-                        <a class="portfolio-item d-block mx-auto" data-toggle="modal" data-target="#portfolio-modal-4">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <p>Bacterial Biodiversity</p>
-                                    <i class="fas fa-search-plus fa-2x"></i>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/project4.png" alt="" />
-                        </a>
-                    </div>
-
-                    <!-- VtM Maps-->
-                    <div class="col-md-6 col-lg-4">
-                        <a class="portfolio-item d-block mx-auto" data-toggle="modal" data-target="#portfolio-modal-6">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <p>VtM Maps</p>
-                                    <i class="fas fa-search-plus fa-2x"></i>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/project6.png" alt="" />
-                        </a>
-                    </div>
-                </div>
-
-                <hr class="credential-divider hr-recolor" />
-                <h3>Angular Projects</h3>
-                <div class="row">
-    
-                    <!-- Card Database-->
-                    <div class="col-md-6 col-lg-4">
-                        <a class="portfolio-item d-block mx-auto" data-toggle="modal" data-target="#portfolio-modal-3">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <p>Card Database</p>
-                                    <i class="fas fa-search-plus fa-2x"></i>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/project3.png" alt="" />
-                        </a>
-                    </div>
-    
-                    <!-- Arecace Website-->
-                    <div class="col-md-6 col-lg-4">
-                        <a class="portfolio-item d-block mx-auto" data-toggle="modal" data-target="#portfolio-modal-1">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <p>Arecace.com</p>
-                                    <i class="fas fa-search-plus fa-2x"></i>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/project1.png" alt="" />
-                        </a>
-                    </div>
-    
-                    <!-- Creanza Lab -->
-                    <div class="col-md-6 col-lg-4">
-                        <a class="portfolio-item d-block mx-auto" data-toggle="modal" data-target="#portfolio-modal-2">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <p>Creanza Lab Website</p>
-                                    <i class="fas fa-search-plus fa-2x"></i>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/project2.png" alt="" />
-                        </a>
-                    </div>
-                </div>
-
-                <hr class="credential-divider hr-recolor" />
-                <h3>C# Blazor Projects</h3>
-                <div class="row">
-
-                    <!-- Bacteria Biodiversity-->
-                    <div class="col-md-6 col-lg-4">
-                        <a class="portfolio-item d-block mx-auto" data-toggle="modal" data-target="#portfolio-modal-5">
-                            <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
-                                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
-                                    <p>Song Evolution Model</p>
-                                    <i class="fas fa-search-plus fa-2x"></i>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/project5.png" alt="" />
-                        </a>
-                    </div>
-                </div>
+            <div id="projectsSection" class="sub-container">
+                <!-- Projects populated by D3 -->
             </div>
         </div>
     </section>
@@ -198,11 +99,14 @@
             </p>
         </div>
         <div class="container">
+            <!-- Languages Icons -->
             <div class="col-md-10 offset-md-1">
                 <div id="icon-row" class="row text-center skills-row">
-                    <!-- Icons populated by d3 into here -->
+                    <!-- Icons populated by D3 -->
                 </div>
             </div>
+
+            <!-- Resume Download -->
             <div class="text-center mt-4">
                 <a class="btn btn-lg btn-outline-light" href="assets/Resume.pdf" crossorigin="anonymous">
                     <i class="fas fa-download mr-2"></i>
@@ -417,48 +321,44 @@
         </div>
     </footer>
 
-
-
-    <!-- Portfolio Modals: These are what open up when you click on each project. Replace the information as needed. -->
     <!-- Portfolio Modal 1 -->
     <div class="modal portfolio-modal mfp-hide" id="portfolio-modal-1">
         <div class="portfolio-modal-dialog"
-        onclick="if (event.srcElement==this) {$('#portfolio-modal-1').modal('hide');}">
-            <div class="bg-tertiary smooth-corners pop-up">
-                <h2 class="text-secondary text-uppercase bg-quaternary align-apart">
-                    Arecace Website
-                    <a class="close-button portfolio-modal-dismiss" href="#" data-dismiss="modal">
-                        <i class="fa fa-2x fa-times close-link"></i>
-                    </a>
-                </h2>
-    
-                <div class="center-contents container">
-                    <img class="fit-image mb-5" src="assets/img/portfolio/project1.png" alt="">
-                    <div class="col-lg-8">
-                        <hr>
-                        <p>
-                            The website for my original worldbuilding and story project set on the
-                            fictional planet Arecace.  All of the writing and the majority of the
-                            art for Arecace were created by me.  This was the first website I
-                            developed in Angular and remains my testing ground to figure out how to
-                            build new web components or learn new techniques.  I plan to refactor
-                            the code in the future to reflect what I’ve learned in the last 3 years.
-                        </p>
-                        <p>
-                            <b>Tools and Languages:</b> Angular, Firebase, Python, GCP
-                        </p>
-                        <hr>
+            onclick="if (event.srcElement==this) {$('#portfolio-modal-1').modal('hide');}">
+                <div class="bg-tertiary smooth-corners pop-up">
+                    <h2 class="text-secondary text-uppercase bg-quaternary align-apart">
+                        Arecace Website
+                        <a class="close-button portfolio-modal-dismiss" href="#" data-dismiss="modal">
+                            <i class="fa fa-2x fa-times close-link"></i>
+                        </a>
+                    </h2>
+        
+                    <div class="center-contents container">
+                        <img class="fit-image mb-5" src="assets/img/portfolio/project1.png" alt="">
+                        <div class="col-lg-8">
+                            <hr>
+                            <p>
+                                The website for my original worldbuilding and story project set on the
+                                fictional planet Arecace.  All of the writing and the majority of the
+                                art for Arecace were created by me.  This was the first website I
+                                developed in Angular and remains my testing ground to figure out how to
+                                build new web components or learn new techniques.  I plan to refactor
+                                the code in the future to reflect what I’ve learned in the last 3 years.
+                            </p>
+                            <p>
+                                <b>Tools and Languages:</b> Angular, Firebase, Python, GCP
+                            </p>
+                            <hr>
 
-                        <div class="text-center">
-                            <a class="btn btn-primary portfolio-modal-dismiss" href="https://arecace.com/home">
-                                Live Website</a>
-                            <a class="btn btn-primary portfolio-modal-dismiss" href="https://github.com/NeuroBio/ArecaceWebsite">
-                                View Code</a>
+                            <div class="text-center">
+                                <a class="btn btn-primary portfolio-modal-dismiss" href="https://arecace.com/home">
+                                    Live Website</a>
+                                <a class="btn btn-primary portfolio-modal-dismiss" href="https://github.com/NeuroBio/ArecaceWebsite">
+                                    View Code</a>
+                            </div>
+                            <br>
                         </div>
-                        <br>
-                    </div>
-            </div>
-
+                </div>
             </div>
         </div>
     </div>
@@ -704,6 +604,7 @@
         integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
 
     <!-- My scripts -->
+    <script src="assets/js/data.js"></script>
     <script src="assets/js/addElements.js"></script>
 </body>
 
