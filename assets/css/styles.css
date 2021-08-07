@@ -321,3 +321,11 @@ h2 {
     border-radius: 1em !important;
     overflow: hidden;
 }
+
+h4 {
+    font-size: 14pt;
+}
+
+.rounded-circle {
+    margin: .5em;
+}
