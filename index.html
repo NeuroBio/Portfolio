@@ -57,9 +57,9 @@
     <!-- Header -->
     <header class="masthead bg-primary text-white decor">
         <div class="max-width">
-            <h1 class="mb-0">Cristina Robinson</h1>
+            <h1>Cristina Robinson</h1>
             <hr />
-            <h2 class="mb-0">
+            <h2>
                 Programmer - Scientist - Artist
             </h2>
 
@@ -185,7 +185,7 @@
     </section>
 
     <!-- About Section -->
-    <section class="bg-primary text-white mb-0" id="about">
+    <section class="bg-primary text-white" id="about">
         <div class="container">
             <h2 class="text-center text-uppercase text-white">About Me</h2>
             <hr class="star-light mb-5" />
@@ -199,28 +199,8 @@
         </div>
         <div class="container">
             <div class="col-md-10 offset-md-1">
-                <div class="row text-center skills-row">
-                    <div class="col">
-                        <i class="fab fa-3x">
-                            <img src="assets/img/logos/r.svg" class="icon">
-                        </i>
-                    </div>
-                    <div class="col">
-                        <i class="fab fa-3x">
-                            <img src="assets/img/logos/c-sharp.svg" class="icon">
-                        </i>
-                    </div>
-                    <div class="col">
-                        <i class="fab fa-brands fa-python fa-3x"></i>
-                    </div>
-                    <div class="col">
-                        <i class="fab fa-brands fa-angular fa-3x"></i>
-                    </div>
-                    <div class="col">
-                        <i class="fab fa-3x">
-                            <img src="assets/img/logos/postgres.svg" class="icon">
-                        </i>
-                    </div>
+                <div id="icon-row" class="row text-center skills-row">
+                    <!-- Icons populated by d3 into here -->
                 </div>
             </div>
             <div class="text-center mt-4">
@@ -705,6 +685,8 @@
     </div>
 
 
+    <!-- D3 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -720,6 +702,9 @@
     <!-- Plugin JavaScript -->
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"
         integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
+
+    <!-- My scripts -->
+    <script src="assets/js/addElements.js"></script>
 </body>
 
 </html>
