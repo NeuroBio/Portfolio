@@ -55,7 +55,7 @@ icons.forEach(icon => {
 });
 
 
-// add project pop ups
+// Add Project Popups
 const body = d3.select('body');
 projectPopups.forEach(project => {
     // add the modal
@@ -93,3 +93,7 @@ projectPopups.forEach(project => {
         .attr('href', project.gitHub);
     description.append('br');
 });
+
+// Add Credentials
+
+

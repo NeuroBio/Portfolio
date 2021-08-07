@@ -129,3 +129,24 @@ const projectPopups = [
         live: 'https://neurobio.github.io/VtM-Maps/'
     },
 ];
+
+const staticText = {
+    brand: `Software engineer looking to work with a collaborative team in data
+    analysis and software development.  Earned PhD from Vanderbilt University
+    in computational biology with five publications.  Took a course in R, and
+    self-taught in C#, Angular, typescript, HTML, and CSS.  Earned a
+    Certificate in Data Analysis from University of Miami, learning Excel,
+    VBA, Python, and SQL.  Developed three live websites and currently acting
+    as a consultant for tech start-up TrustiPhi LLC to design and implement
+    the frontend for their flagship application. Engages in high level
+    discussions with business owners and programmers alike to propose solutions
+    to challenging big picture problems.  Enjoys automating workflow to make
+    tasks faster, easier, and repeatable.  Strives to write readable code and
+    minimize code debt.  Asks for and offers help readily, so that no one is
+    reinventing the wheel.  Well positioned to provide the creativity of an
+    artist and logical approach of a scientist to application development.`,
+    about: ` I am scientist redesigning myself into a software engineer.
+    I live for overcoming complex challenges and aim to make 
+    applications and data stories that are efficient, fast, and
+    aesthetically pleasing.`
+}
