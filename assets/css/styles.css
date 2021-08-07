@@ -237,6 +237,7 @@ a:active {
 .btn-primary {
     background-color: #3A405A;
     border-color: #3A405A;
+    margin: .5em;
 }
 
 .btn-primary:hover,
