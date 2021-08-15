@@ -45,6 +45,39 @@ const projects = [
     },
 ];
 
+const unliveProjects = [
+    {
+        name: 'Song Evolution Model R Package',
+        link: 'https://github.com/NeuroBio/SEM_R_Package',
+        languages: 'R'
+    },
+    {
+        name: 'MechaCar Statistical Analysis',
+        link: 'https://github.com/NeuroBio/MechaCar_Statistical_Analysis',
+        languages: 'R'
+    },
+    {
+        name: 'Mission To Mars Web Scraping',
+        link: 'https://github.com/NeuroBio/Mission-to-Mars/',
+        languages: 'Python, MongoDB'
+    },
+    {
+        name: 'Movies ETL',
+        link: 'https://github.com/NeuroBio/Movies-ETL',
+        languages: 'Python, SQL'
+    },
+    {
+        name: 'PyBer Analysis',
+        link: 'https://github.com/NeuroBio/PyBer_Analysis',
+        languages: 'Python'
+    },
+    {
+        name: 'World Weather Analysis',
+        link: 'https://github.com/NeuroBio/World_Weather_Analysis',
+        languages: 'Python, APIs'
+    }
+];
+
 const icons = [
     { type: 'img', link: 'assets/img/logos/r.svg' },
     { type: 'img', link: 'assets/img/logos/c-sharp.svg' },
