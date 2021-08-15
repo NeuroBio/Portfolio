@@ -329,3 +329,14 @@ h4 {
 .rounded-circle {
     margin: .5em;
 }
+
+.unlive-projects {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.unlive-projects li {
+    margin: 0em 0em .5em 2em;
+    min-width: 250px;
+    flex: 1 1 25%;
+}

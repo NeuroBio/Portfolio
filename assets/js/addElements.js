@@ -13,7 +13,7 @@ const projectsSection  = d3.select('#projectsSection');
 
 projects.forEach((projectType, i) => {
     // project section header
-    projectsSection.append('h3').text(`${projectType.type} Projects`)
+    projectsSection.append('h3').text(`Live ${projectType.type} Projects`)
     const projectRow = projectsSection.append('div').attr('class', 'row')
 
     // display for each project
@@ -35,9 +35,19 @@ projects.forEach((projectType, i) => {
             .attr('src', `assets/img/portfolio/project${showcase.number}.png`).attr('alt', '');
     });
     // divders between project sections
-    if (i < projects.length - 1 ) {
-        projectsSection.append('hr').attr('class', 'credential-divider hr-recolor')
-    }
+    // if (i < projects.length - 1 ) {
+    projectsSection.append('hr').attr('class', 'credential-divider hr-recolor')
+    // }
+});
+
+projectsSection.append('h3').text('Code-Only Projects');
+const unliveProjectRow = projectsSection.append('ul').attr('class', 'unlive-projects');
+
+unliveProjects.forEach(project => {
+    const projectLine = unliveProjectRow.append('li')
+    projectLine.append('a').attr('href', project.link).html(`<i class="fab fa-github"></i> ${project.name}`);
+    projectLine.append('br');
+    projectLine.append('span').text(`Tools and Languages: ${project.languages}`);
 });
 
 
@@ -153,59 +163,3 @@ credentials.forEach((cred, i) => {
     }
 });
 
-
-{/* 
-       
-
-                <ul>
-                    <li>
-                        PRESS: <i>The Conversation</i>, September 3, 2019 - Complex birdsongs help biologists piece together the evolution of lifelong learning
-                        <a class="btn-pubs text-center rounded-circle" aria-label="Link to article"
-                            href="https://theconversation.com/complex-birdsongs-help-biologists-piece-together-the-evolution-of-lifelong-learning-122009">
-                            <i class="bi bi-newspaper"></i>
-                        </a>
-                    </li>
-                    <li>
-                        PRESS: <i>Research News @ Vanderbilt</i>, High standards of female songbirds could be driving their mates to evolve
-                        <a class="btn-pubs text-center rounded-circle" aria-label="Link to article"
-                            href="https://news.vanderbilt.edu/2019/09/04/high-standards-of-female-songbirds-could-be-driving-their-mates-to-evolve/">
-                            <i class="bi bi-newspaper"></i>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <b>C. Robinson</b>, N. Creanza. (2019). Species‐level repertoire size predicts
-                a correlation between individual song elaboration and reproductive success.
-                <i>Ecology and Evolution</i>. 9(14): 8362-8377.
-                <a class="btn-pubs text-center rounded-circle" aria-label="Link to article"
-                    href="https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.5418">
-                    <i class="bi bi-journal-richtext"></i>
-                </a>
-                <a class="btn-pubs text-center rounded-circle" aria-label="github-link"
-                    href="https://github.com/CreanzaLab/RepertoireSizeReproductiveSuccess">
-                        <i class="fab fa-github"></i>
-                </a>
-            </li>
-            <li>
-                <b>C. Robinson</b>, M. Patel, D. Webb. (2016). Super resolution microscopy is poised to
-                reveal new insights into the formation and maturation of dendritic spines. <i>F1000Research</i>.
-                5(F100 Faculty Rev), 1468.
-                <a class="btn-pubs text-center rounded-circle" aria-label="Link to article"
-                    href="https://f1000research.com/articles/5-1468/v1">
-                    <i class="bi bi-journal-richtext"></i>
-                </a>
-            </li>
-            <li>
-                J. Evans, <b>C. Robinson</b>, M. Shi, D. Webb. (2015).
-                The guanine nucleotide exchange factor (GEF) asef2 promotes dendritic spine
-                formation via rac activation and spinophilin-dependent targeting.
-                <i>Journal of Biological Chemistry</i>. 290, 10295-10398.
-                <a class="btn-pubs text-center rounded-circle" aria-label="Link to article"
-                    href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4400342/">
-                    <i class="bi bi-journal-richtext"></i>
-                </a>
-            </li>
-        </ol>
-    </p>
-</div> */}
