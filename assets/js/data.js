@@ -224,9 +224,10 @@ const credentials = [
             },
             {
                 citationInnerHTML: ` R. Gordon, A. Ravignani, J. Hyland Bruno, <b>C. Robinson</b>, A. Scartozzi,
-                R. Embalabala, M. Niarchou, 23andMe Research Team, N. Cox, N. Creanza.
+                R. Embalabala, M. Niarchou, 23andMe Research Team, N. Cox, N. Creanza. (2021)
                 Linking the genomic signatures of human beat synchronization and learned
-                song in birds. <i>Phil Trans B</i>. (in press)`,
+                song in birds. <i>Phil Trans B</i>. 376(1835)`,
+                link: 'https://royalsocietypublishing.org/doi/abs/10.1098/rstb.2020.0329'
             },
             {
                 citationInnerHTML: `<b>C. Robinson</b>, K. Snyder, N. Creanza. (2019).
