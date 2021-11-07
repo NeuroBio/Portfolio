@@ -1,18 +1,18 @@
 const staticText = {
-    brand: `Software engineer looking to work with a collaborative team in data
-    analysis and software development.  Earned PhD from Vanderbilt University
-    in computational biology with five publications.  Took a course in R, and
-    self-taught in C#, Angular, typescript, HTML, and CSS.  Earned a
-    Certificate in Data Analysis from University of Miami, learning Excel,
-    VBA, Python, and SQL.  Developed three live websites and currently acting
-    as a consultant for tech start-up TrustiPhi LLC to design and implement
-    the frontend for their flagship application. Engages in high level
-    discussions with business owners and programmers alike to propose solutions
-    to challenging big picture problems.  Enjoys automating workflow to make
-    tasks faster, easier, and repeatable.  Strives to write readable code and
-    minimize code debt.  Asks for and offers help readily, so that no one is
-    reinventing the wheel.  Well positioned to provide the creativity of an
-    artist and logical approach of a scientist to application development.`,
+    brand: `Software engineer looking to work with a collaborative team in software
+    development or data analysis. Earned PhD from Vanderbilt University in
+    computational biology with eight publications. Took a course in R, and
+    self-taught in C#, Angular, typescript, HTML, and CSS. Earned a Certificate
+    in Data Analysis from University of Miami, learning Python, SQL, and Big
+    Data analytics.  Developed seven live websites and currently acting
+    as a consultant for tech start-up TrustiPhi LLC to design and implement the
+    frontend for their flagship application. Engages in high level discussions
+    with business owners and programmers alike to propose solutions to challenging
+    big picture problems. Enjoys automating workflow to make tasks faster,
+    easier, and repeatable. Strives to write readable code and minimize code debt.
+    Asks for and offers help readily, so that no one is reinventing the wheel.
+    Well positioned to provide the creativity of an artist and logical approach
+    of a scientist to application development.`,
     about: `I am scientist redesigning myself into a software engineer.
     I live for overcoming complex challenges and aim to make 
     applications and data stories that are efficient, fast, and
@@ -38,9 +38,10 @@ const projects = [
         ]
     },
     {
-        type: 'C# Blazor',
+        type: 'Misc.',
         showcase: [
-            { title: 'Song Evolution Model', number: 5 }
+            { title: 'Song Evolution Model', number: 5 },
+            { title: 'Bull or Bear Crypto', number: 7 }
         ]
     },
 ];
@@ -75,7 +76,17 @@ const unliveProjects = [
         name: 'World Weather Analysis',
         link: 'https://github.com/NeuroBio/World_Weather_Analysis',
         languages: 'Python, APIs'
-    }
+    },
+    {
+        name: 'Credit Risk Analysis',
+        link: 'https://github.com/NeuroBio/Credit_Risk_Analysis',
+        languages: 'Python, SciKitLearn (logistic regression and random forest models)'
+    },
+    {
+        name: 'Neural Network Charity Analysis',
+        link: 'https://github.com/NeuroBio/Neural_Network_Charity_Analysis',
+        languages: 'Python, Tensorflow (neural networks)'
+    },
 ];
 
 const icons = [
@@ -182,6 +193,26 @@ const projectPopups = [
         gitHub: 'https://github.com/NeuroBio/VtM-Maps',
         live: 'https://neurobio.github.io/VtM-Maps/'
     },
+
+    {
+        title: 'Bull or Bear Crypto',
+        number: 7,
+        desc: `For the final project of my data analytics bootcamp, I worked in a team of five.
+        Using Facebook’s Prophet model
+        and our own LSTM neural network model, we wanted to address two questions: 1) Can you
+        predict cryptocurrency prices using market data and/or social media chatter? And 2) how far
+        in the future are these predictions accurate? We found that using past price data and Reddit
+        chatter could predict the future prices of cryptocurrencies like Bitcoin and Ethereum to some
+        degree, but these predictions were not accurate very far into the future.
+
+        My Contributions include: Wrote web scraping code and API wrappers. Researched and coded the LSTM model.
+        Analyzed LSTM results. Handled merge requests and merge conflicts for the group. Helped set up
+        and troubleshoot the database on MongoDB Atlas. In charge of the README. Led live share sessions
+        for bug testing and to teach html best practices and CSS tricks`,
+        tools: 'Flask, MongoDB, postgreSQL, Heroku, Python',
+        gitHub: 'https://github.com/CaptCarmine/Bull_or_Bear_Crypto',
+        live: 'https://bull-or-bear-crypto.herokuapp.com/'
+    },
 ];
 
 const credentials = [
@@ -194,27 +225,35 @@ const credentials = [
         intuitive user-experience.  Responsible for developing new features of
         the redesigned application including resolvers and unit tests.  Extended
         and improved base functionality as well as implementing changes to meet
-        web accessibility standards.  As part of this project, wrote over 50
+        web accessibility standards.  As part of this project, wrote over 60
         JIRA tasks.`
     },
     {
         where: 'University of Miami',
         when: 'May 2021 - October 2021',
         what: 'Certificate in Data Analytics',
-        descInnerHTML: ` Learned Excel, VBA, Python, PostgreSQL, and techniques
-        for big data analytics during a 24-week course. See
-        <a href="https://bootcamp.miami.edu/data/">course description.</a>`
+        descInnerHTML: `Learned Excel, VBA, Python, PostgreSQL, big data analytics techniques,
+        and machine learning during a 24-week course. See my final probject above (Bull or Bear Crypto project under
+        Live Misc. Projects) and the <a href="https://bootcamp.miami.edu/data/">course description.</a>`
     },
     {
         where: 'Vanderbilt University',
         when: 'May 2013 - Oct 2019',
         what: 'Ph.D. in Computational Biology',
-        descInnerHTML: ` <ol><li>Examined how birdsong evolves using a
-        simulation model I developed in R and C#.</li> <li>Compiled published
-        data and performed meta data analysis to understand the relationship
-        between birdsong complexity and reproductive success.</li></ol>
-        <i>Thesis Advisors:</i> Dr. Donna Webb (2014-2017, deceased) & Dr.
-        Nicole Creanza (2017-2019)`,
+        descInnerHTML: `
+        <i>Research Advisor:</i> Dr. Nicole Creanza<br><br>
+        Why are some bird’s song so complicated, while others only sing one note? I
+        looked to answer these questions from two angles. First, I datamined journal articles to
+        create a database of correlations between song elaboration and sexual success. My analysis
+        in R showed that song elaboration was only correlated with sexual success in species that
+        have very elaborate songs, implying that elaborate song could be an example of runaway
+        sexual selection in some species. Next, I programmed an agent-based model in C# to examine
+        how song evolves given different selection pressures, such as female preference for more
+        elaborate song, or preference for song that matches a specific template. I found that
+        changing the female song preference from one specific song (a template) or more elaborate
+        song had a marked effect on the number of years a population spent learning song.
+        Furthermore, different male song-learning strategies were more effective for appealing to
+        one preference or the other.`,
         publications: [
             {
                 citationInnerHTML: `<b>C. Robinson</b>, N. Creanza. (2021). Modeling the evolutionary
@@ -273,8 +312,20 @@ const credentials = [
         where: 'Ohio Northern University',
         when: 'Aug 2009 - May 2013',
         what: 'B.S. in Molecular Biology and Behavioral Neuroscience',
-        descInnerHTML: `Research Assistant 2010-2013<br>
-        <i>Research Advisor:</i> Dr. Phillip Zoladz`,
+        descInnerHTML: `<i>Research Assistant:</i> 2010-2013<br>
+        <i>Research Advisor:</i> Dr. Phillip Zoladz<br><br>
+        The way stress interacts with memory is complicated.  Sometimes,
+        highly stressful events lead to shockingly clear recollections certain
+        aspects of the stress (known as flashbulb memories).  Sometimes, stress
+        leads to poor memory storage and seemingly unforgettable details may be
+        entirely lost.  Using a rat model, we sought to examine how stress
+        affects the animals’ ability to remember how to solve a maze.  We
+        discovered two key findings:  1) Using drugs to blunt the action of the
+        stress hormone corticosterone prior to stress significantly impaired the
+        rats’ ability to remember the maze.  2)  We found that presenting a
+        reminder of a past stressful event before maze testing impaired maze
+        memory only in female rats.`
+        ,
         publications: [
             {
                 citationInnerHTML: `P. Zoladz, H. Burke, <b>C. Robinson</b>, S. Woelke, B. Wentz, J. Pisansky,
