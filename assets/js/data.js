@@ -141,7 +141,7 @@ const projectPopups = [
         demand to load new set expansions into the database on the
         fly.`,
         tools: 'Angular, Firebase, Python, GCP',
-        gitHub: 'https://github.com/NeuroBio/pokemon-card-database',
+        gitHub: 'https://github.com/NeuroBio/CardDatabase_ng14',
         live: 'https://carddatabase-6dfef.web.app/Masterlist'
     },
     {
