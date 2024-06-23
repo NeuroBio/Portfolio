@@ -30,8 +30,9 @@ nav .flatten li a {
 	border-radius: 2em;
 }
 
-.flatten li a:hover {
-	color: rgb(196, 160, 250);
+.flatten li a:hover, a:focus {
+	/* important required on focus */
+	color: rgb(196, 160, 250) !important; 
 	background-color: rgba(196, 163, 227, 0.25);
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, .25);
 	
