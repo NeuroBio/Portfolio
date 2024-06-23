@@ -18,8 +18,19 @@ ul.flatten li a {
 	margin: 0px 5px;
 }
 
+nav ul.flatten li a {
+	padding: .3em;
+	border-radius: .5em;
+}
+
+ul.flatten li a {
+	padding: .4em;
+	border-radius: 2em;
+}
+
 ul.flatten li a:hover {
 	color: rgb(198, 117, 221);
+	background-color: rgba(227, 163, 216, 0.1);
 }
 
 ul.flatten li a:active {
