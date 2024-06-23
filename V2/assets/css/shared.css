@@ -49,6 +49,7 @@ nav .flatten li a {
 
 .main-section {
 	padding: 0em .5em .2em .5em;
+	border-bottom: solid 2px rgb(198, 117, 221);
 }
 
 hr {
@@ -98,7 +99,6 @@ footer {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: end;
-	border-top: solid 2px rgb(198, 117, 221);
 	padding: 0em .5em .2em .5em;
 	background-color: #363342;
 }

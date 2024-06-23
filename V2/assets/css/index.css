@@ -2,6 +2,7 @@
 #header-info {
 	position: relative;
 	max-width: 600px;
+	width: 100vw;
 	border-right: solid 2px rgb(198, 117, 221);
 	display: inline-flex;
 	flex-direction: column;
