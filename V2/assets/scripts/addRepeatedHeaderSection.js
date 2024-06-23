@@ -1,0 +1,19 @@
+const header = d3.select('header');
+
+const tagSection = header.append('section')
+	.attr('id', 'header-info');
+
+
+const upperSection = tagSection.append('section')
+	.attr('id', 'header-w-avatar');
+
+const avatarSection = upperSection.append('section')
+	.attr('id', 'header-avatar-container');
+avatarSection.append('img')
+	.attr('id', 'header-avatar');
+
+const nameText = upperSection.append('section')
+	.attr('id', 'header-title');
+nameText.append('h1').text('Cristina Robinson')
+
+tagSection.append('h2').text('Programmer - Scientist - Artist');
