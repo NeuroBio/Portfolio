@@ -92,17 +92,17 @@ nav {
 header {
 	padding: 2.7em .5em 0 .5em;
 	border-bottom: solid 2px rgb(198, 117, 221);
+	display: flex;
 }
 
 
-#header-info {
+.header-left {
 	position: relative;
 	max-width: 600px;
 	width: 100vw;
 	border-right: solid 2px rgb(198, 117, 221);
 	display: inline-flex;
 	flex-direction: column;
-	margin-right: -.6em;
 }
 
 #header-w-avatar {
@@ -148,4 +148,12 @@ footer {
 	align-items: end;
 	padding: 0em .5em .2em .5em;
 	background-color: #363342;
+}
+
+#connect {
+	padding: 1em 0;
+}
+
+#connect ul {
+	margin: 0;
 }
