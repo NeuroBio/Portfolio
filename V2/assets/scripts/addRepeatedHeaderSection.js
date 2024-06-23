@@ -1,7 +1,4 @@
-const header = d3.select('header');
-
-const tagSection = header.append('section')
-	.attr('id', 'header-info');
+const tagSection = d3.select('#header-info');
 
 
 const upperSection = tagSection.append('section')
