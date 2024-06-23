@@ -48,6 +48,7 @@ h2 {
 
 p {
 	font-family:  "Source Code Pro", monospace;
+	font-size: .9em;
 }
 
 nav {
@@ -56,7 +57,7 @@ nav {
 	align-content: flex-end;
 	justify-content: right;
 	position: fixed;
-	width: calc(100vw - 20px);
+	width: calc(100vw - 16px);
 	background-color: #1b1a1e;
 	margin: -8px 0 0 0;
 	border-bottom: solid 2px rgb(198, 117, 221);
@@ -64,6 +65,14 @@ nav {
 
 header {
 	padding-top: 2em;
+}
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: end;
+	border-top: solid 2px rgb(198, 117, 221);
 }
 
 #header-info {
@@ -83,4 +92,12 @@ header {
 
 #socials {
 	display: inline-flex;
+}
+
+#connect {
+	padding: 1em 0;
+}
+
+#connect ul {
+	margin: 0;
 }
