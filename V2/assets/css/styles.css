@@ -5,44 +5,48 @@ body {
 	margin: 0;
 }
 
-ul.flatten {
+.flatten {
 	padding: 0 2em 0 0;
 	display: inline-flex;
 }
 
-ul.flatten li {
+.flatten li {
 	list-style-type: none;
 }
 
-ul.flatten li a {
+.flatten li a {
 	color: whitesmoke;
 	margin: 0px 5px;
 }
 
-nav ul.flatten li a {
+nav .flatten li a {
 	padding: .3em;
 	border-radius: .5em;
 }
 
-ul.flatten li a {
+.flatten li a {
 	padding: .4em;
 	border-radius: 2em;
 }
 
-ul.flatten li a:hover {
+.flatten li a:hover {
 	color: rgb(196, 160, 250);
 	background-color: rgba(196, 163, 227, 0.25);
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, .25);
 	
 }
 
-ul.flatten li a:active {
+.flatten li a:active {
 	color: rgb(67, 14, 120);
 	box-shadow: 0 0 0;
 }
 
 .link-button {
 	text-decoration: none;
+}
+
+.main-section {
+	padding: 0em .5em .2em .5em;
 }
 
 hr {
