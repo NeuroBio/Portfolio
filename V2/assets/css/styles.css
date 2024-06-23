@@ -102,6 +102,7 @@ footer {
 	border-right: solid 2px rgb(198, 117, 221);
 	display: inline-flex;
 	flex-direction: column;
+	margin-right: -.6em;
 }
 #header-w-avatar {
 	display: flex;
