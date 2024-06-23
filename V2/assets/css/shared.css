@@ -5,6 +5,7 @@ body {
 	margin: 0;
 }
 
+
 .flatten {
 	padding: 0 2em 0 0;
 	display: inline-flex;
@@ -99,65 +100,4 @@ footer {
 	border-top: solid 2px rgb(198, 117, 221);
 	padding: 0em .5em .2em .5em;
 	background-color: #363342;
-}
-
-#header-info {
-	position: relative;
-	max-width: 600px;
-	border-right: solid 2px rgb(198, 117, 221);
-	display: inline-flex;
-	flex-direction: column;
-	margin-right: -.6em;
-}
-#header-w-avatar {
-	display: flex;
-	position: relative;
-}
-
-#header-w-avatar:after {
-	content: '';
-	position: absolute;
-	background-color: rgb(198, 117, 221);
-	bottom: 0;
-	left: 0;
-	width: 450px;
-	max-width: 100%;
-	height: 2px;
-	z-index: 1;
-}
-
-#header-avatar-container {
-	z-index: 3;
-
-	height: 70px;
-	width: 70px;
-	/* margin-right: .5em; */
-	background-color: #363342;
-	border-radius: 2em;
-	margin-top: .5em;
-}
-
-#header-avatar {
-	height: 83px;
-}
-
-#header-title {
-	position: relative;
-	z-index: 5;
-}
-
-#teaser {
-	display: inline-block;
-}
-
-#socials {
-	display: inline-flex;
-}
-
-#connect {
-	padding: 1em 0;
-}
-
-#connect ul {
-	margin: 0;
 }
