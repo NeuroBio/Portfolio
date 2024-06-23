@@ -14,10 +14,19 @@ const currentPageName = currentPage.attr('id');
 const onHome = currentPageName === Page.HOME;
 const onAbout = currentPageName === Page.ABOUT;
 
-linkList.append('li').append('a')
-	.attr('href', onAbout ? '' : 'pages/about.html')
+if (!onAbout) {
+	linkList.append('li').append('a')
+	.attr('href', 'pages/about.html')
 	.attr('class', 'link-button')
 	.text('About');
+}
+
+if (!onHome) {
+	linkList.append('li').append('a')
+	.attr('href', '../index.html')
+	.attr('class', 'link-button')
+	.text('Home');
+}
 
 linkList.append('li').append('a')
 	.attr('href', onHome ? '#projects' : '../index.html#projects')
