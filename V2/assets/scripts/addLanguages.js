@@ -6,9 +6,10 @@ PortfolioData.mainLanguages.forEach((language) => {
 		.attr('class', 'language-card');
 	const icon = language.usesLocalImage
 		? iconContainer.append('img')
-		: iconContainer.append('i')
+		: iconContainer.append('i');
 
 	icon.attr('id', language.name)
 		.attr('src', language.src)
-		.attr('class', language.class);
+		.attr('class', language.class)
+		.attr('alt', language.description);
 });
