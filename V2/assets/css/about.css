@@ -56,8 +56,13 @@ header {
 	border-radius: .5em;
 	background-color: rgb(62, 36, 60);
 }
+
 #minutia {
 	padding: .5em;
 	display: flex;
 	column-gap: .5em;
+}
+
+#main-tool-name {
+	height: 1em;
 }
