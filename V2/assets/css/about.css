@@ -1,3 +1,22 @@
-#teaser {
-	display: inline-block;
+.header-right {
+}
+
+#language-header {
+	margin: .5em;
+}
+
+
+#language-card-container {
+	display: flex;
+	font-size: 3em;
+	align-content: space-around;
+}
+
+.language-card {
+	padding: .2em .2em 0 .2em;	
+}
+
+.logo {
+	/* width: 40px; */
+	height: 50px;
 }

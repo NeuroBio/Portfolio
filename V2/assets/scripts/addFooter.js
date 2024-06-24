@@ -7,18 +7,18 @@ const socials = footer.append('section')
 const socialsList = socials.append('ul')
 	.attr('class', 'flatten');
 
-const linkedIn = socialsList.append('li').append('a')
-	.attr('id', 'linkedin')
-	.attr('href', 'https://www.linkedin.com/in/cristina-robinson-88938052/');
-linkedIn.append('i')
-	.attr('class', 'fab fa-linkedin-in');
-
 
 const gitHub = socialsList.append('li').append('a')
 	.attr('id', 'github')
 	.attr('href', 'https://github.com/NeuroBio');
 gitHub.append('i')
 	.attr('class', 'fab fa-github');
+
+const linkedIn = socialsList.append('li').append('a')
+	.attr('id', 'linkedin')
+	.attr('href', 'https://www.linkedin.com/in/cristina-robinson-88938052/');
+linkedIn.append('i')
+	.attr('class', 'fab fa-linkedin');
 
 const email = socialsList.append('li').append('a')
 	.attr('id', 'email')
