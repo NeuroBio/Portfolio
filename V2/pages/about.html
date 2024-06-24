@@ -31,39 +31,38 @@
 
 			<section class="header-right">
 				<h2 id="language-header">
-					Main Languages and Tools
+					Current Tools
 				</h2>
-				<section id="language-card-container">
-					<article class="language-card"><i class="fab fa-node-js"></i></article>
-					<article class="language-card"><i class="fab fa-npm"></i></article>
-					<article class="language-card"><i class="fab fa-git"></i></article>
-					<article class="language-card"><i class="fab fa-jira"></i></article>
-					<article class="language-card"><img class="logo" src="../assets//images//logos/jasmine.svg"></img></article>
-
-
-					<article class="language-card"><i class="fab fa-github-square"></i></article>
-					<article class="language-card"><i class="fab fa-bitbucket"></i></article>
-					<article class="language-card"><i class="fab fa-confluence"></i></article>
-					<article class="language-card"><i class="fab fa-markdown"></i></article>
-					<!-- <article class="language-card"><i class="fab fa-discord"></i></article> -->
-
-					<article class="language-card"><i class="fab fa-angular"></i></article>
-					<article class="language-card"><img class="logo" src="../assets//images//logos/c-sharp.svg"></img></article>
-					<article class="language-card"><img class="logo" src="../assets//images//logos/firebase.svg"></img></article>
-					<article class="language-card"><img class="logo" src="../assets//images//logos/latex.svg"></img></article>
-					<article class="language-card"><img class="logo" src="../assets//images//logos/jest.svg"></img></article>
-					<article class="language-card"><i class="fab fa-python"></i></article>
-					<article class="language-card"><i class="fab fa-r-project"></i></article>
-					<article class="language-card"><i class="fab fa-react"></i></article>
-					<!-- <article class="language-card"><i class="fab fa-slack"></i></article> -->
-				</section>
+				<section id="main-language-card-container"><!-- added with d3 --></section>
 			</section>
 		</header>
 
-		<section class="main-section">
-			<article>I'm Passionate About</article>
-			<article>Books I Recommend</article>
-			<article>Rusty Languages</article>
+		<section id="minutia" class="main-section">
+			<article class="minutia-card">
+				<h2>I'm Passionate About</h2>
+			</article>
+			<article class="minutia-card">
+				<h2>Books I Recommend</h2>
+			</article>
+			<article class="minutia-card">
+				<h2>Other Tools</h2>
+				
+				<article class="language-card-smaller"><i class="fab fa-github-square"></i></article>
+				<article class="language-card-smaller"><i class="fab fa-bitbucket"></i></article>
+				<article class="language-card-smaller"><i class="fab fa-confluence"></i></article>
+				<article class="language-card-smaller"><i class="fab fa-markdown"></i></article>
+				<!-- <article class="language-card-smaller"><i class="fab fa-discord"></i></article> -->
+
+				<article class="language-card-smaller"><i class="fab fa-angular"></i></article>
+				<article class="language-card-smaller"><img class="logo-smaller" src="../assets//images//logos/c-sharp.svg"></img></article>
+				<article class="language-card-smaller"><img class="logo-smaller" src="../assets//images//logos/firebase.svg"></img></article>
+				<article class="language-card-smaller"><img class="logo-smaller" src="../assets//images//logos/latex.svg"></img></article>
+				<article class="language-card-smaller"><img class="logo-smaller" src="../assets//images//logos/jest.svg"></img></article>
+				<article class="language-card-smaller"><i class="fab fa-python"></i></article>
+				<article class="language-card-smaller"><i class="fab fa-r-project"></i></article>
+				<article class="language-card-smaller"><i class="fab fa-react"></i></article>
+				<!-- <article class="language-card-smaller"><i class="fab fa-slack"></i></article> -->
+			</article>
 		</section>
 		<footer><!-- added with d3 --></footer>
 
@@ -71,6 +70,7 @@
 		<script src="../assets/scripts/PortfolioData.js"></script>
 		<script src="../assets/scripts/addNav.js"></script>
 		<script src="../assets/scripts/addRepeatedHeaderSection.js"></script>
+		<script src="../assets/scripts/addLanguages.js"></script>
 		<script src="../assets/scripts/addText.js"></script>
 		<script src="../assets/scripts/addFooter.js"></script>
 	</body>

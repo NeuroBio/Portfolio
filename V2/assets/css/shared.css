@@ -99,8 +99,9 @@ header {
 .header-left {
 	position: relative;
 	max-width: 600px;
+	flex: 1 1 400px;
 	width: 100vw;
-	border-right: solid 2px rgb(198, 117, 221);
+	/* border-right: solid 2px rgb(198, 117, 221); */
 	display: inline-flex;
 	flex-direction: column;
 }
