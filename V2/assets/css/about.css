@@ -50,22 +50,43 @@ header {
 	height: 30px;
 }
 
-.minutia-card {
-	padding: .5em;
-	border-radius: .5em;
-	background-color: rgb(62, 36, 60);
-}
-
 #minutia {
 	padding: .5em;
 	display: flex;
 	column-gap: .5em;
+	justify-content: space-around;
 }
 
-#more-languages {
+.minutia-card {
+	padding: .5em;
+	border-radius: .5em;
+	background-color: rgb(62, 36, 60);
+	max-width: 350px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.book {
+	list-style-type: none;
+}
+
+.book-link {
+	font-style: italic;
+	font-weight: bold;
+	text-decoration: none;
+	color: #8987f7;
+	font-family: "Rajdhani", sans-serif;
+	font-size: 1.25em;
+	margin-left: -1.5em;
+}
+
+.book-link:hover {
+	color: #5b58da;
+}
+
+.book-link:active, .book-link:focus {
+	color: #3f3b9f;
 }
 
 .tool-name {
