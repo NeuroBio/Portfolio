@@ -15,8 +15,7 @@ header {
 	margin: .5em;
 }
 
-
-#main-language-card-container {
+.languages {
 	display: flex;
 	justify-content: space-around;
 	column-gap: .5em;
@@ -43,11 +42,11 @@ header {
 	background-color: rgb(94, 93, 160);
 }
 
-.logo {
+.language-card .logo {
 	height: 50px;
 }
 
-.logo-smaller {
+.language-card-smaller .logo {
 	height: 30px;
 }
 
@@ -63,6 +62,12 @@ header {
 	column-gap: .5em;
 }
 
-#main-tool-name {
+#more-languages {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tool-name {
 	height: 1em;
 }

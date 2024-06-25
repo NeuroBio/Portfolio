@@ -14,6 +14,12 @@ class Language {
 	}
 }
 
+const LanguageKeys = {
+	MAIN: 'main',
+	OTHER: 'other',
+	MISC: 'misc',
+};
+
 
 const PortfolioData = {
 	brandStatement: `Driven by challenge and curiosity.
@@ -32,15 +38,29 @@ const PortfolioData = {
 		I live for overcoming complex challenges.  My goal is to make 
 		applications that are maintainable, performant, and aesthetically pleasing.`,
 
-	mainLanguages: [
-		new Language('Node', 'Node.js', 'fab fa-node-js'),
-		new Language('npm', 'Node Package Manager', 'fab fa-npm'),
-		new Language('git', 'git', 'fab fa-git'),
-		new Language('Jira', 'Jira', 'fab fa-jira'),
-		new Language('Jasmine', 'Jasmine Testing Framework', '../assets/images/logos/jasmine.svg'),		
-	],
-	otherLanguages: [
-		new Language(),
-	],
+	languages: {
+		[LanguageKeys.MAIN]: {
+			Node: new Language('Node', 'Node.js', 'fab fa-node-js'),
+			npm: new Language('npm', 'Node Package Manager', 'fab fa-npm'),
+			git: new Language('git', 'Git', 'fab fa-git'),
+			Jira: new Language('Jira', 'Jira', 'fab fa-jira'),
+			Jasmine: new Language('Jasmine', 'Jasmine (Testing Framework)', '../assets/images/logos/jasmine.svg'),		
+		},
+		[LanguageKeys.OTHER]: {
+			python: new Language('python', 'Python', 'fab fa-python'),
+			R: new Language('R', 'R', 'fab fa-r-project'),
+			'C#': new Language('C#', 'C#', '../assets/images/logos/c-sharp.svg'),
+			angular: new Language('angular', 'Angular (Web Framework)', 'fab fa-angular'),
+			react: new Language('react', 'React (Web Framework)', 'fab fa-react'),
+		},
+		[LanguageKeys.MISC]: {
+			github: new Language('github', 'GitHub', 'fab fa-github-square'),
+			firebase: new Language('firebase', 'Firebase', '../assets/images/logos/firebase.svg'),
+			jest: new Language('jest', 'Jest (Testing Framework)', '../assets/images/logos/jest.svg'),
+			confluence: new Language('confluence', 'Confluence', 'fab fa-confluence'),
+			markdown: new Language('markdown', 'Markdown', 'fab fa-markdown'),
+			bitbucket: new Language('bitbucket', 'Bitbucket', 'fab fa-bitbucket'),
+		},
+	},
 }
 
