@@ -31,7 +31,7 @@ nav .flatten li a {
 	box-shadow: 3px 3px 5px rgba(0, 0, 0, .25);
 }
 
-.flatten li a:hover, a:focus {
+.flatten li a:hover, .flatten li a:focus {
 	/* important required on focus */
 	color: rgb(196, 160, 250) !important; 
 	background-color: rgba(196, 163, 227, 0.25);
@@ -96,7 +96,7 @@ header {
 
 .header-left {
 	position: relative;
-	max-width: 600px;
+	max-width: 500px;
 	flex: 1 1 400px;
 	width: 100vw;
 	/* border-right: solid 2px rgb(198, 117, 221); */
@@ -115,7 +115,7 @@ header {
 	background-color: rgb(198, 117, 221);
 	bottom: 0;
 	left: 0;
-	width: 450px;
+	width: 425px;
 	max-width: 100%;
 	height: 2px;
 	z-index: 1;
