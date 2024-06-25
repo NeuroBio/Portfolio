@@ -53,6 +53,13 @@ const PortfolioData = {
 			I found immediate use for the philosophy side and its focus on collaboration and fully exploring the problem domain.`,
 			'https://www.amazon.com/Patterns-Principles-Practices-Domain-Driven-Design/dp/1118714709'
 		),
+		new Book('Refactoring: Improving the Design of Existing Code',
+			`I picked up some new techniques, put names to my existing techniques,
+			and learned new ways to explain why a refactor was the better option.
+			An easy read that remains useful as a reference book.
+			`,
+			'https://www.amazon.com/Refactoring-Improving-Existing-Addison-Wesley-Signature-dp-0134757599/dp/0134757599/ref=dp_ob_title_bk'
+		)
 	],
 
 	languages: {
