@@ -14,6 +14,14 @@ class Language {
 	}
 }
 
+class Book {
+	constructor(title, description, link) {
+		this.title = title;
+		this.description = description;
+		this.link = link;
+	}
+}
+
 const LanguageKeys = {
 	MAIN: 'main',
 	OTHER: 'other',
@@ -37,6 +45,15 @@ const PortfolioData = {
 	teaser: `An-ex scientist, I refactored myself into a software engineer.
 		I live for overcoming complex challenges.  My goal is to make 
 		applications that are maintainable, performant, and aesthetically pleasing.`,
+
+	books: [
+		new Book('Patterns, Principles, and Practices of Domain-Driven Design',
+			`This is the first Domain-Driven Design book where I understood everything the authors were saying.
+			The book opens on DDD philosophy instead of the tactical patterns.
+			I found immediate use for the philosophy side, and its focus on fully exploring the problem domain.`,
+			'https://www.amazon.com/Patterns-Principles-Practices-Domain-Driven-Design/dp/1118714709'
+		),
+	],
 
 	languages: {
 		[LanguageKeys.MAIN]: {
