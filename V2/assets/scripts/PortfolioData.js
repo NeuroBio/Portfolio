@@ -50,7 +50,7 @@ const PortfolioData = {
 		new Book('Patterns, Principles, and Practices of Domain-Driven Design',
 			`This is the first Domain-Driven Design book where I understood everything the authors were saying.
 			The book opens on DDD philosophy instead of the tactical patterns.
-			I found immediate use for the philosophy side, and its focus on fully exploring the problem domain.`,
+			I found immediate use for the philosophy side and its focus on collaboration and fully exploring the problem domain.`,
 			'https://www.amazon.com/Patterns-Principles-Practices-Domain-Driven-Design/dp/1118714709'
 		),
 	],
