@@ -52,7 +52,7 @@ header {
 }
 
 #minutia {
-	padding: .5em;
+	padding: .75em;
 	display: flex;
 	column-gap: .5em;
 	row-gap: .5em;
