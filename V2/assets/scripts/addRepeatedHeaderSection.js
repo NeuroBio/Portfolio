@@ -7,7 +7,8 @@ const upperSection = tagSection.append('section')
 const avatarSection = upperSection.append('section')
 	.attr('id', 'header-avatar-container');
 avatarSection.append('img')
-	.attr('id', 'header-avatar');
+	.attr('id', 'header-avatar')
+	.attr('alt', '');
 
 const nameText = upperSection.append('section')
 	.attr('id', 'header-title');
