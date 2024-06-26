@@ -69,6 +69,12 @@ header {
 	align-items: center;
 }
 
+.passion-title {
+	font-weight: bold;
+	font-size: 1.3em;
+	font-family: "Rajdhani", sans-serif;
+}
+
 .book {
 	list-style-type: none;
 }
