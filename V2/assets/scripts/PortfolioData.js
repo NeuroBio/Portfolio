@@ -13,7 +13,6 @@ class Language {
 		}
 	}
 }
-
 class Book {
 	constructor(title, description, link) {
 		this.title = title;
@@ -22,12 +21,18 @@ class Book {
 	}
 }
 
+class Passion {
+	constructor(title, description) {
+		this.title = title;
+		this.description = description;
+	}
+}
+
 const LanguageKeys = {
 	MAIN: 'main',
 	OTHER: 'other',
 	MISC: 'misc',
 };
-
 
 const PortfolioData = {
 	brandStatement: `Driven by challenge and curiosity.
@@ -46,6 +51,21 @@ const PortfolioData = {
 		I live for overcoming complex challenges.  My goal is to make 
 		applications that are maintainable, performant, and aesthetically pleasing.`,
 
+	passions: [
+		new Passion(
+			'Test-Driven Development',
+			`Writing automated tests is coding.  Running them is way faster than manual testing during development.`
+		),
+		new Passion(
+			'Clean Architecture',
+			`Learning how to write it.  Implementing it.  Recognizing when simple CRUD is sufficient.`
+		),
+		new Passion(
+			'Code Review',
+			`Having another set of eyes on your code helps ensure you're building a maintainable product.`
+		)
+	],
+	
 	books: [
 		new Book('Patterns, Principles, and Practices of Domain-Driven Design',
 			`This is the first Domain-Driven Design book where I understood everything the authors were saying.
