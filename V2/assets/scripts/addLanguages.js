@@ -8,26 +8,26 @@ const otherLanguagesElement = d3.select('#other-languages');
 const miscLanguagesElement = d3.select('#misc-languages');
 
 const displayElement = {
-	[LanguageKeys.MAIN]: d3.select('#main-tool-name'),
-	[LanguageKeys.OTHER]: d3.select('#other-tool-name'),
-	[LanguageKeys.MISC]: d3.select('#misc-tool-name'),
+	[LanguageGroupKey.MAIN]: d3.select('#main-tool-name'),
+	[LanguageGroupKey.OTHER]: d3.select('#other-tool-name'),
+	[LanguageGroupKey.MISC]: d3.select('#misc-tool-name'),
 }
 
 populateLanguages({
 	languageSection: mainLanguagesElement,
-	languageKey: LanguageKeys.MAIN,
+	languageKey: LanguageGroupKey.MAIN,
 	cssClass: 'language-card',
 });
 
 populateLanguages({
 	languageSection: otherLanguagesElement,
-	languageKey: LanguageKeys.OTHER,
+	languageKey: LanguageGroupKey.OTHER,
 	cssClass: 'language-card-smaller',
 });
 
 populateLanguages({
 	languageSection: miscLanguagesElement,
-	languageKey: LanguageKeys.MISC,
+	languageKey: LanguageGroupKey.MISC,
 	cssClass: 'language-card-smaller',
 });
 
