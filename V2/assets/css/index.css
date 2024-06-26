@@ -1,3 +1,52 @@
-#socials {
-	display: inline-flex;
+.project {
+	background-color: rgb(62, 36, 60);
+	max-width: 575px;
+	padding: .5em;
+	border-radius: 1em;
+}
+
+.project h3 {
+	margin: 0;
+}
+
+.project-content {
+	display: flex;
+	margin: 1em 0;
+}
+
+.project-image {
+	max-width: 350px;
+	border-radius: 1em 0 0 1em;
+}
+
+.project-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color:  rgb(31, 42, 46);
+	border-radius: 0 1em 1em 0;
+	padding: .3em;
+}
+
+.project-text p {
+	margin-top: 0;;
+}
+
+.project-footer {
+	display: flex;
+	justify-content: center;
+}
+
+.project-link {
+	font-weight: bold;
+	color: #8987f7;
+	font-family: "Rajdhani", sans-serif;
+	text-decoration: none;
+}
+
+.link-separator:after {
+	font-weight: bold;
+	font-weight: bolder;
+	content: "|";
+	margin: 0 1em;
 }
