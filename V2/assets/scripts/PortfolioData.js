@@ -116,10 +116,27 @@ const PortfolioData = {
 			[
 				AllLanguages[LanguageKey.ANGULAR],
 				AllLanguages[LanguageKey.FIREBASE],
+				AllLanguages[LanguageKey.PYTHON],
 			],
 			[
 				new Link('Live Project', 'https://arecace.com/home'),
 				new Link('Repo', 'https://github.com/NeuroBio/ArecaceWebsite'),
+			]
+		),
+		new Project(
+			'Code Namer',
+			'../assets/images/projects/CodeNamer.jpg',
+			`An April Fool's Day prank app.
+			Based on a number of long running jokes at work, DDD concepts, and my personal sense of humor.
+			This project was an excuse to learn react in my personal time back when we planned to transition
+			to using react for our application's frontend.
+			`,
+			[
+				AllLanguages[LanguageKey.REACT],
+			],
+			[
+				new Link('Live Project', 'https://code-namer.firebaseapp.com/'),
+				new Link('Repo', 'https://github.com/NeuroBio/Code-Namer-React-App'),
 			]
 		),
 	],

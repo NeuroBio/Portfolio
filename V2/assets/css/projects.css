@@ -1,8 +1,17 @@
+#project-container {
+	display: flex;
+	row-gap: .5em;
+	column-gap: .5em;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
 .project {
 	background-color: rgb(62, 36, 60);
-	max-width: 575px;
+	max-width: calc(100vw - 3em);
 	padding: .5em;
 	border-radius: 1em;
+	flex: 1 1 300px;
 }
 
 .project h3 {
@@ -14,20 +23,24 @@
 	margin: 1em 0;
 	border-radius: 1em;
 	overflow: hidden;
+	background-color:  rgb(31, 42, 46);
+	flex-wrap: wrap;
+	min-width: min(80vw, 450px)
 }
 
 .project-image {
-	max-width: 350px;
 	height: 100%;
+	flex: 1 1 240px;
+	width: 48.5%;
 }
 
 .project-text {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	background-color:  rgb(31, 42, 46);
 	padding: .3em;
-	min-width: 200px;
+	flex: 1 1 200px;
+	width: 48.5%;
 }
 
 .project-text p {

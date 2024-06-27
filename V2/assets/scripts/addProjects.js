@@ -1,4 +1,4 @@
-const projectContainer = d3.select('#projects');
+const projectContainer = d3.select('#project-container');
 
 PortfolioData.projects.forEach((project) => {
 	const { title, previewImage, description, languages, links } = project;
