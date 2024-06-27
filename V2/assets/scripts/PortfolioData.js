@@ -103,6 +103,7 @@ const PortfolioData = {
 		I live for overcoming complex challenges.  My goal is to make 
 		applications that are maintainable, performant, and aesthetically pleasing.`,
 
+		// https://code-namer.firebaseapp.com/
 	projects: [
 		new Project(
 			'Arecace (Worldbuilding Project)',
