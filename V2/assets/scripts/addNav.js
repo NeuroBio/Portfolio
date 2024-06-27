@@ -12,25 +12,24 @@ const linkList = nav.append('ul')
 
 const currentPage = d3.select('body');
 const currentPageName = currentPage.attr('id');
-const onHome = currentPageName === Page.HOME;
 
 if (currentPageName !== Page.ABOUT) {
 	linkList.append('li').append('a')
-		.attr('href', onHome ? 'pages/about.html' : './about.html')
+		.attr('href', './about.html')
 		.attr('class', 'link-button')
 		.text('About');
 }
 
-if (!onHome) {
+if (currentPageName !== Page.HOME) {
 	linkList.append('li').append('a')
-		.attr('href', '../index.html')
+		.attr('href', './projects.html')
 		.attr('class', 'link-button')
 		.text('Projects');
 }
 
 if (currentPageName !== Page.EXPERIENCE) {
 	linkList.append('li').append('a')
-		.attr('href', onHome ? 'pages/experience.html' : './experience.html')
+		.attr('href', './experience.html')
 		.attr('class', 'link-button')
 		.text('Experience');
 }
