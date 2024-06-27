@@ -12,11 +12,13 @@
 .project-content {
 	display: flex;
 	margin: 1em 0;
+	border-radius: 1em;
+	overflow: hidden;
 }
 
 .project-image {
 	max-width: 350px;
-	border-radius: 1em 0 0 1em;
+	height: 100%;
 }
 
 .project-text {
@@ -24,8 +26,8 @@
 	flex-direction: column;
 	justify-content: space-between;
 	background-color:  rgb(31, 42, 46);
-	border-radius: 0 1em 1em 0;
 	padding: .3em;
+	min-width: 200px;
 }
 
 .project-text p {
