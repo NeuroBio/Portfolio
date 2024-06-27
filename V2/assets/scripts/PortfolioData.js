@@ -106,7 +106,7 @@ const PortfolioData = {
 	projects: [
 		new Project(
 			'Arecace (Worldbuilding Project)',
-			'assets/images/projects/project1.png',
+			'../assets/images/projects/project1.png',
 			`A showcase website for my original story and Worldbuilding project.
 			This was one of my first websites.
 			It was where I began to understand the power of modular code...

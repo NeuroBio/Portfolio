@@ -20,7 +20,8 @@ PortfolioData.projects.forEach((project) => {
 
 	textContent.append('p').text(description);
 
-	const tools = textContent.append('section');
+	const tools = textContent.append('section')
+		.attr('class', 'project-tools');
 	tools.append('span').text('Tools: ');
 
 	languages.forEach((language) => {
@@ -45,7 +46,7 @@ PortfolioData.projects.forEach((project) => {
 
 		if (i + 1 !== links.length) {
 			footer.append('span')
-			.attr('class', 'link-separator');
+				.attr('class', 'link-separator');
 		} 
 	});
 });
