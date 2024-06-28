@@ -85,6 +85,7 @@ const AllLanguages = Object.freeze({
 	[LanguageKey.MARKDOWN]: new Language('markdown', 'Markdown', 'fab fa-markdown'),
 	[LanguageKey.BITBUCKET]: new Language('bitbucket', 'Bitbucket', 'fab fa-bitbucket'),
 	[LanguageKey.BLAZOR]: new Language('blazor', 'Blazor', '../assets/images/logos/blazor.svg'),
+	[LanguageKey.HTML]: new Language('html5', 'HTML 5', 'fab fa-html5'),
 });
 
 
@@ -179,7 +180,40 @@ const PortfolioData = {
 				new Link('Webapp Repo', 'https://github.com/NeuroBio/SEMWebApp'),
 			]
 		),
-		
+		new Project(
+			'VtM Maps',
+			'../assets/images/projects/VtMMaps.png',
+			`A app for my Vampire the Masquerade Campaign: Phoenix Heat.
+			It acts as a quick references for the NPCs my players had met, as well as in-game locations.
+			Includes two maps: one for real world Phoenix and a second for fictional town Hartstone
+			where the players where based.
+			`,
+			[],
+			[
+				new Link('Live Project', 'https://carddatabase-6dfef.web.app/Masterlist'),
+				new Link('Repo', 'https://github.com/NeuroBio/CardDatabase_ng14'),
+			]
+		),
+		new Project(
+			'Card Database',
+			'../assets/images/projects/Cards.png',
+			`A app for managing my pokemon card collection.
+			The app itself is mostly focused on tracking and organizing cards.
+			There's also a set of python scripts for web scraping expansion sets from Bulbapedia that are run in the CLI.
+			I'm starting to get a lot of data (over 20K cards), which causes performance issues in the app.
+			At the moment, I added a card cache to make reloads faster.
+			The next steps will be changing my app to request and display data differently to reduce lag.
+			`,
+			[
+				AllLanguages[LanguageKey.ANGULAR],
+				AllLanguages[LanguageKey.FIREBASE],
+				AllLanguages[LanguageKey.PYTHON],
+			],
+			[
+				new Link('Live Project', 'https://carddatabase-6dfef.web.app/Masterlist'),
+				new Link('Repo', 'https://github.com/NeuroBio/CardDatabase_ng14'),
+			]
+		),
 	],
 	
 	passions: [
@@ -193,7 +227,7 @@ const PortfolioData = {
 		),
 		new Passion(
 			'Code Review',
-			`Having another set of eyes on your code helps ensure you're building a maintainable product.`
+			`Having another set of eyes on your code helps ensure you build a maintainable product.`
 		)
 	],
 	

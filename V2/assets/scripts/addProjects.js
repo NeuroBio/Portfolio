@@ -20,9 +20,12 @@ PortfolioData.projects.forEach((project) => {
 
 	textContent.append('p').text(description);
 
-	const tools = textContent.append('section')
-		.attr('class', 'project-tools');
-	tools.append('span').text('Tools: ');
+	let tools;
+	if (languages.length > 0) {
+		tools = textContent.append('section')
+			.attr('class', 'project-tools');
+		tools.append('span').text('Tools: ');
+	}
 
 	languages.forEach((language) => {
 		const icon = language.usesLocalImage
