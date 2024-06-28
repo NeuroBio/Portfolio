@@ -13,7 +13,7 @@ PortfolioData.projects.forEach((project) => {
 	const demoButton = mainContent.append('button')
 		.attr('class', 'demo-button')
 		.attr('type', 'button')
-		.attr('title', 'View Demo')
+		.attr('title', `View Demo for ${title}`)
 
 	demoButton.append('img')
 		.attr('src', previewImage)
