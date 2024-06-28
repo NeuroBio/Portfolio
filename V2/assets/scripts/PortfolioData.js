@@ -21,6 +21,7 @@ const LanguageKey = Object.freeze({
 	CONFLUENCE: 'confluence',
 	MARKDOWN: 'markdown',
 	BITBUCKET: 'bitbucket',
+	BLAZOR: 'blazor',
 });
 
 class Language {
@@ -83,6 +84,7 @@ const AllLanguages = Object.freeze({
 	[LanguageKey.CONFLUENCE]: new Language('confluence', 'Confluence', 'fab fa-confluence'),
 	[LanguageKey.MARKDOWN]: new Language('markdown', 'Markdown', 'fab fa-markdown'),
 	[LanguageKey.BITBUCKET]: new Language('bitbucket', 'Bitbucket', 'fab fa-bitbucket'),
+	[LanguageKey.BLAZOR]: new Language('blazor', 'Blazor', '../assets/images/logos/blazor.svg'),
 });
 
 
@@ -137,6 +139,27 @@ const PortfolioData = {
 			[
 				new Link('Live Project', 'https://code-namer.firebaseapp.com/'),
 				new Link('Repo', 'https://github.com/NeuroBio/Code-Namer-React-App'),
+			]
+		),
+		new Project(
+			'Song Evolution Model',
+			'../assets/images/projects/SEM.png',
+			`An agent based model I developed for my PhD thesis.
+			It simulates how birdsong evolves under different selection pressures.
+			Initially written in R, the model ran too slow to generate the volume of data I needed.
+			I learned C# and rewrote my model in it, earning 10x speed increases.
+			`,
+			[
+				AllLanguages[LanguageKey.R],
+				AllLanguages[LanguageKey.C_SHARP],
+				AllLanguages[LanguageKey.BLAZOR],
+			],
+			[
+				new Link('Live Project', 'https://neurobio.github.io/SEMWebApp/release/SEMWebApp/dist/'),
+				new Link('C# Library', 'https://github.com/NeuroBio/SongEvolutionModelLibrary'),
+				new Link('C# Programs', 'https://github.com/NeuroBio/SongEvolutionModelPrograms'),
+				new Link('R Repo', 'https://github.com/NeuroBio/SEM_R_Package'),
+				new Link('Webapp Repo', 'https://github.com/NeuroBio/SEMWebApp'),
 			]
 		),
 	],
