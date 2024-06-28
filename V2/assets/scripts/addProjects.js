@@ -10,9 +10,14 @@ PortfolioData.projects.forEach((project) => {
 	const mainContent = outerContainer.append('section')
 		.attr('class', 'project-content');
 
-	mainContent.append('img')
+	const demoButton = mainContent.append('button')
+		.attr('class', 'demo-button')
+		.attr('type', 'button')
+		.attr('title', 'View Demo')
+
+	demoButton.append('img')
 		.attr('src', previewImage)
-		.attr('class', 'project-image');	
+		.attr('class', 'project-image');
 	
 	const textContent = mainContent.append('section')
 		.attr('class', 'project-text');
