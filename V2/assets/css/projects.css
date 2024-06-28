@@ -28,10 +28,21 @@
 	min-width: min(80vw, 450px)
 }
 
-.project-image {
-	height: 100%;
+.demo-button {
 	flex: 1 1 240px;
 	width: 48.5%;
+	display: flex;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+}
+.project-image {
+	width: 100%;
+}
+
+.project-image:hover {
+	opacity: .2;
+	cursor: pointer;
 }
 
 .project-text {
