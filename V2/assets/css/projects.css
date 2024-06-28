@@ -78,6 +78,14 @@
 	text-decoration: none;
 }
 
+.project-link:hover {
+	color: #5b58da;
+}
+
+.project-link:active, .project-link:focus {
+	color: #3f3b9f;
+}
+
 .link-separator:after {
 	font-weight: bold;
 	font-weight: bolder;

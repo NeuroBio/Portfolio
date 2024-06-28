@@ -126,6 +126,23 @@ const PortfolioData = {
 			]
 		),
 		new Project(
+			'Discord Bot',
+			'../assets/images/projects/discordbot.jpg',
+			`Made for convenience and trolling.
+			Includes commands for DnD and VtM dice rolls, prompt generators, and fetching web scraped data.
+			I used it as an opportunity to start from nothing and see what inconveniences drove me to improve the dev experience.
+			I quickly realized that I now expect all my projects to have:
+			lint auto-fix on save, a unit testing framework for TDD, and path aliases. 
+			`,
+			[
+				AllLanguages[LanguageKey.NODE],
+				AllLanguages[LanguageKey.JASMINE],
+			],
+			[
+				new Link('Repo', 'https://github.com/NeuroBio/DiscordBot'),
+			]
+		),
+		new Project(
 			'Code Namer',
 			'../assets/images/projects/CodeNamer.jpg',
 			`An April Fool's Day prank app.
@@ -162,6 +179,7 @@ const PortfolioData = {
 				new Link('Webapp Repo', 'https://github.com/NeuroBio/SEMWebApp'),
 			]
 		),
+		
 	],
 	
 	passions: [
