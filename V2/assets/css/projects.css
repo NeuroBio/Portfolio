@@ -36,6 +36,7 @@
 	border: 0;
 	background-color: transparent;
 }
+
 .project-image {
 	width: 100%;
 }
@@ -43,6 +44,21 @@
 .project-image:hover {
 	opacity: .2;
 	cursor: pointer;
+	transition: opacity .25s;
+}
+
+.demo-icon {
+	pointer-events:none;
+	font-size: 4em;
+	position: relative;
+	color: transparent;
+    top: calc(50% - .3em);
+	right: calc(50% + .3em);
+}
+
+.demo-button:hover .demo-icon {
+	transition: color .25s;
+	color: white;
 }
 
 .project-text {

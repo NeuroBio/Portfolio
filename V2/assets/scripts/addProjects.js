@@ -17,7 +17,10 @@ PortfolioData.projects.forEach((project) => {
 
 	demoButton.append('img')
 		.attr('src', previewImage)
-		.attr('class', 'project-image');
+		.attr('class', 'project-image')
+		.attr('alt', '');
+	demoButton.append('i')
+		.attr('class', 'fas fa-play-circle demo-icon')
 	
 	const textContent = mainContent.append('section')
 		.attr('class', 'project-text');
@@ -37,8 +40,7 @@ PortfolioData.projects.forEach((project) => {
 			? tools.append('img')
 			: tools.append('i');
 
-		icon.attr('id', language.name)
-			.attr('src', language.src)
+		icon.attr('src', language.src)
 			.attr('class', language.class)
 			.attr('alt', language.description);
 	});
