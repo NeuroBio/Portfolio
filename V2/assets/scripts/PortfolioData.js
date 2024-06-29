@@ -58,9 +58,10 @@ class Link {
 	}
 }
 class Project {
-	constructor(title, previewImage, description, languages, links) {
+	constructor(title, previewImage, demo, description, languages, links) {
 		this.title = title;
 		this.previewImage = previewImage;
+		this.demo = demo;
 		this.description = description;
 		this.languages = languages;
 		this.links = links;
@@ -111,6 +112,7 @@ const PortfolioData = {
 		new Project(
 			'Arecace (Worldbuilding Project)',
 			'../assets/images/projects/Arecace.jpg',
+			'../assets/videos/ArecaceDemo.mp4',
 			`A showcase website for my original story and Worldbuilding project.
 			This was one of my first websites.
 			It was where I began to understand the power of modular code...
@@ -129,6 +131,7 @@ const PortfolioData = {
 		new Project(
 			'Discord Bot',
 			'../assets/images/projects/discordbot.jpg',
+			'',
 			`Made for convenience and trolling.
 			Includes commands for DnD and VtM dice rolls, prompt generators, and fetching web scraped data.
 			I used it as an opportunity to start from nothing and see what inconveniences drove me to improve the dev experience.
@@ -146,6 +149,7 @@ const PortfolioData = {
 		new Project(
 			'Code Namer',
 			'../assets/images/projects/CodeNamer.jpg',
+			'',
 			`An April Fool's Day prank app.
 			Based on a number of long running jokes at work, DDD concepts, and my personal sense of humor.
 			This project was an excuse to learn react in my personal time back when we planned to transition
@@ -162,6 +166,7 @@ const PortfolioData = {
 		new Project(
 			'Song Evolution Model',
 			'../assets/images/projects/SEM.png',
+			'',
 			`An agent based model I developed for my PhD thesis.
 			It simulates how birdsong evolves under different selection pressures.
 			Initially written in R, the model ran too slow to generate the volume of data I needed.
@@ -183,6 +188,7 @@ const PortfolioData = {
 		new Project(
 			'VtM Maps',
 			'../assets/images/projects/VtMMaps.png',
+			'',
 			`A app for my Vampire the Masquerade Campaign: Phoenix Heat.
 			It acts as a quick references for the NPCs my players had met, as well as in-game locations.
 			Includes two maps: one for real world Phoenix and a second for fictional town Hartstone
@@ -197,6 +203,7 @@ const PortfolioData = {
 		new Project(
 			'Card Database',
 			'../assets/images/projects/Cards.png',
+			'',
 			`A app for managing my pokemon card collection.
 			The app itself is mostly focused on tracking and organizing cards.
 			There's also a set of python scripts for web scraping expansion sets from Bulbapedia that are run in the CLI.

@@ -35,6 +35,14 @@
 
 		<footer><!-- added with d3 --></footer>
 
+		<section id="demo-container" class="closed">
+			<section id="demo-curtain"></section>
+			<video id="demo" controls><!-- sourced by d3 --></video>
+			<button type="button" title="Close Demo" id="close-demo" onclick="closeDemo()">
+				<i class="fas fa-times-circle"></i>
+			</button>
+		</section>
+
 		<script src="https://d3js.org/d3.v5.min.js"></script>
 		<!-- thanks CORS! -->
 		<script src="../assets/scripts/PortfolioData.js"></script>
