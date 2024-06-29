@@ -7,7 +7,7 @@
 }
 
 .project {
-	background-color: rgb(62, 36, 60);
+	background-color: var(--speakingViolet);
 	max-width: calc(100vw - 3em);
 	padding: .5em;
 	border-radius: 1em;
@@ -23,7 +23,7 @@
 	margin: 1em 0;
 	border-radius: 1em;
 	overflow: hidden;
-	background-color:  rgb(31, 42, 46);
+	background-color: var(--blueForYou);
 	flex-wrap: wrap;
 	min-width: min(80vw, 450px)
 }
@@ -58,7 +58,7 @@
 
 .demo-button:hover .demo-icon, .demo-button:focus .demo-icon  {
 	transition: color .25s;
-	color: white;
+	color: var(--textDefault);
 }
 
 .project-text {
@@ -91,7 +91,7 @@
 }
 
 .project-tools i:hover {
-	background-color: rgb(73, 71, 73);
+	background-color: var(--linkBaseDark);
 }
 
 .logo {
@@ -102,7 +102,7 @@
 }
 
 .logo:hover {
-	background-color: rgb(73, 71, 73);
+	background-color: var(--linkBaseDark);
 }
 
 .project-footer {
@@ -113,17 +113,17 @@
 
 .project-link {
 	font-weight: bold;
-	color: #8987f7;
+	color: var(--linkBase);
 	font-family: "Rajdhani", sans-serif;
 	text-decoration: none;
 }
 
 .project-link:hover {
-	color: #5b58da;
+	color: var(--linkHover);
 }
 
 .project-link:active, .project-link:focus {
-	color: #3f3b9f;
+	color: var(--linkActive);
 }
 
 .link-separator:after {
@@ -151,7 +151,7 @@
 	z-index: 102;
 	position: fixed;
 	background-color: transparent;
-	color: white;
+	color: var(--textDefault);
 	padding: .15em .22em .05em .2em;
 	font-size: 2em;
 	border-radius: 1em;
@@ -160,7 +160,7 @@
 }
 
 #close-demo:hover, #close-demo:focus {
-	background-color: #acabdc;
+	background-color: var(--linkBase);
 }
 
 #demo {
