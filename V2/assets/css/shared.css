@@ -167,3 +167,32 @@ footer {
 #connect ul {
 	margin: 0;
 }
+
+.tooltip {
+	position: relative;
+}
+  
+.tooltip .tooltip-text {
+	font-size: .5em;
+	font-family:  "Source Code Pro", monospace;
+	visibility: hidden;
+	opacity: 0;
+	background-color: rgb(73, 71, 73);
+	color: whitesmoke;
+	text-align: center;
+	border-radius: 6px;
+	padding: .5em;
+	
+	position: absolute;
+	z-index: 1;
+	bottom: calc(100% + .2em);
+	left: 50%;
+	transform: translateX(-50%);
+}
+  
+.tooltip:hover .tooltip-text {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity .25s;
+	transition-delay: 350ms;
+}

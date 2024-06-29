@@ -36,13 +36,18 @@ PortfolioData.projects.forEach((project) => {
 	}
 
 	languages.forEach((language) => {
+		const languageWithTooltip = tools.append('section')
+			.attr('class', 'tooltip');
 		const icon = language.usesLocalImage
-			? tools.append('img')
-			: tools.append('i');
+			? languageWithTooltip.append('img')
+			: languageWithTooltip.append('i');
 
 		icon.attr('src', language.src)
 			.attr('class', language.class)
 			.attr('alt', language.description);
+		languageWithTooltip.append('span')
+			.attr('class', 'tooltip-text')
+			.text(language.description)
 	});
 
 	const footer = outerContainer.append('section')

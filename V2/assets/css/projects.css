@@ -84,12 +84,25 @@
 }
 
 .project-tools i {
+	border-radius: .5em;
 	font-size: 1.75em;
-	margin: 0 .2em;
+	margin: 0 .1em;
+	padding: .2em;
+}
+
+.project-tools i:hover {
+	background-color: rgb(73, 71, 73);
 }
 
 .logo {
+	border-radius: .5em;
 	height: 25px;
+	margin: 0 .1em;
+	padding: .3em;
+}
+
+.logo:hover {
+	background-color: rgb(73, 71, 73);
 }
 
 .project-footer {
