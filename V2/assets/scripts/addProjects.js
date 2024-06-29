@@ -1,7 +1,9 @@
 const projectContainer = d3.select('#project-container');
+const demoContainer = d3.select('#demo-container');
+const demo = d3.select('#demo');
 
 PortfolioData.projects.forEach((project) => {
-	const { title, previewImage, description, languages, links } = project;
+	const { title, previewImage, demo, description, languages, links, } = project;
 	const outerContainer = projectContainer.append('article')
 		.attr('class', 'project');
 
@@ -14,13 +16,14 @@ PortfolioData.projects.forEach((project) => {
 		.attr('class', 'demo-button')
 		.attr('type', 'button')
 		.attr('title', `View Demo for ${title}`)
+		.attr('onClick', `openDemo('${demo}')`);
 
 	demoButton.append('img')
 		.attr('src', previewImage)
 		.attr('class', 'project-image')
 		.attr('alt', '');
 	demoButton.append('i')
-		.attr('class', 'fas fa-play-circle demo-icon')
+		.attr('class', 'fas fa-play-circle demo-icon');
 	
 	const textContent = mainContent.append('section')
 		.attr('class', 'project-text');
@@ -65,3 +68,22 @@ PortfolioData.projects.forEach((project) => {
 		} 
 	});
 });
+
+function openDemo(demoLink) {
+	demoContainer
+		.attr('class', 'open')
+		.attr('onkeyup', 'checkKeyAndContinue(event)')
+	demo.attr('src', demoLink)
+	demo.node().focus();
+}
+
+function checkKeyAndContinue(e) {
+	if (e.code === 'Escape') {
+		closeDemo();
+	}
+  }
+
+function closeDemo() {
+	demoContainer.attr('onkeyup', '')
+	demoContainer.attr('class', 'closed');
+}

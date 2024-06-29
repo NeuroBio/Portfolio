@@ -1,4 +1,5 @@
 body {
+	position: relative;
 	background-color: rgb(31, 42, 46);
 	color: whitesmoke;
 	font-family: 'Courier New', Courier, monospace;
