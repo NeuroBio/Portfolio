@@ -26,7 +26,7 @@ header {
 .language-card {
 	font-size: 3em;
 	padding: .2em .2em 0 .2em;
-	background-color: #8987f7;
+	background-color: var(--linkBase);
 	border-radius: .5em;
 	display: inline;
 }
@@ -34,13 +34,13 @@ header {
 .language-card-smaller {
 	font-size: 2em;
 	padding: .1em .1em 0 .1em;
-	background-color: rgb(137, 135, 247);
+	background-color: var(--linkBase);
 	border-radius: .2em;
 	display: inline;
 }
 
 .language-card:hover, .language-card-smaller:hover {
-	background-color: rgb(94, 93, 160);
+	background-color: var(--pictureLinkHover);
 }
 
 .language-card .logo {
@@ -63,7 +63,7 @@ header {
 .minutia-card {
 	padding: .5em;
 	border-radius: .5em;
-	background-color: rgb(62, 36, 60);
+	background-color: var(--speakingViolet);
 	min-width: 250px;
 	display: flex;
 	flex-direction: column;
@@ -89,18 +89,18 @@ header {
 	font-style: italic;
 	font-weight: bold;
 	text-decoration: none;
-	color: #8987f7;
+	color: var(--linkBase);
 	font-family: "Rajdhani", sans-serif;
 	font-size: 1.25em;
 	margin-left: -1.5em;
 }
 
 .book-link:hover {
-	color: #5b58da;
+	color: var(--linkHover);
 }
 
 .book-link:active, .book-link:focus {
-	color: #3f3b9f;
+	color: var(--linkActive);
 }
 
 .tool-name {

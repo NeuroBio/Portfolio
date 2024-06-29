@@ -2,20 +2,20 @@ p {
 	max-width: 600px;
 	align-self: center;
 	border-radius: 1em;
-	background-color: #1b1a1e;
+	background-color: var(--myBlack);
 	padding: 2em;
 }
 
 a {
 	font-weight: bold;
-	color: #8987f7;
+	color: var(--linkBase);
 	text-decoration: none;
 }
 
 a:hover {
-	color: #5b58da;
+	color: var(--linkHover);
 }
 
 a:active, a:focus {
-	color: #3f3b9f;
+	color: var(--linkActive);
 }

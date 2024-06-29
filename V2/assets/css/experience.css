@@ -1,0 +1,22 @@
+.epoch {
+	margin: .5em 0;
+	max-width: 600px;
+	display: flex;
+	flex-direction: column;
+}
+
+.accordion-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 1em 1em 0 0;
+}
+
+h2 {
+	font-family: "Rajdhani", sans-serif;
+	font-weight: bold;
+}
+
+.accordion-icon {
+	margin-right: 1em;
+}
