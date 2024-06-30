@@ -5,6 +5,7 @@ experienceContainer.append('h2').text('Corporate Experience');
 buildAccordion({
 	organization: 'RF-SMART',
 	buttonTitle: 'Corporate Experience',
+	startExpanded: true,
 	positions: [
 		{
 			position: 'Senior Software Developer',
@@ -38,7 +39,8 @@ experienceContainer.append('h2').text('Education');
 function buildAccordion ({
 	organization,
 	buttonTitle,
-	positions
+	positions,
+	startExpanded
 }) {
 	const epoch = experienceContainer.append('article')
 		.attr('class', 'epoch');
@@ -60,6 +62,14 @@ function buildAccordion ({
 	const buttonText = `${organization} - ${calculateTimeAtCompany(fullTimeAtOrganization)}, ${lastPosition.position}`;
 	button.append('h3').text(buttonText);
 	button.append('i').attr('class', 'accordion-icon fas fa-plus-circle')
+
+	const epochContents = epoch.append('section')
+		.attr('id', `${organization}-panel`)
+		.attr('class', `accordion-panel ${startExpanded ? 'expanded' : 'collapsed'}`)
+
+	if (positions.length > 1) {
+		epochContents.text('ashgd ahsd hasdg asd jSAGDD sa jhASDG jhsdg JHGASDD jhsda HASG DD')
+	}
 }
 
 function calculateTimeAtCompany(params) {
@@ -90,7 +100,7 @@ function expandAccordion (organization) {
 		.attr('onClick', `collapseAccordion('${organization}')`)
 	d3.select(`#${organization} i`)
 		.attr('class', 'accordion-icon fas fa-minus-circle');
-	d3.select(`#${organization} .accordion-panel`)
+	d3.select(`#${organization}-panel`)
 		.attr('class', 'accordion-panel expanded');
 }
 
@@ -100,6 +110,6 @@ function collapseAccordion (organization) {
 		.attr('onClick', `expandAccordion('${organization}')`);
 	d3.select(`#${organization} i`)
 		.attr('class', 'accordion-icon fas fa-plus-circle');
-	d3.select(`#${organization} .accordion-panel`)
+	d3.select(`#${organization}-panel`)
 		.attr('class', 'accordion-panel collapsed');
 }
