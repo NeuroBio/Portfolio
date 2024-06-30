@@ -120,7 +120,7 @@
 .project-link {
 	font-weight: bold;
 	color: var(--linkBase);
-	font-family: "Rajdhani", sans-serif;
+	font-family: var(--slimSleek);;
 	text-decoration: none;
 }
 

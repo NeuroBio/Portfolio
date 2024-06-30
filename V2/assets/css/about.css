@@ -78,7 +78,7 @@ header {
 .passion-title {
 	font-weight: bold;
 	font-size: 1.3em;
-	font-family: "Rajdhani", sans-serif;
+	font-family: var(--slimSleek);;
 }
 
 .book {
@@ -90,7 +90,7 @@ header {
 	font-weight: bold;
 	text-decoration: none;
 	color: var(--linkBase);
-	font-family: "Rajdhani", sans-serif;
+	font-family: var(--slimSleek);;
 	font-size: 1.25em;
 	margin-left: -1.5em;
 }
