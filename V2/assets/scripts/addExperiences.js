@@ -31,35 +31,33 @@ function buildAccordion (buttonTitle, {
 	
 	const lastPosition = positions[0];
 	const firstPosition = positions[positions.length - 1];
-	const fullTimeAtOrganization = {
-		startMonth: firstPosition.startMonth,
-		startYear: firstPosition.startYear,
-		endMonth: lastPosition.endMonth,
-		endYear: lastPosition.endYear,
-	}
-	const timeAtOrganization = calculateTimeAtOrganization(fullTimeAtOrganization);
-	const buttonText = `${organization}  -  ${lastPosition.title}, ${timeAtOrganization}`;
-	button.append('h3').text(buttonText);
+	const startMonth = firstPosition.startMonth;
+	const startYear = firstPosition.startYear;
+	const endMonth = lastPosition.endMonth;
+	const endYear = lastPosition.endYear;
+	const endTime = endYear === PRESENT ? PRESENT : `${endMonth}, ${endYear}`
+
+	const header = button.append('h3')
+	header.append('span').text(`${organization}  |  ${lastPosition.title}`);
+	header.append('span').text(`${startMonth}, ${startYear} - ${endTime}`).attr('class', 'dates');
 	button.append('i').attr('class', `accordion-icon fas fa-${startExpanded ? 'minus': 'plus'}-circle`);
 
 	const epochContents = epoch.append('section')
 		.attr('id', `${safeId}-panel`)
 		.attr('class', `accordion-panel ${startExpanded ? 'expanded' : 'collapsed'}`);
 
-	if (positions.length > 1) {
-		epochContents.append('h4').text('Positions');
-		const positionList = epochContents.append('ul');
-		positions.forEach((position) => {
-			const positionEntry = positionList.append('li')
-				.attr('class', 'position')
+	epochContents.append('h4').text('Positions');
+	const positionList = epochContents.append('ul');
+	positions.forEach((position) => {
+		const positionEntry = positionList.append('li')
+			.attr('class', 'position')
 
-			positionEntry.append('span').text(position.title);
-			const endPeriod = position.endYear === PRESENT
-				? PRESENT
-				: `${position.endMonth}, ${position.endYear}`
-			positionEntry.append('i').text(`(${position.startMonth}, ${position.startYear} - ${endPeriod})`);
-		});
-	}
+		positionEntry.append('span').text(position.title);
+		const endPeriod = position.endYear === PRESENT
+			? PRESENT
+			: `${position.endMonth}, ${position.endYear}`
+		positionEntry.append('i').text(`(${position.startMonth}, ${position.startYear} - ${endPeriod})`);
+	});
 
 	if (achievements.length > 0) {
 		epochContents.append('h4').text('Achievements');
@@ -74,27 +72,27 @@ function buildAccordion (buttonTitle, {
 	}
 }
 
-function calculateTimeAtOrganization(params) {
-	console.log(params)
-	const startMonth = params.startMonth;
-	const startYear = params.startYear;
-	let endMonth = MonthValue[params.endMonth];
-	let endYear = params.endYear;
+// function calculateTimeAtOrganization(params) {
+// 	console.log(params)
+// 	const startMonth = params.startMonth;
+// 	const startYear = params.startYear;
+// 	let endMonth = MonthValue[params.endMonth];
+// 	let endYear = params.endYear;
 
-	if (endYear === PRESENT) {
-		endYear = new Date().getFullYear();
-		endMonth = new Date().getMonth() + 1;
-	}
+// 	if (endYear === PRESENT) {
+// 		endYear = new Date().getFullYear();
+// 		endMonth = new Date().getMonth() + 1;
+// 	}
 
-	const fullYearMonths = (endYear - startYear) * 12;
-	const firstYearExcludedMonths = (MonthValue[startMonth] - 1);
-	const monthTotal = fullYearMonths - firstYearExcludedMonths + endMonth;
+// 	const fullYearMonths = (endYear - startYear) * 12;
+// 	const firstYearExcludedMonths = (MonthValue[startMonth] - 1);
+// 	const monthTotal = fullYearMonths - firstYearExcludedMonths + endMonth;
 
-	return monthTotal < 12
-		? `${monthTotal} months`
-		: `${parseFloat((Math.round((monthTotal / 12) * 4) / 4).toFixed(2))} years`
+// 	return monthTotal < 12
+// 		? `${monthTotal} months`
+// 		: `${parseFloat((Math.round((monthTotal / 12) * 4) / 4).toFixed(2))} years`
 
-}
+// }
 
 function expandAccordion (organization) {
 	console.log('expanding...', organization)
