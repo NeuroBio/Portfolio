@@ -2,40 +2,10 @@ const experienceContainer = d3.select('#experiences');
 
 // Corporate Experience
 experienceContainer.append('h2').text('Corporate Experience');
-buildAccordion({
-	organization: 'RF-SMART',
-	buttonTitle: 'Corporate Experience',
-	startExpanded: true,
-	positions: [
-		{
-			title: 'Senior Software Developer',
-			startMonth: MonthKey.DECEMBER,
-			startYear: 2023,
-			endMonth: PRESENT,
-			endYear: PRESENT,
-		},
-		{
-			title: 'Software Developer II',
-			startMonth: MonthKey.JANUARY,
-			startYear: 2023,
-			endMonth: MonthKey.NOVEMBER,
-			endYear: 2023,
-		},
-		{
-			title: 'Software Developer I',
-			startMonth: MonthKey.JANUARY,
-			startYear: 2022,
-			endMonth: MonthKey.DECEMBER,
-			endYear: 2022,
-		}
-	],
-	achievements: [
-		`(2024) Won the "Most Likely To Implement" category in RF-SMART's HackFest`,
-		`(2023) Became the dev team lead for Outbound Products`,
-		`(2022) Earned a High Altitude Award - RF-SMART's individual merit award (nominated by manager)`,
-		`(2022) Built an integration testing framework prototype to run our code in a 3rd party environment.`,
-		`(2022 - 2024) Earned 6 DYSTs - RF-SMART's peer recognition award`,
-	],
+const corporateButton = 'Corporate Experience';
+console.log(PortfolioData.experiences)
+PortfolioData.experiences.corporate.forEach((experience) => {
+	buildAccordion(corporateButton, experience);
 });
 
 
@@ -43,9 +13,9 @@ buildAccordion({
 experienceContainer.append('h2').text('Education');
 
 
-function buildAccordion ({
+function buildAccordion (buttonTitle, {
+	safeId,
 	organization,
-	buttonTitle,
 	positions,
 	achievements,
 	startExpanded,
@@ -54,10 +24,10 @@ function buildAccordion ({
 		.attr('class', 'epoch');
 	const button = epoch.append('button')
 		.attr('title', buttonTitle)
-		.attr('id', organization)
+		.attr('id', safeId)
 		.attr('type', 'button')
 		.attr('class', 'accordion-header')
-		.attr('onClick', `collapseAccordion('${organization}')`);
+		.attr('onClick', `${startExpanded ? 'collapse' : 'expand'}Accordion('${safeId}')`);
 	
 	const lastPosition = positions[0];
 	const firstPosition = positions[positions.length - 1];
@@ -73,7 +43,7 @@ function buildAccordion ({
 	button.append('i').attr('class', `accordion-icon fas fa-${startExpanded ? 'minus': 'plus'}-circle`);
 
 	const epochContents = epoch.append('section')
-		.attr('id', `${organization}-panel`)
+		.attr('id', `${safeId}-panel`)
 		.attr('class', `accordion-panel ${startExpanded ? 'expanded' : 'collapsed'}`);
 
 	if (positions.length > 1) {
@@ -95,9 +65,11 @@ function buildAccordion ({
 		epochContents.append('h4').text('Achievements');
 		const achievementsList = epochContents.append('ul');
 		achievements.forEach((achievement) => {
-			achievementsList.append('li')
+			const achievementEntry = achievementsList.append('li')
 				.attr('class', 'achievement')
-				.text(achievement);
+
+			achievementEntry.append('span').text(achievement.text);
+			achievementEntry.append('i').text(achievement.date);
 		});
 	}
 }
@@ -125,7 +97,7 @@ function calculateTimeAtOrganization(params) {
 }
 
 function expandAccordion (organization) {
-	console.log('expanding...')
+	console.log('expanding...', organization)
 	d3.select(`#${organization}`)
 		.attr('onClick', `collapseAccordion('${organization}')`)
 	d3.select(`#${organization} i`)
@@ -135,7 +107,7 @@ function expandAccordion (organization) {
 }
 
 function collapseAccordion (organization) {
-	console.log('collapsing...')
+	console.log('collapsing...', organization)
 	d3.select(`#${organization}`)
 		.attr('onClick', `expandAccordion('${organization}')`);
 	d3.select(`#${organization} i`)

@@ -122,6 +122,35 @@ const AllLanguages = Object.freeze({
 });
 
 
+class Experience {
+	constructor(name, expanded, positions, achievements) {
+		this.organization = name;
+		this.safeId = name.replace(/[^a-zA-Z\d]/g, '');
+		this.startExpanded = expanded;
+		this.positions = positions;
+		this.achievements = achievements;
+		console.log(this.safeId)
+
+	}
+}
+
+class Position {
+	constructor(title, startMonth, startYear, endMonth, endYear) {
+		this.title = title;
+		this.startMonth = startMonth;
+		this.startYear = startYear;
+		this.endMonth = endMonth;
+		this.endYear = endYear;
+	}
+}
+class Achievement {
+	constructor(date, text) {
+		this.date = date;
+		this.text = text;
+	}
+}
+
+
 const PortfolioData = {
 	brandStatement: `Driven by challenge and curiosity.
 		I combine an artist's creativity with a scientist's logical approach to solve software engineering problems.
@@ -309,5 +338,35 @@ const PortfolioData = {
 			[LanguageKey.BITBUCKET]: AllLanguages[LanguageKey.BITBUCKET],
 		},
 	},
+
+	experiences: {
+		corporate: [
+			new Experience(
+				'RF-SMART',
+				true,
+				[
+					new Position('Senior Software Developer', MonthKey.DECEMBER, 2023, PRESENT, PRESENT),
+					new Position('Software Developer II', MonthKey.JANUARY, 2023, MonthKey.NOVEMBER, 2023),
+					new Position('Software Developer I', MonthKey.JANUARY, 2022, MonthKey.DECEMBER, 2022),
+				],
+				[
+					new Achievement('2024',	`Won the "Most Likely To Implement" category in RF-SMART's HackFest`),
+					new Achievement('2023', `Became the dev team lead for Outbound Products`),
+					new Achievement('2022', `Earned a High Altitude Award - RF-SMART's individual merit award (nominated by manager)`),
+					new Achievement('2022',	`Built an integration testing framework prototype to run our code in a 3rd party environment`),
+					new Achievement('2022 - 2024', `Earned 6 DYSTs - RF-SMART's peer recognition award`),
+				],
+			),
+			new Experience(
+				'TrustiPhi, LLC',
+				false,
+				[new Position('Programming Consultant', MonthKey.AUGUST, 2020, MonthKey.JANUARY, 2022)],
+				[new Achievement('2021', `Resigned and reimplemented the frontend for the company's flagship security application.`)]
+			)
+		],
+		education: [
+
+		]
+	}
 }
 
