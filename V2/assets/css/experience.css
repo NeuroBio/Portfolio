@@ -3,13 +3,17 @@
 	max-width: 600px;
 	display: flex;
 	flex-direction: column;
+	border-radius: 1em;
+	overflow: hidden;
 }
 
 .accordion-header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	border-radius: 1em 1em 0 0;
+	border: 0;
+	color: var(--textDefault);
+	background-color: var(--speakingViolet);
 }
 
 h2 {
@@ -17,6 +21,25 @@ h2 {
 	font-weight: bold;
 }
 
+.accordion-panel {
+	background-color: var(--blueForYou);
+}
+
 .accordion-icon {
-	margin-right: 1em;
+	font-size: 2em;
+	margin-right: .2em;
+}
+
+.collapsed {
+	/* display: none; */
+	padding: 0 .5em;
+	max-height: 0px;
+	transition: all .25s;
+}
+
+.expanded {
+	/* display: block; */
+	padding: .5em;
+	max-height: 100px;
+	transition: all .25s;
 }

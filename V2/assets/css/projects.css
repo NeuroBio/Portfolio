@@ -91,7 +91,7 @@
 }
 
 .project-tools i:hover {
-	background-color: var(--linkBaseDark);
+	background-color: var(--hoverables);
 }
 
 .logo {
@@ -102,7 +102,7 @@
 }
 
 .logo:hover {
-	background-color: var(--linkBaseDark);
+	background-color: var(--hoverables);
 }
 
 .project-footer {
