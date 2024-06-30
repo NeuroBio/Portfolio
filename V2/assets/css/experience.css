@@ -16,7 +16,7 @@
 	background-color: var(--speakingViolet);
 }
 
-h2 {
+#experiences h2 {
 	font-family: "Rajdhani", sans-serif;
 	font-weight: bold;
 }
@@ -40,6 +40,6 @@ h2 {
 .expanded {
 	/* display: block; */
 	padding: .5em;
-	max-height: 100px;
+	max-height: 50em;
 	transition: all .25s;
 }

@@ -68,6 +68,38 @@ class Project {
 	}
 }
 
+const PRESENT = 'Present'
+
+const MonthKey = Object.freeze({
+	JANUARY: 'Jan',
+	FEBRUARY: 'Feb', 
+	MARCH: 'Mar',
+	APRIL: 'Apr',
+	MAY: 'May',
+	JUNE: 'Jun',
+	JULY: 'Jul',
+	AUGUST: 'Aug',
+	SEPTEMBER: 'Sep',
+	OCTOBER: 'Oct',
+	NOVEMBER: 'Nov',
+	DECEMBER: 'Dec',
+});
+
+const MonthValue = Object.freeze({
+	[MonthKey.JANUARY]: 1,
+	[MonthKey.FEBRUARY]: 2,
+	[MonthKey.MARCH]: 3,
+	[MonthKey.APRIL]: 4,
+	[MonthKey.MAY]: 5,
+	[MonthKey.JUNE]: 6,
+	[MonthKey.JULY]: 7,
+	[MonthKey.AUGUST]: 8,
+	[MonthKey.SEPTEMBER]: 9,
+	[MonthKey.OCTOBER]: 10,
+	[MonthKey.NOVEMBER]: 11,
+	[MonthKey.DECEMBER]: 12,
+});
+
 const AllLanguages = Object.freeze({
 	[LanguageKey.NODE]: new Language('Node', 'Node.js', 'fab fa-node-js'),
 	[LanguageKey.NPM]: new Language('npm', 'Node Package Manager', 'fab fa-npm'),
