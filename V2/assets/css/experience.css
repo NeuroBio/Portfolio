@@ -1,6 +1,6 @@
 .epoch {
 	margin: .5em 0;
-	max-width: 600px;
+	max-width: 800px;
 	display: flex;
 	flex-direction: column;
 	border-radius: 1em;
@@ -17,7 +17,7 @@
 }
 
 #experiences h2 {
-	font-family: "Rajdhani", sans-serif;
+	font-family: var(--slimSleek);;
 	font-weight: bold;
 }
 
@@ -43,3 +43,12 @@
 	max-height: 50em;
 	transition: all .25s;
 }
+
+.position, .achievement {
+	margin: 0 0 .5em 0;
+	display: flex;
+	justify-content: space-between;
+	font-family: var(--vsCode);
+	font-size: .75em;
+}
+

@@ -24,6 +24,10 @@
 
 	/* misc */
 	--brilliantBreak: #c675dd;
+
+	/* font */
+	--slimSleek: "Rajdhani", sans-serif;
+	--vsCode:  "Source Code Pro", monospace;
 }
 
 
@@ -104,7 +108,7 @@ h1 {
 }
 
 h2 {
-	font-family: "Rajdhani", sans-serif;
+	font-family: var(--slimSleek);;
 	font-weight: normal;
 }
 
@@ -113,7 +117,7 @@ h3 {
 }
 
 p {
-	font-family:  "Source Code Pro", monospace;
+	font-family: var(--vsCode);
 	font-size: .9em;
 }
 
@@ -204,7 +208,7 @@ footer {
   
 .tooltip .tooltip-text {
 	font-size: .5em;
-	font-family:  "Source Code Pro", monospace;
+	font-family: var(--vsCode);
 	visibility: hidden;
 	opacity: 0;
 	background-color: var(--hoverables);

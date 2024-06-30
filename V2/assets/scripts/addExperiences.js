@@ -8,26 +8,33 @@ buildAccordion({
 	startExpanded: true,
 	positions: [
 		{
-			position: 'Senior Software Developer',
+			title: 'Senior Software Developer',
 			startMonth: MonthKey.DECEMBER,
 			startYear: 2023,
 			endMonth: PRESENT,
 			endYear: PRESENT,
 		},
 		{
-			position: 'Software Developer II',
+			title: 'Software Developer II',
 			startMonth: MonthKey.JANUARY,
 			startYear: 2023,
 			endMonth: MonthKey.NOVEMBER,
 			endYear: 2023,
 		},
 		{
-			position: 'Software Developer I',
+			title: 'Software Developer I',
 			startMonth: MonthKey.JANUARY,
 			startYear: 2022,
-			endMonth: MonthKey.NOVEMBER,
+			endMonth: MonthKey.DECEMBER,
 			endYear: 2022,
 		}
+	],
+	achievements: [
+		`(2024) Won the "Most Likely To Implement" category in RF-SMART's HackFest`,
+		`(2023) Became the dev team lead for Outbound Products`,
+		`(2022) Earned a High Altitude Award - RF-SMART's individual merit award (nominated by manager)`,
+		`(2022) Built an integration testing framework prototype to run our code in a 3rd party environment.`,
+		`(2022 - 2024) Earned 6 DYSTs - RF-SMART's peer recognition award`,
 	],
 });
 
@@ -40,7 +47,8 @@ function buildAccordion ({
 	organization,
 	buttonTitle,
 	positions,
-	startExpanded
+	achievements,
+	startExpanded,
 }) {
 	const epoch = experienceContainer.append('article')
 		.attr('class', 'epoch');
@@ -59,20 +67,42 @@ function buildAccordion ({
 		endMonth: lastPosition.endMonth,
 		endYear: lastPosition.endYear,
 	}
-	const buttonText = `${organization} - ${calculateTimeAtCompany(fullTimeAtOrganization)}, ${lastPosition.position}`;
+	const timeAtOrganization = calculateTimeAtOrganization(fullTimeAtOrganization);
+	const buttonText = `${organization}  -  ${lastPosition.title}, ${timeAtOrganization}`;
 	button.append('h3').text(buttonText);
-	button.append('i').attr('class', 'accordion-icon fas fa-plus-circle')
+	button.append('i').attr('class', `accordion-icon fas fa-${startExpanded ? 'minus': 'plus'}-circle`);
 
 	const epochContents = epoch.append('section')
 		.attr('id', `${organization}-panel`)
-		.attr('class', `accordion-panel ${startExpanded ? 'expanded' : 'collapsed'}`)
+		.attr('class', `accordion-panel ${startExpanded ? 'expanded' : 'collapsed'}`);
 
 	if (positions.length > 1) {
-		epochContents.text('ashgd ahsd hasdg asd jSAGDD sa jhASDG jhsdg JHGASDD jhsda HASG DD')
+		epochContents.append('h4').text('Positions');
+		const positionList = epochContents.append('ul');
+		positions.forEach((position) => {
+			const positionEntry = positionList.append('li')
+				.attr('class', 'position')
+
+			positionEntry.append('span').text(position.title);
+			const endPeriod = position.endYear === PRESENT
+				? PRESENT
+				: `${position.endMonth}, ${position.endYear}`
+			positionEntry.append('i').text(`(${position.startMonth}, ${position.startYear} - ${endPeriod})`);
+		});
+	}
+
+	if (achievements.length > 0) {
+		epochContents.append('h4').text('Achievements');
+		const achievementsList = epochContents.append('ul');
+		achievements.forEach((achievement) => {
+			achievementsList.append('li')
+				.attr('class', 'achievement')
+				.text(achievement);
+		});
 	}
 }
 
-function calculateTimeAtCompany(params) {
+function calculateTimeAtOrganization(params) {
 	console.log(params)
 	const startMonth = params.startMonth;
 	const startYear = params.startYear;
@@ -85,7 +115,7 @@ function calculateTimeAtCompany(params) {
 	}
 
 	const fullYearMonths = (endYear - startYear) * 12;
-	const firstYearExcludedMonths = (MonthValue[startMonth] - 1)
+	const firstYearExcludedMonths = (MonthValue[startMonth] - 1);
 	const monthTotal = fullYearMonths - firstYearExcludedMonths + endMonth;
 
 	return monthTotal < 12
