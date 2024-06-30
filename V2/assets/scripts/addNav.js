@@ -13,18 +13,18 @@ const linkList = nav.append('ul')
 const currentPage = d3.select('body');
 const currentPageName = currentPage.attr('id');
 
-if (currentPageName !== Page.ABOUT) {
-	linkList.append('li').append('a')
-		.attr('href', './about.html')
-		.attr('class', 'link-button')
-		.text('About');
-}
-
 if (currentPageName !== Page.HOME) {
 	linkList.append('li').append('a')
 		.attr('href', './projects.html')
 		.attr('class', 'link-button')
 		.text('Projects');
+}
+
+if (currentPageName !== Page.ABOUT) {
+	linkList.append('li').append('a')
+		.attr('href', './about.html')
+		.attr('class', 'link-button')
+		.text('About');
 }
 
 if (currentPageName !== Page.EXPERIENCE) {
