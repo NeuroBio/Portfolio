@@ -131,12 +131,12 @@ const PortfolioData = {
 		new Project(
 			'Discord Bot',
 			'../assets/images/projects/discordbot.jpg',
-			'',
+			'../assets/videos/ArecaceDemo.mp4',
 			`Made for convenience and trolling.
-			Includes commands for DnD and VtM dice rolls, prompt generators, and fetching web scraped data.
-			I used it as an opportunity to start from nothing and see what inconveniences drove me to improve the dev experience.
-			I quickly realized that I now expect all my projects to have:
-			lint auto-fix on save, a unit testing framework for TDD, and path aliases. 
+			Includes commands dice rolls, generators, and fetching web-scraped data.
+			I started from nothing to see what inconveniences drove me to improve the dev experience.
+			I realized all my projects need to have:
+			linting on save, a unit tests for TDD, and path aliases. 
 			`,
 			[
 				AllLanguages[LanguageKey.NODE],
@@ -149,7 +149,7 @@ const PortfolioData = {
 		new Project(
 			'Code Namer',
 			'../assets/images/projects/CodeNamer.jpg',
-			'',
+			'../assets/videos/ArecaceDemo.mp4',
 			`An April Fool's Day prank app.
 			Based on a number of long running jokes at work, DDD concepts, and my personal sense of humor.
 			This project was an excuse to learn react in my personal time back when we planned to transition
@@ -165,8 +165,8 @@ const PortfolioData = {
 		),
 		new Project(
 			'Song Evolution Model',
-			'../assets/images/projects/SEM.png',
-			'',
+			'../assets/images/projects/SEM.jpg',
+			'../assets/videos/SEMDemo.mp4',
 			`An agent based model I developed for my PhD thesis.
 			It simulates how birdsong evolves under different selection pressures.
 			Initially written in R, the model ran too slow to generate the volume of data I needed.
@@ -187,8 +187,8 @@ const PortfolioData = {
 		),
 		new Project(
 			'VtM Maps',
-			'../assets/images/projects/VtMMaps.png',
-			'',
+			'../assets/images/projects/VtMMaps.jpg',
+			'../assets/videos/ArecaceDemo.mp4',
 			`A app for my Vampire the Masquerade Campaign: Phoenix Heat.
 			It acts as a quick references for the NPCs my players had met, as well as in-game locations.
 			Includes two maps: one for real world Phoenix and a second for fictional town Hartstone
@@ -196,20 +196,19 @@ const PortfolioData = {
 			`,
 			[],
 			[
-				new Link('Live Project', 'https://carddatabase-6dfef.web.app/Masterlist'),
-				new Link('Repo', 'https://github.com/NeuroBio/CardDatabase_ng14'),
+				new Link('Live Project', 'https://neurobio.github.io/VtM-Maps/'),
+				new Link('Repo', 'https://github.com/NeuroBio/VtM-Maps'),
 			]
 		),
 		new Project(
 			'Card Database',
-			'../assets/images/projects/Cards.png',
-			'',
-			`A app for managing my pokemon card collection.
-			The app itself is mostly focused on tracking and organizing cards.
-			There's also a set of python scripts for web scraping expansion sets from Bulbapedia that are run in the CLI.
-			I'm starting to get a lot of data (over 20K cards), which causes performance issues in the app.
-			At the moment, I added a card cache to make reloads faster.
-			The next steps will be changing my app to request and display data differently to reduce lag.
+			'../assets/images/projects/Cards.jpg',
+			'../assets/videos/CardsDemo.mp4',
+			`For managing my pokemon card collection.
+			The app focuses on tracking and organizing cards.
+			Web scraping scripts for fetch expansion sets from Bulbapedia.
+			At over 20K cards in the database, there are now performance issues.
+			The next steps will be focused on reducing lag.
 			`,
 			[
 				AllLanguages[LanguageKey.ANGULAR],
