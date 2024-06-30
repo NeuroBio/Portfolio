@@ -17,7 +17,7 @@
 	--linkHover: #5b58da;
 	--pictureLinkHover: #5e5da0;
 	--linkActive: #3f3b9f;
-	--linkBaseDark: #494749;
+	--hoverables: #494749;
 
 	/* text */
 	--textDefault: whitesmoke;
@@ -207,7 +207,7 @@ footer {
 	font-family:  "Source Code Pro", monospace;
 	visibility: hidden;
 	opacity: 0;
-	background-color: var(--linkBaseDark);
+	background-color: var(--hoverables);
 	color: var(--textDefault);
 	text-align: center;
 	border-radius: 6px;
