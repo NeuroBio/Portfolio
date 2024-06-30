@@ -131,7 +131,7 @@ const PortfolioData = {
 		new Project(
 			'Discord Bot',
 			'../assets/images/projects/discordbot.jpg',
-			'../assets/videos/ArecaceDemo.mp4',
+			'../assets/videos/DiscordBotDemo.mp4',
 			`Made for convenience and trolling.
 			Includes commands dice rolls, generators, and fetching web-scraped data.
 			I started from nothing to see what inconveniences drove me to improve the dev experience.
@@ -149,7 +149,7 @@ const PortfolioData = {
 		new Project(
 			'Code Namer',
 			'../assets/images/projects/CodeNamer.jpg',
-			'../assets/videos/ArecaceDemo.mp4',
+			'../assets/videos/CodeNamerDemo.mp4',
 			`An April Fool's Day prank app.
 			Based on a number of long running jokes at work, DDD concepts, and my personal sense of humor.
 			This project was an excuse to learn react in my personal time back when we planned to transition
@@ -188,7 +188,7 @@ const PortfolioData = {
 		new Project(
 			'VtM Maps',
 			'../assets/images/projects/VtMMaps.jpg',
-			'../assets/videos/ArecaceDemo.mp4',
+			'../assets/videos/VtMMapsDemo.mp4',
 			`A app for my Vampire the Masquerade Campaign: Phoenix Heat.
 			It acts as a quick references for the NPCs my players had met, as well as in-game locations.
 			Includes two maps: one for real world Phoenix and a second for fictional town Hartstone
