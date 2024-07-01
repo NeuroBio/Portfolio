@@ -38,7 +38,10 @@ function buildAccordion (buttonTitle, {
 	const endTime = endYear === PRESENT ? PRESENT : `${endMonth}, ${endYear}`
 
 	const header = button.append('h3')
-	header.append('span').text(`${organization}  |  ${lastPosition.title}`);
+	const mainText = header.append('span')
+	mainText.append('span').text(organization);
+	mainText.append('b').text('  |  ');
+	mainText.append('span').text(lastPosition.title).attr('class', 'position-text');
 	header.append('span').text(`${startMonth}, ${startYear} - ${endTime}`).attr('class', 'dates');
 	button.append('i').attr('class', `accordion-icon fas fa-${startExpanded ? 'minus': 'plus'}-circle`);
 
