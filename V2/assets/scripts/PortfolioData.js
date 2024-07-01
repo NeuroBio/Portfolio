@@ -123,14 +123,28 @@ const AllLanguages = Object.freeze({
 
 
 class Experience {
-	constructor(name, expanded, positions, achievements) {
+	constructor(name, expanded, credential, dateRange, positions, achievements, publications) {
 		this.organization = name;
 		this.safeId = name.replace(/[^a-zA-Z\d]/g, '');
 		this.startExpanded = expanded;
+		this.credential = credential;
 		this.positions = positions;
 		this.achievements = achievements;
-		console.log(this.safeId)
+		this.publications = publications;
+		this.dateRange = dateRange || _getDateRange();
 
+
+		function _getDateRange() {
+			const lastPosition = positions[0];
+			const firstPosition = positions[positions.length - 1];
+
+			const startMonth = firstPosition.startMonth;
+			const startYear = firstPosition.startYear;
+			const endMonth = lastPosition.endMonth;
+			const endYear = lastPosition.endYear;
+			const endTime = endYear === PRESENT ? PRESENT : `${endMonth}, ${endYear}`;
+			return `${startMonth}, ${startYear} - ${endTime}`;
+		};
 	}
 }
 
@@ -344,6 +358,8 @@ const PortfolioData = {
 			new Experience(
 				'RF-SMART',
 				true,
+				'',
+				'',
 				[
 					new Position('Senior Software Developer', MonthKey.DECEMBER, 2023, PRESENT, PRESENT),
 					new Position('Software Developer II', MonthKey.JANUARY, 2023, MonthKey.NOVEMBER, 2023),
@@ -356,16 +372,46 @@ const PortfolioData = {
 					new Achievement('2022',	`Built an integration testing framework prototype to run our code in a 3rd party environment`),
 					new Achievement('2022 - 2024', `Earned 6 DYSTs - RF-SMART's peer recognition award`),
 				],
+				[],
 			),
 			new Experience(
 				'TrustiPhi, LLC',
 				false,
+				'',
+				'',
 				[new Position('Programming Consultant', MonthKey.AUGUST, 2020, MonthKey.JANUARY, 2022)],
-				[new Achievement('2021', `Resigned and reimplemented the frontend for the company's flagship security application.`)]
+				[new Achievement('2021', `Resigned and reimplemented the frontend for the company's flagship security application.`)],
+				[],
 			)
 		],
 		education: [
-
+			new Experience(
+				'University of Miami',
+				false,
+				'Certificate in Data Analytics',
+				`${MonthKey.MAY}, ${2021} - ${MonthKey.OCTOBER}, ${2021}`,
+				[],
+				[],
+				[],
+			),
+			new Experience(
+				'Vanderbilt University',
+				false,
+				'Ph.D. in Computational Biology',
+				`${MonthKey.AUGUST}, ${2013} - ${MonthKey.OCTOBER}, ${2019}`,
+				[],
+				[],
+				[],
+			),
+			new Experience(
+				'Ohio Northern University',
+				false,
+				'B.S. in Molecular Biology and Behavioral Neuroscience',
+				`${MonthKey.AUGUST}, ${2010} - ${MonthKey.MAY}, ${2013}`,
+				[],
+				[],
+				[],
+			),
 		]
 	}
 }

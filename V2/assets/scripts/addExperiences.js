@@ -3,64 +3,69 @@ const experienceContainer = d3.select('#experiences');
 // Corporate Experience
 experienceContainer.append('h2').text('Corporate Experience');
 const corporateButton = 'Corporate Experience';
-console.log(PortfolioData.experiences)
+const educationButton = 'Education';
+
 PortfolioData.experiences.corporate.forEach((experience) => {
-	buildAccordion(corporateButton, experience);
+	const mainText = buildAccordion(corporateButton, experience);
+
+	const lastPosition = experience.positions[0];
+
+	mainText.append('span').text(experience.organization);
+	mainText.append('b').text('  |  ');
+	mainText.append('span').text(lastPosition.title).attr('class', 'position-text');
 });
 
 
 // Education
 experienceContainer.append('h2').text('Education');
+PortfolioData.experiences.education.forEach((experience) => {
+	const mainText = buildAccordion(educationButton, experience);
 
+	mainText.append('span').text(experience.organization);
+	mainText.append('b').text('  |  ');
+	mainText.append('span').text(experience.credential).attr('class', 'position-text');
+});
 
-function buildAccordion (buttonTitle, {
-	safeId,
-	organization,
-	positions,
-	achievements,
-	startExpanded,
-}) {
+function buildAccordion (buttonTitle, { safeId, dateRange, positions, achievements, startExpanded }) {
+	const isExpandable = (positions.length > 0 || achievements.length > 0);
 	const epoch = experienceContainer.append('article')
 		.attr('class', 'epoch');
 	const button = epoch.append('button')
 		.attr('title', buttonTitle)
 		.attr('id', safeId)
 		.attr('type', 'button')
-		.attr('class', 'accordion-header')
-		.attr('onClick', `${startExpanded ? 'collapse' : 'expand'}Accordion('${safeId}')`);
-	
-	const lastPosition = positions[0];
-	const firstPosition = positions[positions.length - 1];
-	const startMonth = firstPosition.startMonth;
-	const startYear = firstPosition.startYear;
-	const endMonth = lastPosition.endMonth;
-	const endYear = lastPosition.endYear;
-	const endTime = endYear === PRESENT ? PRESENT : `${endMonth}, ${endYear}`
+		.attr('class', 'accordion-header');
 
-	const header = button.append('h3')
-	const mainText = header.append('span')
-	mainText.append('span').text(organization);
-	mainText.append('b').text('  |  ');
-	mainText.append('span').text(lastPosition.title).attr('class', 'position-text');
-	header.append('span').text(`${startMonth}, ${startYear} - ${endTime}`).attr('class', 'dates');
-	button.append('i').attr('class', `accordion-icon fas fa-${startExpanded ? 'minus': 'plus'}-circle`);
+	if (isExpandable) {
+		button.attr('onClick', `${startExpanded ? 'collapse' : 'expand'}Accordion('${safeId}')`);
+	}
+	
+	const header = button.append('h3');
+	const mainText = header.append('span');
+	header.append('span').attr('class', 'dates').text(dateRange);
+	
+	if (isExpandable) {
+		button.append('i').attr('class', `accordion-icon fas fa-${startExpanded ? 'minus': 'plus'}-circle`);
+	}
 
 	const epochContents = epoch.append('section')
 		.attr('id', `${safeId}-panel`)
 		.attr('class', `accordion-panel ${startExpanded ? 'expanded' : 'collapsed'}`);
 
-	epochContents.append('h4').text('Positions');
-	const positionList = epochContents.append('ul');
-	positions.forEach((position) => {
-		const positionEntry = positionList.append('li')
-			.attr('class', 'position')
+	if (positions.length > 0) {
+		epochContents.append('h4').text('Positions');
+		const positionList = epochContents.append('ul');
+		positions.forEach((position) => {
+			const positionEntry = positionList.append('li')
+				.attr('class', 'position')
 
-		positionEntry.append('span').text(position.title);
-		const endPeriod = position.endYear === PRESENT
-			? PRESENT
-			: `${position.endMonth}, ${position.endYear}`
-		positionEntry.append('i').text(`(${position.startMonth}, ${position.startYear} - ${endPeriod})`);
-	});
+			positionEntry.append('span').text(position.title);
+			const endPeriod = position.endYear === PRESENT
+				? PRESENT
+				: `${position.endMonth}, ${position.endYear}`
+			positionEntry.append('i').text(`(${position.startMonth}, ${position.startYear} - ${endPeriod})`);
+		});
+	}
 
 	if (achievements.length > 0) {
 		epochContents.append('h4').text('Achievements');
@@ -73,29 +78,10 @@ function buildAccordion (buttonTitle, {
 			achievementEntry.append('i').text(achievement.date);
 		});
 	}
+
+	// return this part because it changes
+	return mainText;
 }
-
-// function calculateTimeAtOrganization(params) {
-// 	console.log(params)
-// 	const startMonth = params.startMonth;
-// 	const startYear = params.startYear;
-// 	let endMonth = MonthValue[params.endMonth];
-// 	let endYear = params.endYear;
-
-// 	if (endYear === PRESENT) {
-// 		endYear = new Date().getFullYear();
-// 		endMonth = new Date().getMonth() + 1;
-// 	}
-
-// 	const fullYearMonths = (endYear - startYear) * 12;
-// 	const firstYearExcludedMonths = (MonthValue[startMonth] - 1);
-// 	const monthTotal = fullYearMonths - firstYearExcludedMonths + endMonth;
-
-// 	return monthTotal < 12
-// 		? `${monthTotal} months`
-// 		: `${parseFloat((Math.round((monthTotal / 12) * 4) / 4).toFixed(2))} years`
-
-// }
 
 function expandAccordion (organization) {
 	console.log('expanding...', organization)
