@@ -400,8 +400,8 @@ const PortfolioData = {
 				'Ph.D. in Computational Biology',
 				`${MonthKey.AUGUST}, ${2013} - ${MonthKey.OCTOBER}, ${2019}`,
 				[
-					new Position('Research Assistant under Dr. Nicole Creanza', MonthKey.JUNE, 2017, MonthKey.AUGUST, 2019),
-					new Position('Research Assistant under Dr. Donna Webb', MonthKey.MAY, 2014, MonthKey.MAY, 2017),
+					new Position('PhD Candidate under Dr. Nicole Creanza', MonthKey.JUNE, 2017, MonthKey.AUGUST, 2019),
+					new Position('PhD Candidate under Dr. Donna Webb', MonthKey.MAY, 2014, MonthKey.MAY, 2017),
 				],
 				[],
 				[],
