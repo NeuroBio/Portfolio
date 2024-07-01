@@ -26,8 +26,8 @@ PortfolioData.experiences.education.forEach((experience) => {
 	mainText.append('span').text(experience.credential).attr('class', 'position-text');
 });
 
-function buildAccordion (buttonTitle, { safeId, dateRange, positions, achievements, startExpanded }) {
-	const isExpandable = (positions.length > 0 || achievements.length > 0);
+function buildAccordion (buttonTitle, { safeId, dateRange, positions, achievements, publications, startExpanded }) {
+	const isExpandable = (positions.length > 0 || achievements.length > 0 || publications.length > 0);
 	const epoch = experienceContainer.append('article')
 		.attr('class', 'epoch');
 	const button = epoch.append('button')
