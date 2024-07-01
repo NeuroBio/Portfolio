@@ -20,7 +20,7 @@
 }
 
 #experiences h2 {
-	font-family: var(--slimSleek);;
+	font-family: var(--slimSleek);
 	font-weight: bold;
 }
 
@@ -61,11 +61,15 @@ h3 {
 	transition: all .25s;
 }
 
-.position, .achievement {
+.position, .achievement, .publication {
 	margin: 0 0 .5em 0;
 	display: flex;
 	justify-content: space-between;
 	font-family: var(--vsCode);
 	font-size: .75em;
+}
+
+.publication span b {
+	color: var(--linkBase);
 }
 

@@ -3,30 +3,18 @@ const experienceContainer = d3.select('#experiences');
 // Corporate Experience
 experienceContainer.append('h2').text('Corporate Experience');
 const corporateButton = 'Corporate Experience';
-const educationButton = 'Education';
-
-PortfolioData.experiences.corporate.forEach((experience) => {
-	const mainText = buildAccordion(corporateButton, experience);
-
-	const lastPosition = experience.positions[0];
-
-	mainText.append('span').text(experience.organization);
-	mainText.append('b').text('  |  ');
-	mainText.append('span').text(lastPosition.title).attr('class', 'position-text');
-});
+PortfolioData.experiences.corporate.forEach((experience) => buildAccordion(corporateButton, experience));
 
 
 // Education
 experienceContainer.append('h2').text('Education');
-PortfolioData.experiences.education.forEach((experience) => {
-	const mainText = buildAccordion(educationButton, experience);
+const educationButton = 'Education';
+PortfolioData.experiences.education.forEach((experience) => buildAccordion(educationButton, experience));
 
-	mainText.append('span').text(experience.organization);
-	mainText.append('b').text('  |  ');
-	mainText.append('span').text(experience.credential).attr('class', 'position-text');
-});
 
-function buildAccordion (buttonTitle, { safeId, dateRange, positions, achievements, publications, startExpanded }) {
+function buildAccordion (buttonTitle, experience) {
+	const { organization, safeId, dateRange, positions, achievements, publications, startExpanded } = experience;
+
 	const isExpandable = (positions.length > 0 || achievements.length > 0 || publications.length > 0);
 	const epoch = experienceContainer.append('article')
 		.attr('class', 'epoch');
@@ -42,6 +30,9 @@ function buildAccordion (buttonTitle, { safeId, dateRange, positions, achievemen
 	
 	const header = button.append('h3');
 	const mainText = header.append('span');
+	mainText.append('span').text(organization);
+	mainText.append('b').text('  |  ');
+	mainText.append('span').text(experience.getHighlightedText()).attr('class', 'position-text');
 	header.append('span').attr('class', 'dates').text(dateRange);
 	
 	if (isExpandable) {
@@ -79,8 +70,15 @@ function buildAccordion (buttonTitle, { safeId, dateRange, positions, achievemen
 		});
 	}
 
-	// return this part because it changes
-	return mainText;
+	if (publications.length > 0) {
+		epochContents.append('h4').text('Publications');
+		const publicationList = epochContents.append('ul');
+		publications.forEach((publication) => {
+			const publicationEntry = publicationList.append('li')
+				.attr('class', 'publication')
+			publicationEntry.append('span').html(publication.citation);
+		});
+	}
 }
 
 function expandAccordion (organization) {

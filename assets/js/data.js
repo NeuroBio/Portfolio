@@ -256,12 +256,6 @@ const credentials = [
         one preference or the other.`,
         publications: [
             {
-                citationInnerHTML: `<b>C. Robinson</b>, N. Creanza. (2021). Modeling the evolutionary
-                interactions of sexual selection and learning strategies on the duration
-                of song-learning in birds. <i>PLoS Computational Biology</i>. (under review).`,
-                github: 'https://github.com/CreanzaLab/SongEvolutionModel',
-            },
-            {
                 citationInnerHTML: ` R. Gordon, A. Ravignani, J. Hyland Bruno, <b>C. Robinson</b>, A. Scartozzi,
                 R. Embalabala, M. Niarchou, 23andMe Research Team, N. Cox, N. Creanza. (2021)
                 Linking the genomic signatures of human beat synchronization and learned
