@@ -265,8 +265,8 @@ const PortfolioData = {
 			'../assets/images/projects/VtMMaps.jpg',
 			'../assets/videos/VtMMapsDemo.mp4',
 			`A app for my Vampire the Masquerade Campaign: Phoenix Heat.
-			It acts as a quick references for the NPCs my players had met, as well as in-game locations.
-			Includes two maps: one for real world Phoenix and a second for fictional town Hartstone
+			It acted as a quick reference for the NPCs my players had met, as well as in-game locations.
+			Includes two maps: one for real world Phoenix and a second for fictional town Hartstone,
 			where the players where based.
 			`,
 			[],
