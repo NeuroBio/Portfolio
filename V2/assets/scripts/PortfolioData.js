@@ -146,6 +146,10 @@ class Experience {
 			return `${startMonth}, ${startYear} - ${endTime}`;
 		};
 	}
+
+	getHighlightedText () {
+		return this.credential ? this.credential : this.positions[0].title;
+	}
 }
 
 class Position {
@@ -163,6 +167,22 @@ class Achievement {
 		this.text = text;
 	}
 }
+
+class Publication {
+	constructor (citation, publicationLink, githubLink, pressReleases) {
+		this.citation = citation;
+		this.publicationLink = publicationLink;
+		this.githubLink = githubLink;
+		this.pressReleases = pressReleases;
+	}
+ }
+
+ class PressRelease {
+	constructor(citation, link) {
+		this.citation = citation;
+		this.link = link;
+	}
+ }
 
 
 const PortfolioData = {
@@ -404,7 +424,55 @@ const PortfolioData = {
 					new Position('PhD Candidate under Dr. Donna Webb', MonthKey.MAY, 2014, MonthKey.MAY, 2017),
 				],
 				[],
-				[],
+				[
+					new Publication(
+						` R. Gordon, A. Ravignani, J. Hyland Bruno, <b>C. Robinson</b>, A. Scartozzi,
+						R. Embalabala, M. Niarchou, 23andMe Research Team, N. Cox, N. Creanza. (2021)
+						Linking the genomic signatures of human beat synchronization and learned
+						song in birds. <i>Phil Trans B</i>. 376(1835)`,
+						'https://royalsocietypublishing.org/doi/abs/10.1098/rstb.2020.0329'
+					),
+					new Publication(
+						`<b>C. Robinson</b>, K. Snyder, N. Creanza. (2019).
+						Correlated evolution between repertoire size and song plasticity predicts that
+						sexual selection on song promotes open-ended learning. <i>eLife</i>. 8: e44454.`,
+						'https://elifesciences.org/articles/44454',
+						'https://github.com/CreanzaLab/SongLearningEvolution',
+						[
+							new PressRelease(
+								`PRESS: <i>The Conversation</i>, September 3, 2019 - Complex birdsongs help biologists piece together the evolution of lifelong learning`,
+								'https://theconversation.com/complex-birdsongs-help-biologists-piece-together-the-evolution-of-lifelong-learning-122009'
+							),
+							new PressRelease(
+								`PRESS: <i>Research News @ Vanderbilt</i>, High standards of female songbirds could be driving their mates to evolve`,
+								'https://news.vanderbilt.edu/2019/09/04/high-standards-of-female-songbirds-could-be-driving-their-mates-to-evolve/'
+							)
+						]
+		
+					),
+					new Publication(
+						` <b>C. Robinson</b>, N. Creanza. (2019). Species‐level repertoire size predicts
+						a correlation between individual song elaboration and reproductive success.
+						<i>Ecology and Evolution</i>. 9(14): 8362-8377.`,
+						'https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.5418',
+						'https://github.com/CreanzaLab/RepertoireSizeReproductiveSuccess',
+					),
+					new Publication(
+						`<b>C. Robinson</b>, M. Patel, D. Webb. (2016). Super resolution microscopy is poised to
+						reveal new insights into the formation and maturation of dendritic spines. <i>F1000Research</i>.
+						5(F100 Faculty Rev), 1468.`,
+						'https://f1000research.com/articles/5-1468/v1',
+						''
+					),
+					new Publication(
+						`J. Evans, <b>C. Robinson</b>, M. Shi, D. Webb. (2015).
+						The guanine nucleotide exchange factor (GEF) asef2 promotes dendritic spine
+						formation via rac activation and spinophilin-dependent targeting.
+						<i>Journal of Biological Chemistry</i>. 290, 10295-10398.`,
+						'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4400342/',
+						''
+					)
+				],
 			),
 			new Experience(
 				'Ohio Northern University',
@@ -413,7 +481,20 @@ const PortfolioData = {
 				`${MonthKey.AUGUST}, ${2009} - ${MonthKey.MAY}, ${2013}`,
 				[new Position('Research Assistant under Dr. Phillip Zoladz', MonthKey.DECEMBER, 2010, MonthKey.MAY, 2013)],
 				[],
-				[],
+				[
+					new Publication(
+						`P. Zoladz, H. Burke, <b>C. Robinson</b>, S. Woelke, B. Wentz, J. Pisansky,
+						J. McKay, K. Dexter, J. Talbot. (2014). Blunted Corticosterone Response to
+						Acute Predator Stress Results in Long-Term Spatial Memory Impairment. <i>SOJ Psychology</i>. 1(1): 7.`,
+						'https://symbiosisonlinepublishing.com/psychology/psychology02.php',
+					),
+					new Publication(
+						`H. Burke, <b>C. Robinson</b>, B. Wentz, J. McKay, K. Dexter., J. Pisansky, J. Talbot, P. Zoladz.
+						(2013). Sex-specific impairment of spatial memory in rats following a reminder of predator stress.
+						<i>Stress</i>. 16(4): 469-76.`,
+						'https://www.tandfonline.com/doi/abs/10.3109/10253890.2013.791276?journalCode=ists20',
+					)
+				],
 			),
 		]
 	}
