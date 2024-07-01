@@ -31,6 +31,10 @@ h3 {
 	background-color: var(--blueForYou);
 }
 
+.position-text {
+	color: var(--linkBase);
+}
+
 .dates {
 	font-size: 1em;
 	color: var(--whisperingViolet);
