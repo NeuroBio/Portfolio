@@ -9,19 +9,19 @@ const socialsList = socials.append('ul')
 
 
 const gitHub = socialsList.append('li').append('a')
-	.attr('id', 'github')
+	.attr('aria-label', 'Link to my Github')
 	.attr('href', 'https://github.com/NeuroBio');
 gitHub.append('i')
 	.attr('class', 'fab fa-github');
 
 const linkedIn = socialsList.append('li').append('a')
-	.attr('id', 'linkedin')
+	.attr('aria-label', 'Link to my LinkedIn')
 	.attr('href', 'https://www.linkedin.com/in/cristina-robinson-88938052/');
 linkedIn.append('i')
 	.attr('class', 'fab fa-linkedin');
 
 const email = socialsList.append('li').append('a')
-	.attr('id', 'email')
+	.attr('aria-label', 'Link to my email')
 	.attr('href', 'mailto: cristinamrobinson@gmail.com');
 email.append('i')
 	.attr('class', 'fas fa-envelope');
