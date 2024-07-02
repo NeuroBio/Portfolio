@@ -77,6 +77,20 @@ function buildAccordion (buttonTitle, experience) {
 			const publicationEntry = publicationList.append('li')
 				.attr('class', 'publication')
 			publicationEntry.append('span').html(publication.citation);
+			const publicationLinks = publicationEntry.append('span')
+				.attr('class', 'publicationLinks');
+			const articleLink = publicationLinks.append('a')
+				.attr('aria-label', 'journal article link')
+				.attr('href', publication.articleLink)
+				.attr('class', 'publicationLink');
+			articleLink.append('i').attr('class', 'fas fa-file-invoice')
+			if (publication.githubLink) {
+				const githubLink = publicationLinks.append('a')
+					.attr('aria-label', 'github repo link')
+					.attr('href', publication.githubLink)
+					.attr('class', 'publicationLink');
+				githubLink.append('i').attr('class', 'fab fa-github-square')	
+			}
 		});
 	}
 }
