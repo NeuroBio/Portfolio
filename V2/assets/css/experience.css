@@ -64,12 +64,14 @@ h3 {
 }
 
 .collapsed {
+	visibility: hidden;
 	padding: 0 .5em;
 	max-height: 0px;
 	transition: all .25s;
 }
 
 .expanded {
+	visibility: visible;
 	padding: .5em;
 	max-height: 50em;
 	transition: all .25s;
