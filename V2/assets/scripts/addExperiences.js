@@ -17,14 +17,16 @@ function buildAccordion (experience) {
 	const epoch = experienceContainer.append('article')
 		.attr('class', 'epoch');
 	const button = epoch.append('button')
-		.attr('title', `Open/Close details for ${organization}`)
 		.attr('id', safeId)
 		.attr('type', 'button')
-		.attr('class', 'accordion-header');
 
 	if (isExpandable) {
 		button.attr('onClick', `${startExpanded ? 'collapse' : 'expand'}Accordion('${safeId}')`)
+			.attr('title', `Open/Close details for ${organization}`)
 			.attr('class', 'accordion-header active');
+	} else {
+		button.attr('class', 'accordion-header inactive')
+			.attr('tabindex', '-1')
 	}
 	
 	const header = button.append('h3');
