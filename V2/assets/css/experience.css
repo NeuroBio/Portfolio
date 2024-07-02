@@ -10,13 +10,20 @@
 	border-radius: 1em;
 	overflow: hidden;
 }
+#experiences h2 {
+	font-family: var(--slimSleek);
+	font-weight: bold;
+}
 
 .accordion-header {
+	font-family: var(--slimSleek);
+	font-size: .9em;
 	display: flex;
 	align-items: center;
 	border: 0;
 	color: var(--textDefault);
 	background-color: var(--speakingViolet);
+	border: 2px solid transparent;
 }
 
 .accordion-header:focus-visible {
@@ -25,12 +32,9 @@
 	border-radius: 1.2em 1.2em;
 }
 
-#experiences h2 {
-	font-family: var(--slimSleek);
-	font-weight: bold;
-}
 
 h3 {
+	font-weight: 500;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -46,7 +50,8 @@ h3 {
 }
 
 .dates {
-	font-size: 1em;
+	font-weight: bold;
+	font-size: .8em;
 	color: var(--whisperingViolet);
 }
 
@@ -58,6 +63,7 @@ h3 {
 .active {
 	cursor: pointer;
 }
+
 
 .not-expandable {
 	color: var(--whisperingViolet);
