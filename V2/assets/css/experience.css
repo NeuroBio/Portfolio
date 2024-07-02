@@ -84,7 +84,7 @@ h3 {
 }
 
 .position, .achievement, .publication {
-	margin: 0 0 .5em 0;
+	margin: 0 0 .75em 0;
 	display: flex;
 	justify-content: space-between;
 	font-family: var(--vsCode);
@@ -112,4 +112,8 @@ h3 {
 
 .publicationLink:active {
 	color: var(--linkActive);
+}
+
+.press-releases {
+	margin-bottom: 1.75em;
 }
