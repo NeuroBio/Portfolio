@@ -73,3 +73,21 @@ h3 {
 	color: var(--linkBase);
 }
 
+.publicationLinks {
+	display: block;
+	flex-shrink: 0;
+}
+
+.publicationLink {
+	color: var(--linkBase);
+	font-size: 2em;
+	margin: 0 .2em;
+}
+
+.publicationLink:hover, .publicationLink:focus {
+	color: var(	--linkHover);
+}
+
+.publicationLink:active {
+	color: var(--linkActive);
+}
