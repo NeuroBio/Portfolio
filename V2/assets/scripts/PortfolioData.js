@@ -439,11 +439,11 @@ const PortfolioData = {
 						'https://github.com/CreanzaLab/SongLearningEvolution',
 						[
 							new PressRelease(
-								`PRESS: <i>The Conversation</i>, September 3, 2019 - Complex birdsongs help biologists piece together the evolution of lifelong learning`,
+								`<b>PRESS:</b> <i>The Conversation</i>, September 3, 2019 - Complex birdsongs help biologists piece together the evolution of lifelong learning`,
 								'https://theconversation.com/complex-birdsongs-help-biologists-piece-together-the-evolution-of-lifelong-learning-122009'
 							),
 							new PressRelease(
-								`PRESS: <i>Research News @ Vanderbilt</i>, High standards of female songbirds could be driving their mates to evolve`,
+								`<b>PRESS:</b> <i>Research News @ Vanderbilt</i>, High standards of female songbirds could be driving their mates to evolve`,
 								'https://news.vanderbilt.edu/2019/09/04/high-standards-of-female-songbirds-could-be-driving-their-mates-to-evolve/'
 							)
 						]

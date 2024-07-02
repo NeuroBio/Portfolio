@@ -94,6 +94,21 @@ function buildAccordion (experience) {
 					.attr('class', 'publicationLink');
 				githubLink.append('i').attr('class', 'fab fa-github-square')	
 			}
+
+			if (publication.pressReleases) {
+				const pressReleaseList = publicationList.append('ul')
+					.attr('class', 'press-releases');
+				publication.pressReleases.forEach(release => {
+					const pressReleaseEntry = pressReleaseList.append('li')
+						.attr('class', 'publication');
+					pressReleaseEntry.append('span').html(release.citation);
+					const pressReleaseLink = pressReleaseEntry.append('a')
+						.attr('aria-label', 'Press release link')
+						.attr('href', release.githubLink)
+						.attr('class', 'publicationLink');
+					pressReleaseLink.append('i').attr('class', 'fas fa-newspaper');
+				});
+			}
 		});
 	}
 }
