@@ -43,6 +43,12 @@
 	background-color: transparent;
 }
 
+.demo-button:focus-visible {
+	outline: 2px solid white;
+	border: 2px solid white;
+	border-radius: 1.2em 1.2em;
+}
+
 .project-image {
 	width: 100%;
 }

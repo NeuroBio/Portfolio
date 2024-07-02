@@ -2,30 +2,29 @@ const experienceContainer = d3.select('#experiences');
 
 // Corporate Experience
 experienceContainer.append('h2').text('Corporate Experience');
-const corporateButton = 'Corporate Experience';
-PortfolioData.experiences.corporate.forEach((experience) => buildAccordion(corporateButton, experience));
+PortfolioData.experiences.corporate.forEach((experience) => buildAccordion(experience));
 
 
 // Education
 experienceContainer.append('h2').text('Education');
-const educationButton = 'Education';
-PortfolioData.experiences.education.forEach((experience) => buildAccordion(educationButton, experience));
+PortfolioData.experiences.education.forEach((experience) => buildAccordion(experience));
 
 
-function buildAccordion (buttonTitle, experience) {
+function buildAccordion (experience) {
 	const { organization, safeId, dateRange, positions, achievements, publications, startExpanded } = experience;
 
 	const isExpandable = (positions.length > 0 || achievements.length > 0 || publications.length > 0);
 	const epoch = experienceContainer.append('article')
 		.attr('class', 'epoch');
 	const button = epoch.append('button')
-		.attr('title', buttonTitle)
+		.attr('title', `Open/Close details for ${organization}`)
 		.attr('id', safeId)
 		.attr('type', 'button')
 		.attr('class', 'accordion-header');
 
 	if (isExpandable) {
-		button.attr('onClick', `${startExpanded ? 'collapse' : 'expand'}Accordion('${safeId}')`);
+		button.attr('onClick', `${startExpanded ? 'collapse' : 'expand'}Accordion('${safeId}')`)
+			.attr('class', 'accordion-header active');
 	}
 	
 	const header = button.append('h3');
@@ -37,6 +36,8 @@ function buildAccordion (buttonTitle, experience) {
 	
 	if (isExpandable) {
 		button.append('i').attr('class', `accordion-icon fas fa-${startExpanded ? 'minus': 'plus'}-circle`);
+	} else {
+		button.append('i').attr('class', `not-expandable accordion-icon fas fa-circle`);
 	}
 
 	const epochContents = epoch.append('section')

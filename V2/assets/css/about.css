@@ -95,11 +95,11 @@ header {
 	margin-left: -1.5em;
 }
 
-.book-link:hover {
+.book-link:hover, .book-link:focus {
 	color: var(--linkHover);
 }
 
-.book-link:active, .book-link:focus {
+.book-link:active {
 	color: var(--linkActive);
 }
 
