@@ -227,10 +227,10 @@ const PortfolioData = {
 			'../assets/images/projects/discordbot.jpg',
 			'../assets/videos/DiscordBotDemo.mp4',
 			`Made for convenience and trolling.
-			Includes commands dice rolls, generators, and fetching web-scraped data.
+			Includes commands for dice rolls, generators, and fetching web-scraped data.
 			I started from nothing to see what inconveniences drove me to improve the dev experience.
 			I realized all my projects need to have:
-			linting on save, a unit tests for TDD, and path aliases. 
+			linting on save, a unit tests for TDD, and filepath aliases. 
 			`,
 			[
 				AllLanguages[LanguageKey.NODE],
@@ -283,7 +283,7 @@ const PortfolioData = {
 			'VtM Maps',
 			'../assets/images/projects/VtMMaps.jpg',
 			'../assets/videos/VtMMapsDemo.mp4',
-			`A app for my Vampire the Masquerade Campaign: Phoenix Heat.
+			`An app for my Vampire the Masquerade Campaign: Phoenix Heat.
 			It acted as a quick reference for the NPCs my players had met, as well as in-game locations.
 			Includes two maps: one for real world Phoenix and a second for fictional town Hartstone,
 			where the players where based.
@@ -333,9 +333,9 @@ const PortfolioData = {
 	
 	books: [
 		new Book('Patterns, Principles, and Practices of Domain-Driven Design',
-			`This is the first DDD I've understood.
+			`This is the first DDD book I've understood.
 			It opens on DDD philosophy instead of the tactical patterns.
-			I quickly found use for the philosophy and its focus on collaboration and fully exploring the problem domain.`,
+			I quickly found use for the philosophy and its focus on collaboration to fully explore the problem domain.`,
 			'https://www.amazon.com/Patterns-Principles-Practices-Domain-Driven-Design/dp/1118714709'
 		),
 		new Book('Refactoring: Improving the Design of Existing Code',
@@ -399,7 +399,7 @@ const PortfolioData = {
 				'',
 				'',
 				[new Position('Programming Consultant', MonthKey.AUGUST, 2020, MonthKey.JANUARY, 2022)],
-				[new Achievement('2021', `Resigned and reimplemented the frontend for the company's flagship security application.`)],
+				[new Achievement('2021', `Redesigned and reimplemented the frontend for the company's flagship security application.`)],
 				[],
 			)
 		],
