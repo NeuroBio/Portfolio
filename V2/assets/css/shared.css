@@ -89,6 +89,14 @@ nav .flatten li a {
 	box-shadow: 0 0 0;
 }
 
+#current-page {
+	padding: .3em;
+	border-radius: .5em;
+	margin: 0px 5px;
+	color: var(--navFooterLinkActiveText);
+	background-color: var(--navFooterLinkHoverBackground);
+}
+
 .link-button {
 	text-decoration: none;
 }
