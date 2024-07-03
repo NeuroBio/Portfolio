@@ -2,6 +2,11 @@
 	padding: 0 1em;
 }
 
+.main-section {
+	display: flex;
+	justify-content: center;
+}
+
 .epoch {
 	margin: .5em 0;
 	max-width: 800px;
