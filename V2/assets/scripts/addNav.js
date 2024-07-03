@@ -13,28 +13,19 @@ const linkList = nav.append('ul')
 const currentPage = d3.select('body');
 const currentPageName = currentPage.attr('id');
 
-if (currentPageName !== Page.HOME) {
+currentPageName === Page.HOME ? createAsCurrentPage('Projects') : createAsLink('./projects.html', 'Projects');
+currentPageName === Page.ABOUT ? createAsCurrentPage('About') : createAsLink('./about.html', 'About');
+currentPageName === Page.EXPERIENCE ? createAsCurrentPage('Experience') : createAsLink('./experience.html', 'Experience');
+
+function createAsLink(link, text) {
 	linkList.append('li').append('a')
-		.attr('href', './projects.html')
+		.attr('href', link)
 		.attr('class', 'link-button')
-		.text('Projects');
+		.text(text);
 }
 
-if (currentPageName !== Page.ABOUT) {
-	linkList.append('li').append('a')
-		.attr('href', './about.html')
-		.attr('class', 'link-button')
-		.text('About');
+function createAsCurrentPage (text) {
+	linkList.append('li').append('span')
+		.attr('id', 'current-page')
+		.text(text);
 }
-
-if (currentPageName !== Page.EXPERIENCE) {
-	linkList.append('li').append('a')
-		.attr('href', './experience.html')
-		.attr('class', 'link-button')
-		.text('Experience');
-}
-
-// linkList.append('li').append('a')
-// 		.attr('href', '#connect') // every page as a footer where the connect info lives
-// 		.attr('class', 'link-button')
-// 		.text('Connect');
