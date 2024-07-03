@@ -25,6 +25,14 @@ addSocial({
 	iconClass: 'fas fa-envelope',
 });
 
+const resume = socialsList.append('li')
+	.attr('id', 'resume');
+const resumeDownload = resume.append('a')
+	.attr('crossorigin','anonymous')
+	.attr('href', '../assets/Resume.pdf')
+	.text('Resume ');
+resumeDownload.append('i').attr('class', 'fas fa-download')
+
 
 const copyRight = footer.append('section')
 	.attr('id', 'copyright')
@@ -39,6 +47,7 @@ function addSocial({ socialsList, link, text, iconClass }) {
 		.attr('href', link);
 	social.append('i').attr('class', iconClass);
 }
+
 function getCopyRightWithCurrentYear() {
 	const year = new Date().getFullYear()
 	let copyright = 'Copyright © Cristina Robinson 2021'
