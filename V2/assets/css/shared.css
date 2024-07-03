@@ -238,3 +238,9 @@ footer {
 	transition: opacity .25s;
 	transition-delay: 350ms;
 }
+
+#resume a {
+	text-decoration: none;
+	color: var(--textDefault);
+	font-family: var(--slimSleek);
+}
