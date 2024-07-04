@@ -224,7 +224,7 @@ const PortfolioData = {
 		),
 		new Project(
 			'Discord Bot',
-			'../assets/images/projects/discordbot.jpg',
+			'../assets/images/projects/DiscordBot.jpg',
 			'../assets/videos/DiscordBotDemo.mp4',
 			`Made for convenience and trolling.
 			Includes commands for dice rolls, generators, and fetching web-scraped data.
