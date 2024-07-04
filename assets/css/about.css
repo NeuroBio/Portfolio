@@ -1,0 +1,114 @@
+#important-header-content {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.header-right {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 600px;
+}
+
+#language-header {
+	margin: .5em;
+}
+
+.languages {
+	display: flex;
+	justify-content: space-around;
+	column-gap: .5em;
+	row-gap: .5em;
+	padding: .5em;
+	flex-wrap: wrap;
+}
+
+.language-card {
+	font-size: 3em;
+	padding: .2em .2em 0 .2em;
+	background-color: var(--linkBase);
+	border-radius: .5em;
+	display: inline;
+}
+
+.language-card-smaller {
+	font-size: 2em;
+	padding: .1em .1em 0 .1em;
+	background-color: var(--linkBase);
+	border-radius: .2em;
+	display: inline;
+}
+
+.language-card:hover, .language-card-smaller:hover {
+	background-color: var(--pictureLinkHover);
+}
+
+.language-card .logo {
+	height: 50px;
+}
+
+.language-card-smaller .logo {
+	height: 30px;
+}
+
+#minutia {
+	padding: .75em;
+	display: flex;
+	column-gap: .5em;
+	row-gap: .5em;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.minutia-card {
+	padding: .5em;
+	border-radius: .5em;
+	background-color: var(--speakingViolet);
+	min-width: 250px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1 1 250px;
+}
+
+.minutia-card h2 {
+	margin-bottom: .2em;
+}
+
+#passion-list p {
+	margin-bottom: 2em;
+}
+
+.passion-title {
+	font-weight: bold;
+	font-size: 1.3em;
+	font-family: var(--slimSleek);;
+}
+
+.book {
+	list-style-type: none;
+	position: relative;;
+}
+
+.book-link {
+	font-style: italic;
+	font-weight: bold;
+	text-decoration: none;
+	color: var(--linkBase);
+	font-family: var(--slimSleek);
+	font-size: 1.25em;
+	position: relative;
+	left: -1.5em;
+}
+
+.book-link:hover, .book-link:focus {
+	color: var(--linkHover);
+}
+
+.book-link:active {
+	color: var(--linkActive);
+}
+
+.tool-name {
+	height: 1em;
+}

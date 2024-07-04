@@ -1,165 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
+	<head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="My Code Portfolio (V2!)" />
+        <meta name="author" content="Cristina Robinson" />
 
-        <title>Cristina Robinson | Portfolio</title>
+        <title>C. Robinson | Portfolio</title>
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-        <!-- more bootstrap icons -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet" />
-        <!-- Custom styles for this template -->
-        <link href="assets/css/styles.css" rel="stylesheet" />
+		<link href="assets/css/shared.css" rel="stylesheet" />
+		<link href="assets/css/index.css" rel="stylesheet" />
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     </head>
+	<body>
+		<script src="assets/scripts/redirect.js"></script>
 
-    <body id="page-top">
 
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg bg-dark fixed-top text-uppercase" id="mainNav">
-            <div class="container">
-                <button class="navbar-toggler navbar-toggler-right text-uppercase text-white rounded" type="button"
-                    data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul id="main-nav" class="navbar-nav ml-auto">
-                        <!-- Links populated by D3 -->
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Header -->
-        <header class="masthead bg-primary text-white decor">
-            <div class="max-width">
-                <h1>Cristina Robinson</h1>
-                <hr>
-                <h2> Programmer - Scientist - Artist </h2>
-                <!-- Text added via D3 -->
-                <p id="brand-statement" class="brand-statement"></p> 
-            </div>
-        </header>
-
-        <!-- Portfolio Grid Section -->
-        <section class="portfolio bg-accent" id="portfolio">
-            <div class="max-width-container bg-tertiary smooth-corners">
-                <h2 class="text-center text-uppercase text-secondary bg-quaternary">
-                    Portfolio
-                </h2>
-                <!-- Projects populated by D3 -->
-                <div id="projectsSection" class="sub-container"></div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="bg-primary text-white" id="about">
-            <div class="container">
-                <h2 class="text-center text-uppercase text-white">About Me</h2>
-                <hr class="star-light mb-5">
-
-                <!-- Text added via D3 -->
-                <p id="about-me" class="about-me text-center"></p>
-            </div>
-            <div class="container">
-                <!-- Languages Icons -->
-                <div class="col-md-10 offset-md-1">
-                    <!-- Icons populated by D3 -->
-                    <div id="icon-row" class="row text-center skills-row"></div>
-                </div>
-
-                <!-- Resume Download -->
-                <div class="text-center mt-4">
-                    <a class="btn btn-lg btn-outline-light" href="assets/Resume.pdf" crossorigin="anonymous">
-                        <i class="fas fa-download mr-2"></i> Resume
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education and Employment-->
-        <section class="education bg-accent" id="experience">
-            <div id="credentials" class="max-width-container bg-tertiary smooth-corners">
-                <h2 class="text-center text-uppercase text-secondary  bg-quaternary">
-                    Employment and Education
-                </h2>
-                <!-- Populated by D3 -->
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer bg-default" id="connect">
-            <div class="container">
-                <div class="row text-center">
-
-                    <!-- connect -->
-                    <div class="col-md-6 offset-md-3">
-                        <h2 class="text-center text-uppercase mb-3">
-                            Connect with Me
-                        </h2>
-                        <p class="text-uppercase mb-4">
-                            cristinamrobinson@gmail.com
-                        </p>
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item">
-                                <a class="btn-social text-center rounded-circle"
-                                href="https://www.linkedin.com/in/cristina-robinson-88938052/">
-                                    <i class="fab fa-fw fa-linkedin-in"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="btn-social text-center rounded-circle"
-                                href="https://github.com/NeuroBio">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- copyright -->
-            <div class="py-4 text-white">
-                <!-- Text set by D3 -->
-                <div class="container"><small id="copyright"></small></div>
-            </div>
-        </footer>
-
-        <!-- D3 -->
-        <script src="https://d3js.org/d3.v5.min.js"></script>
-
-        <!-- Bootstrap core JavaScript -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-
-        <!-- Plugin JavaScript -->
-        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"
-            integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
-
-        <!-- Popup code populated by D3 -->
-        <!-- My scripts -->
-        <script src="assets/js/data.js"></script>
-        <script src="assets/js/addText.js"></script>
-        <script src="assets/js/addElements.js"></script>
-
-    </body>
-
+		
+		<p>
+			Oh dear...
+			If you landed here, chances are you have javascript disabled.
+			That means you won't be able to see much.
+			This website relies on d3, a javascript library, to build page content dynamically.<br><br>
+			You can at least see a nearly blank page if you <a href="./pages/projects.html">follow this link.</a>
+		</p>
+	</body>
 </html>

@@ -1,0 +1,21 @@
+p {
+	max-width: 600px;
+	align-self: center;
+	border-radius: 1em;
+	background-color: var(--myBlack);
+	padding: 2em;
+}
+
+a {
+	font-weight: bold;
+	color: var(--linkBase);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--linkHover);
+}
+
+a:active, a:focus {
+	color: var(--linkActive);
+}
