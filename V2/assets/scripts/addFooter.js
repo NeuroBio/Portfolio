@@ -29,7 +29,7 @@ const resume = socialsList.append('li')
 	.attr('id', 'resume');
 const resumeDownload = resume.append('a')
 	.attr('crossorigin','anonymous')
-	.attr('href', '../assets/Resume.pdf')
+	.attr('href', '../assets/C.Robinson-Resume.pdf')
 	.text('Resume ');
 resumeDownload.append('i').attr('class', 'fas fa-download')
 
