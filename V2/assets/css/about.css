@@ -71,6 +71,10 @@ header {
 	flex: 1 1 250px;
 }
 
+.minutia-card h2 {
+	margin-bottom: .2em;
+}
+
 #passion-list p {
 	margin-bottom: 2em;
 }
@@ -83,6 +87,7 @@ header {
 
 .book {
 	list-style-type: none;
+	position: relative;;
 }
 
 .book-link {
@@ -90,9 +95,10 @@ header {
 	font-weight: bold;
 	text-decoration: none;
 	color: var(--linkBase);
-	font-family: var(--slimSleek);;
+	font-family: var(--slimSleek);
 	font-size: 1.25em;
-	margin-left: -1.5em;
+	position: relative;
+	left: -1.5em;
 }
 
 .book-link:hover, .book-link:focus {
