@@ -63,6 +63,7 @@ body {
 
 .flatten li {
 	list-style-type: none;
+	padding-top: .5em;
 }
 
 .flatten li a {
@@ -183,12 +184,13 @@ header {
 	z-index: 3;
 	height: 70px;
 	width: 70px;
-	background-color: var(--sliverSection);
+	background-color: var(--navFooterLinkBase);
 	border-radius: 2em;
-	margin-top: .5em;
+	margin-top: .6em;
 }
 
 #header-avatar {
+	padding-top: .25em;
 	height: 80px;
 	content: url('../images/avatar.png');
 }
