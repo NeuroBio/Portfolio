@@ -4,7 +4,23 @@
 
 .main-section {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
+}
+
+@keyframes fadeIn { 
+	from { opacity: .15; } 
+}
+
+.side-decoration {
+	flex: 1 1 0px;
+	max-width: 90px;
+	background-image: url('../images//SideDecorations.svg');
+	opacity: .7;
+	animation: fadeIn 5s infinite alternate;
+}
+
+.flip-me {
+	transform: rotate(180deg);
 }
 
 .epoch {
