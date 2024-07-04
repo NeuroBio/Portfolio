@@ -387,7 +387,7 @@ const PortfolioData = {
 				[
 					new Achievement('2024',	`Won the "Most Likely To Implement" category in the company HackFest`),
 					new Achievement('2023', `Became the dev team lead for Outbound Products`),
-					new Achievement('2023', `Won 2nd place in RF-SMARTs Envision the Future competition`),
+					new Achievement('2023', `Won 2nd place in the Envision the Future competition`),
 					new Achievement('2022', `Earned a High Altitude - individual merit award (nominated by manager)`),
 					new Achievement('2022',	`Built an integration testing framework prototype to run our code in a 3rd party environment`),
 					new Achievement('2022 - 2024', `Earned 6 DYSTs - peer recognition award`),
