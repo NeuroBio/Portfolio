@@ -204,7 +204,8 @@ header {
 	min-height: 200px;
 	flex: 1 1 0px;
 	background-image: url('../images/HeaderDecoration.svg');
-	background-size: contain;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 footer {
