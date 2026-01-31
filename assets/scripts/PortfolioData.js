@@ -385,6 +385,7 @@ const PortfolioData = {
 					new Position('Software Developer I', MonthKey.JANUARY, 2022, MonthKey.DECEMBER, 2022),
 				],
 				[
+					new Achievement('2025',	`Became member of the 4-person Architectural Committee`),
 					new Achievement('2024',	`Won the "Most Likely To Implement" category in the company HackFest`),
 					new Achievement('2023 - Present', `Became the dev team lead for Outbound products`),
 					new Achievement('2023', `Won 2nd place in the Envision the Future competition`),
