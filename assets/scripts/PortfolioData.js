@@ -22,6 +22,8 @@ const LanguageKey = Object.freeze({
 	MARKDOWN: 'markdown',
 	BITBUCKET: 'bitbucket',
 	BLAZOR: 'blazor',
+	STENCIL: 'stencil',
+	ESLINT: 'eslint',
 });
 
 class Language {
@@ -119,6 +121,8 @@ const AllLanguages = Object.freeze({
 	[LanguageKey.BITBUCKET]: new Language('bitbucket', 'Bitbucket', 'fab fa-bitbucket'),
 	[LanguageKey.BLAZOR]: new Language('blazor', 'Blazor', '../assets/images/logos/blazor.svg'),
 	[LanguageKey.HTML]: new Language('html5', 'HTML 5', 'fab fa-html5'),
+	[LanguageKey.STENCIL]: new Language('stencil', 'Stencil.js', '../assets/images/logos/stenciljs.svg'),
+	[LanguageKey.ESLINT]: new Language('eslint', 'Eslint', '../assets/images/logos/eslint.svg'),
 });
 
 
@@ -361,6 +365,7 @@ const PortfolioData = {
 			[LanguageKey.C_SHARP]: AllLanguages[LanguageKey.C_SHARP],
 			[LanguageKey.ANGULAR]: AllLanguages[LanguageKey.ANGULAR],
 			[LanguageKey.REACT]: AllLanguages[LanguageKey.REACT],
+			[LanguageKey.STENCIL]: AllLanguages[LanguageKey.STENCIL],
 		},
 		[LanguageGroupKey.MISC]: {
 			[LanguageKey.GITHUB]: AllLanguages[LanguageKey.GITHUB],
@@ -369,6 +374,7 @@ const PortfolioData = {
 			[LanguageKey.CONFLUENCE]: AllLanguages[LanguageKey.CONFLUENCE],
 			[LanguageKey.MARKDOWN]: AllLanguages[LanguageKey.MARKDOWN],
 			[LanguageKey.BITBUCKET]: AllLanguages[LanguageKey.BITBUCKET],
+			[LanguageKey.ESLINT]: AllLanguages[LanguageKey.ESLINT],
 		},
 	},
 
@@ -385,13 +391,17 @@ const PortfolioData = {
 					new Position('Software Developer I', MonthKey.JANUARY, 2022, MonthKey.DECEMBER, 2022),
 				],
 				[
-					new Achievement('2025',	`Became member of the 4-person Architectural Committee`),
+					new Achievement('2026', `One of 3 presenters in company-sponsored "AI for Developers" course; my section focused on building skills, rules, commands, and subagents.`),
+					new Achievement('2026', `Galactic Battle Points MVP at company Hackfest (award for setting good culture)`),
+					new Achievement('2025 - 2026', `Rearchitected the product from handling one order at a time to up to 2K orders in bulk.`),
+					new Achievement('2025 - Present', `Member of the 4-developer Architectural Committee`),
 					new Achievement('2024',	`Won the "Most Likely To Implement" category in the company HackFest`),
-					new Achievement('2023 - Present', `Became the dev team lead for Outbound products`),
+					new Achievement('2023 - Present', `Team Lead for Outbound products`),
 					new Achievement('2023', `Won 2nd place in the Envision the Future competition`),
 					new Achievement('2022', `Earned a High Altitude - individual merit award (nominated by manager)`),
-					new Achievement('2022',	`Built an integration testing framework prototype to run our code in a 3rd party environment`),
-					new Achievement('2022 - 2026', `Earned 18 DYSTs - peer recognition award`),
+					new Achievement('2022',	`Built an integration testing framework to run our code in a 3rd party environment`),
+					new Achievement('2022 - Present', `Wrote 25% of the department's technical documentation and contributed to 50% of it.`),
+					new Achievement('2022 - 2026', `Earned 20 DYSTs - peer recognition award`),
 				],
 				[],
 			),

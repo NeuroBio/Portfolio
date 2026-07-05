@@ -89,7 +89,8 @@ function addAchievements ({ epochContents, achievements }) {
 				.attr('class', 'achievement')
 
 			achievementEntry.append('span').text(achievement.text);
-			achievementEntry.append('i').text(achievement.date);
+			achievementEntry.append('i').text(achievement.date)
+				.attr('class', 'time-frame');
 		});
 }
 

@@ -115,6 +115,11 @@ h3 {
 	font-size: .75em;
 }
 
+.time-frame {
+	min-width: 101px;
+	margin-left: 5px;
+}
+
 .publication span b {
 	color: var(--linkBase);
 }
