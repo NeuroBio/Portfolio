@@ -47,23 +47,24 @@ body {
 
 #main-content {
 	width: 1200px;
-	max-width: 100vw;
+	max-width: calc(100vw - 17px);
 	align-self: center;
 	background-color: var(--myBlack);	
 	flex: 1 0 auto;
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	top: 9px;
 }
 
 .flatten {
-	padding: 0 2em 0 0;
+	padding: 2px 15px 0 0;
 	display: inline-flex;
 }
 
 .flatten li {
 	list-style-type: none;
-	padding-top: .5em;
+	padding-top: 5px;
 }
 
 .flatten li a {
@@ -73,13 +74,13 @@ body {
 }
 
 nav .flatten li a {
-	padding: .3em;
-	border-radius: .5em;
+	padding: 3px;
+	border-radius: 5px;
 }
 
 .flatten li a {
-	padding: .4em;
-	border-radius: 2em;
+	padding: 4px;
+	border-radius: 15px;
 	box-shadow: 3px 3px 5px var(--myShadowsShadow);
 }
 
@@ -96,19 +97,21 @@ nav .flatten li a {
 }
 
 #current-page {
-	padding: .3em;
-	border-radius: .5em;
+	padding: 3px;
+	border-radius: 5px;
 	margin: 0px 5px;
 	color: var(--navFooterLinkActiveText);
 	background-color: var(--navFooterLinkHoverBackground);
+	font-size: 12pt;
 }
 
 .link-button {
 	text-decoration: none;
+	font-size: 12pt;
 }
 
 .main-section {
-	padding: 0em .5em .5em .5em;
+	padding: 0px 5px 5px 5px;
 }
 
 hr {
@@ -119,12 +122,13 @@ hr {
 h1 {
 	font-size: 2em;
 	display: inline-block;
-	margin: 1.55em 0 0 0;
+	margin: 57px 0 0 0;
 }
 
 h2 {
 	font-family: var(--slimSleek);;
 	font-weight: normal;
+	font-size: 14pt;
 }
 
 h3 {
@@ -133,7 +137,7 @@ h3 {
 
 p {
 	font-family: var(--vsCode);
-	font-size: .9em;
+	font-size: 9pt;
 }
 
 nav {
@@ -145,11 +149,11 @@ nav {
 	background-color: var(--sliverSection);
 	margin: -8px 0 0 0;
 	border-bottom: solid 2px var(--brilliantBreak);
-	z-index: 100;
+	z-index: 4;
 }
 
 header {
-	padding: 2.7em 0 0 1em;
+	padding: 27px 0 0 1px;
 	border-bottom: solid 2px var(--brilliantBreak);
 	display: flex;
 }
@@ -185,12 +189,13 @@ header {
 	height: 70px;
 	width: 70px;
 	background-color: var(--navFooterLinkBase);
-	border-radius: 2em;
-	margin-top: .6em;
+	border-radius: 15px;
+	margin-top: 5px;
 }
 
 #header-avatar {
-	padding-top: .25em;
+	padding-top: 4px;
+	padding-left: 2px;
 	height: 80px;
 	content: url('../images/avatar.png');
 }
@@ -213,13 +218,14 @@ footer {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: end;
-	padding: 0em .5em .2em .5em;
+	padding: 5px 15px 7px 10px;
 	background-color: var(--sliverSection);
 	border-top: solid 2px var(--brilliantBreak);
+	margin-top: 9px;
 }
 
 #connect {
-	padding: 1em 0;
+	padding: 1px 0;
 }
 
 #connect ul {
@@ -239,10 +245,10 @@ footer {
 	color: var(--textDefault);
 	text-align: center;
 	border-radius: 6px;
-	padding: .5em;
+	padding: 5px;
 	position: absolute;
 	z-index: 1;
-	bottom: calc(100% + .2em);
+	bottom: calc(100% + 2px);
 	left: 50%;
 	transform: translateX(-50%);
 }
