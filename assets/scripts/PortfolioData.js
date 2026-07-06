@@ -127,7 +127,7 @@ const AllLanguages = Object.freeze({
 
 
 class Experience {
-	constructor(name, expanded, credential, dateRange, positions, achievements, publications) {
+	constructor(name, expanded, credential, dateRange, positions, achievements, publications, blurb) {
 		this.organization = name;
 		this.safeId = name.replace(/[^a-zA-Z\d]/g, '');
 		this.startExpanded = expanded;
@@ -136,6 +136,7 @@ class Experience {
 		this.achievements = achievements;
 		this.publications = publications;
 		this.dateRange = dateRange || _getDateRange();
+		this.blurb = blurb;
 
 
 		function _getDateRange() {
@@ -202,7 +203,7 @@ const PortfolioData = {
 		Every job or lab I’ve worked in has recognized my potential and been sad to see me go.
 		Not just for my work ethic, but also for my (apparently) unforgettable laugh and oddball sense of humor.`,
 		
-	teaser: `An-ex scientist, I refactored myself into a software engineer.
+	teaser: `An ex-scientist, I refactored myself into a software engineer.
 		I live for overcoming complex challenges.  My goal is to make 
 		applications that are maintainable, performant, and aesthetically pleasing.`,
 
@@ -404,6 +405,17 @@ const PortfolioData = {
 					new Achievement('2022 - 2026', `Earned 20 DYSTs - peer recognition award`),
 				],
 				[],
+				`
+				Mentored 6 developers (3 are now seniors, 1 is a team lead).
+				Transitioned the integration testing framework from a prototype to running overnight.
+				Integration tests are now embedded in our definition of done and are used to validate release readiness.
+				Prototyped a UI testing framework to reduce our e2e testbed size (not yet adopted).
+				Prototyping a API using plugins to allow for cleaner and easier customization by our mod devs.
+				The new system is designed to bypasses the rigid problems with our current system for small- to medium-sized mods,
+				and reduce the uplift costs for complex mods.
+				Pioneered a new PR review process to alleviate the department's review bottleneck;
+				trained 3 team-level approvers who were then moved to separate teams.
+				`,
 			),
 			new Experience(
 				'TrustiPhi, LLC',
@@ -413,6 +425,7 @@ const PortfolioData = {
 				[new Position('Programming Consultant', MonthKey.AUGUST, 2020, MonthKey.JANUARY, 2022)],
 				[new Achievement('2021', `Redesigned and reimplemented the frontend for the company's flagship security application.`)],
 				[],
+				``,
 			)
 		],
 		education: [
@@ -424,6 +437,7 @@ const PortfolioData = {
 				[],
 				[],
 				[],
+				``,
 			),
 			new Experience(
 				'Vanderbilt University',
@@ -484,6 +498,7 @@ const PortfolioData = {
 						''
 					)
 				],
+				``,
 			),
 			new Experience(
 				'Ohio Northern University',
@@ -506,6 +521,7 @@ const PortfolioData = {
 						'https://www.tandfonline.com/doi/abs/10.3109/10253890.2013.791276?journalCode=ists20',
 					)
 				],
+				``,
 			),
 		]
 	}

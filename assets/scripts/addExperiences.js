@@ -11,7 +11,7 @@ PortfolioData.experiences.education.forEach((experience) => buildAccordion(exper
 
 
 function buildAccordion (experience) {
-	const { safeId, positions, achievements, publications, startExpanded } = experience;
+	const { safeId, positions, achievements, publications, startExpanded, blurb } = experience;
 
 	const epoch = experienceContainer.append('article')
 		.attr('class', 'epoch');
@@ -25,6 +25,19 @@ function buildAccordion (experience) {
 	addPositions({ epochContents, positions });
 	addAchievements({ epochContents, achievements });
 	addPublications({ epochContents, publications });
+	addBlurb({ epochContents, blurb });
+}
+
+function addBlurb({ epochContents, blurb}) {
+	if (!blurb) {
+		return;
+	}
+
+	epochContents.append('h4')
+		.text('Misc.');
+	epochContents.append('p')
+		.text(blurb)
+		.attr('class', 'blurb');
 }
 
 function buildHeader (epoch, experience) {

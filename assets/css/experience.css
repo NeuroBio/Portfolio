@@ -103,16 +103,20 @@ h3 {
 .expanded {
 	visibility: visible;
 	padding: .5em;
-	max-height: 50em;
+	max-height: 4000vh;
 	transition: all .25s;
 }
 
-.position, .achievement, .publication {
+.position, .achievement, .publication, .blurb {
 	margin: 0 0 .75em 0;
 	display: flex;
 	justify-content: space-between;
 	font-family: var(--vsCode);
 	font-size: .75em;
+}
+
+.blurb {
+	margin-left: 40px;
 }
 
 .time-frame {
@@ -146,3 +150,4 @@ h3 {
 .press-releases {
 	margin-bottom: 1.75em;
 }
+
