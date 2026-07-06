@@ -209,6 +209,19 @@ const PortfolioData = {
 
 	projects: [
 		new Project(
+			'Starkly Still (Reading App)',
+			'../assets/images/projects/StarklyStill.jpg',
+			'../assets/videos/StarklyStillDemo.mp4',
+			`A place to host my novels without the bloat from the big name writing sites.
+			This is a simple vanilla js, html, and css project with d3 added for DOM manipulation. 
+			`,
+			[],
+			[
+				new Link('Live Project', 'https://neurobio.github.io/Starkly-Still/pages/landing.html'),
+				new Link('Repo', 'https://github.com/NeuroBio/Starkly-Still'),
+			]
+		),
+		new Project(
 			'Arecace (Worldbuilding Project)',
 			'../assets/images/projects/Arecace.jpg',
 			'../assets/videos/ArecaceDemo.mp4',
