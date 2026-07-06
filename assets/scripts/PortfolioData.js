@@ -337,15 +337,22 @@ const PortfolioData = {
 	passions: [
 		new Passion(
 			'Test-Driven Development',
-			`Writing automated tests is coding.  Running them is way faster than manual testing during development.`
+			`
+			Writing automated tests is coding.
+			Automated tests are way faster than manual testing during development.
+			It still baffles me that many devs dislike writing tests.
+			`
 		),
 		new Passion(
 			'Clean Architecture',
-			`Learning how to write it.  Implementing it.  Recognizing when simple CRUD is sufficient.`
+			`Designing it.  Implementing it.  Recognizing when simple CRUD is sufficient.`
 		),
 		new Passion(
 			'Code Review',
-			`Having another set of eyes on your code helps ensure you build a maintainable product.`
+			`
+			Having another set of eyes on your code helps ensure you build a maintainable product.
+			This is even more critical in the AI era.
+			`
 		)
 	],
 	
@@ -414,7 +421,6 @@ const PortfolioData = {
 					new Achievement('2023', `Won 2nd place in the Envision the Future competition`),
 					new Achievement('2022', `Earned a High Altitude - individual merit award (nominated by manager)`),
 					new Achievement('2022',	`Built an integration testing framework to run our code in a 3rd party environment`),
-					new Achievement('2022 - Present', `Wrote 25% of the department's technical documentation and contributed to 50% of it.`),
 					new Achievement('2022 - 2026', `Earned 20 DYSTs - peer recognition award`),
 				],
 				[],
@@ -428,6 +434,7 @@ const PortfolioData = {
 				and reduce the uplift costs for complex mods.
 				Pioneered a new PR review process to alleviate the department's review bottleneck;
 				trained 3 team-level approvers who were then moved to separate teams.
+				Wrote 25% of the department's technical documentation and contributed to 50% of it.
 				`,
 			),
 			new Experience(

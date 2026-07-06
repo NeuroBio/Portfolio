@@ -89,7 +89,7 @@
 
 .book {
 	list-style-type: none;
-	position: relative;;
+	position: relative;
 }
 
 .book-link {
@@ -98,7 +98,7 @@
 	text-decoration: none;
 	color: var(--linkBase);
 	font-family: var(--slimSleek);
-	font-size: 1.25em;
+	font-size: 12pt;
 	position: relative;
 	left: -1.5em;
 }
