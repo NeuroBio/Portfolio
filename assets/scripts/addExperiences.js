@@ -34,7 +34,7 @@ function addBlurb({ epochContents, blurb}) {
 	}
 
 	epochContents.append('h4')
-		.text('Misc.');
+		.text('Description');
 	epochContents.append('p')
 		.text(blurb)
 		.attr('class', 'blurb');
