@@ -213,14 +213,17 @@ const PortfolioData = {
 		new Project(
 			'Virtual Desktop',
 			'VirtualDesktop.jpg',
-			'VirtualDesktop.mp4',
-			`A place to host my novels without the bloat from the big name writing sites.
-			This is a simple vanilla js, html, and css project with d3 added for DOM manipulation. 
+			'VirtualDesktopDemo.mp4',
+			`
+			A light electron app that allows shortcuts to be grouped by category.
+			Each category is an expansion panel that can be defaulted to open or closed,
+			creating a task-focused experience.
+			Designed for users that need to maintain deeply-nested, rigid folder-structures.
 			`,
 			[],
 			[
-				new Link('Live Project', 'https://neurobio.github.io/Starkly-Still/pages/landing.html'),
-				new Link('Repo', 'https://github.com/NeuroBio/Starkly-Still'),
+				new Link('Repo', 'https://github.com/NeuroBio/virtual-desktop'),
+				new Link('Releases', 'https://github.com/NeuroBio/virtual-desktop/releases'),
 			]
 		),
 		new Project(
