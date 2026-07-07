@@ -211,22 +211,6 @@ const PortfolioData = {
 
 	projects: [
 		new Project(
-			'Virtual Desktop',
-			'VirtualDesktop.jpg',
-			'VirtualDesktopDemo.mp4',
-			`
-			A light electron app that allows shortcuts to be grouped by category.
-			Each category is an expansion panel that can be defaulted to open or closed,
-			creating a task-focused experience.
-			Designed for users that need to maintain deeply-nested, rigid folder-structures.
-			`,
-			[],
-			[
-				new Link('Repo', 'https://github.com/NeuroBio/virtual-desktop'),
-				new Link('Releases', 'https://github.com/NeuroBio/virtual-desktop/releases'),
-			]
-		),
-		new Project(
 			'Starkly Still (Reading App)',
 			'StarklyStill.jpg',
 			'StarklyStillDemo.mp4',
@@ -256,6 +240,22 @@ const PortfolioData = {
 			[
 				new Link('Live Project', 'https://arecace.com/home'),
 				new Link('Repo', 'https://github.com/NeuroBio/ArecaceWebsite'),
+			]
+		),
+		new Project(
+			'Virtual Desktop',
+			'VirtualDesktop.jpg',
+			'VirtualDesktopDemo.mp4',
+			`
+			A light electron app that allows shortcuts to be grouped by category.
+			Each category is an expansion panel that can be defaulted to open or closed,
+			creating a task-focused experience.
+			Designed for users that need to maintain deeply-nested, rigid folder-structures.
+			`,
+			[],
+			[
+				new Link('Repo', 'https://github.com/NeuroBio/virtual-desktop'),
+				new Link('Releases', 'https://github.com/NeuroBio/virtual-desktop/releases'),
 			]
 		),
 		new Project(
