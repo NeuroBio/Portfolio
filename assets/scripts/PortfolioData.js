@@ -26,6 +26,7 @@ const LanguageKey = Object.freeze({
 	BLAZOR: 'blazor',
 	STENCIL: 'stencil',
 	ESLINT: 'eslint',
+	ELECTRON: 'electron',
 });
 
 class Language {
@@ -125,6 +126,7 @@ const AllLanguages = Object.freeze({
 	[LanguageKey.HTML]: new Language('html5', 'HTML 5', 'fab fa-html5'),
 	[LanguageKey.STENCIL]: new Language('stencil', 'Stencil.js', '../assets/images/logos/stenciljs.svg'),
 	[LanguageKey.ESLINT]: new Language('eslint', 'Eslint', '../assets/images/logos/eslint.svg'),
+	[LanguageKey.ELECTRON]: new Language('electron', 'Electron', '../assets/images/logos/electron.svg'),
 });
 
 
@@ -252,7 +254,9 @@ const PortfolioData = {
 			creating a task-focused experience.
 			Designed for users that need to maintain deeply-nested, rigid folder-structures.
 			`,
-			[],
+			[
+				AllLanguages[LanguageKey.ELECTRON],
+			],
 			[
 				new Link('Repo', 'https://github.com/NeuroBio/virtual-desktop'),
 				new Link('Releases', 'https://github.com/NeuroBio/virtual-desktop/releases'),
@@ -414,6 +418,7 @@ const PortfolioData = {
 			[LanguageKey.MARKDOWN]: AllLanguages[LanguageKey.MARKDOWN],
 			[LanguageKey.BITBUCKET]: AllLanguages[LanguageKey.BITBUCKET],
 			[LanguageKey.ESLINT]: AllLanguages[LanguageKey.ESLINT],
+			[LanguageKey.ELECTRON]: AllLanguages[LanguageKey.ELECTRON],
 		},
 	},
 

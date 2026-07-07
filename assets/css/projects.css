@@ -96,10 +96,10 @@
 }
 
 .project-tools i {
-	border-radius: .5em;
-	font-size: 1.75em;
-	margin: 0 .1em;
-	padding: .2em;
+	border-radius: 5px;
+	font-size: 21pt;
+	margin: 0 1px;
+	padding: 3px;
 }
 
 .project-tools i:hover {
@@ -107,10 +107,10 @@
 }
 
 .logo {
-	border-radius: .5em;
+	border-radius: 5px;
 	height: 25px;
-	margin: 0 .1em;
-	padding: .3em;
+	margin: 0 1px;
+	padding: 3px;
 }
 
 .logo:hover {

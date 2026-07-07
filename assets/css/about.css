@@ -21,6 +21,7 @@
 	row-gap: .5em;
 	padding: .5em;
 	flex-wrap: wrap;
+	max-width: 250px;
 }
 
 .language-card {
