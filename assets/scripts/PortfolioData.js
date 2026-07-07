@@ -4,6 +4,8 @@ const LanguageGroupKey = Object.freeze({
 	MISC: 'misc',
 });
 
+const CloudFlareBucket = 'https://pub-7ed5deb88bba4f79920e870aaed0c42a.r2.dev'
+
 const LanguageKey = Object.freeze({
 	NODE: 'Node',
 	NPM: 'npm',
@@ -62,8 +64,8 @@ class Link {
 class Project {
 	constructor(title, previewImage, demo, description, languages, links) {
 		this.title = title;
-		this.previewImage = previewImage;
-		this.demo = demo;
+		this.previewImage = `${CloudFlareBucket}/${previewImage}`;
+		this.demo = `${CloudFlareBucket}/${demo}`;
 		this.description = description;
 		this.languages = languages;
 		this.links = links;
@@ -209,9 +211,22 @@ const PortfolioData = {
 
 	projects: [
 		new Project(
+			'Virtual Desktop',
+			'VirtualDesktop.jpg',
+			'VirtualDesktop.mp4',
+			`A place to host my novels without the bloat from the big name writing sites.
+			This is a simple vanilla js, html, and css project with d3 added for DOM manipulation. 
+			`,
+			[],
+			[
+				new Link('Live Project', 'https://neurobio.github.io/Starkly-Still/pages/landing.html'),
+				new Link('Repo', 'https://github.com/NeuroBio/Starkly-Still'),
+			]
+		),
+		new Project(
 			'Starkly Still (Reading App)',
-			'../assets/images/projects/StarklyStill.jpg',
-			'../assets/videos/StarklyStillDemo.mp4',
+			'StarklyStill.jpg',
+			'StarklyStillDemo.mp4',
 			`A place to host my novels without the bloat from the big name writing sites.
 			This is a simple vanilla js, html, and css project with d3 added for DOM manipulation. 
 			`,
@@ -223,8 +238,8 @@ const PortfolioData = {
 		),
 		new Project(
 			'Arecace (Worldbuilding Project)',
-			'../assets/images/projects/Arecace.jpg',
-			'../assets/videos/ArecaceDemo.mp4',
+			'Arecace.jpg',
+			'ArecaceDemo.mp4',
 			`A showcase website for my original story and Worldbuilding project.
 			This was one of my first websites.
 			It was where I began to understand the power of modular code...
@@ -242,8 +257,8 @@ const PortfolioData = {
 		),
 		new Project(
 			'Discord Bot',
-			'../assets/images/projects/DiscordBot.jpg',
-			'../assets/videos/DiscordBotDemo.mp4',
+			'DiscordBot.jpg',
+			'DiscordBotDemo.mp4',
 			`Made for convenience and trolling.
 			Includes commands for dice rolls, generators, and fetching web-scraped data.
 			I started from nothing to see what inconveniences drove me to improve the dev experience.
@@ -260,8 +275,8 @@ const PortfolioData = {
 		),
 		new Project(
 			'Code Namer',
-			'../assets/images/projects/CodeNamer.jpg',
-			'../assets/videos/CodeNamerDemo.mp4',
+			'CodeNamer.jpg',
+			'CodeNamerDemo.mp4',
 			`An April Fool's Day prank app.
 			Based on a number of long running jokes at work, DDD concepts, and my personal sense of humor.
 			This project was an excuse to learn react in my personal time back when we planned to transition
@@ -277,8 +292,8 @@ const PortfolioData = {
 		),
 		new Project(
 			'Song Evolution Model',
-			'../assets/images/projects/SEM.jpg',
-			'../assets/videos/SEMDemo.mp4',
+			'SEM.jpg',
+			'SEMDemo.mp4',
 			`An agent based model I developed for my PhD thesis.
 			It simulates how birdsong evolves under different selection pressures.
 			Initially written in R, the model ran too slow to generate the volume of data I needed.
@@ -299,8 +314,8 @@ const PortfolioData = {
 		),
 		new Project(
 			'VtM Maps',
-			'../assets/images/projects/VtMMaps.jpg',
-			'../assets/videos/VtMMapsDemo.mp4',
+			'VtMMaps.jpg',
+			'VtMMapsDemo.mp4',
 			`An app for my Vampire the Masquerade Campaign: Phoenix Heat.
 			It acted as a quick reference for the NPCs my players had met, as well as in-game locations.
 			Includes two maps: one for real world Phoenix and a second for fictional town Hartstone,
@@ -314,8 +329,8 @@ const PortfolioData = {
 		),
 		new Project(
 			'Card Database',
-			'../assets/images/projects/Cards.jpg',
-			'../assets/videos/CardsDemo.mp4',
+			'Cards.jpg',
+			'CardsDemo.mp4',
 			`For managing my pokemon card collection.
 			The app focuses on tracking and organizing cards.
 			Web scraping scripts for fetch expansion sets from Bulbapedia.
