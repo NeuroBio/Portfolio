@@ -29,15 +29,17 @@ function buildAccordion (experience) {
 }
 
 function addBlurb({ epochContents, blurb}) {
-	if (!blurb) {
+	if (blurb.length === 0) {
 		return;
 	}
 
 	epochContents.append('h4')
 		.text('Description');
-	epochContents.append('p')
-		.text(blurb)
-		.attr('class', 'blurb');
+	blurb.forEach((b) => {
+		epochContents.append('p')
+			.text(b)
+			.attr('class', 'blurb');
+	});
 }
 
 function buildHeader (epoch, experience) {
